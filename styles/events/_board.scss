@@ -1,0 +1,215 @@
+div.events-preview-board-wrap {
+  padding-top: 40px;
+
+  > ul {
+    margin: 0 60px 40px 60px;
+    border-top: 2px solid $color-default;
+    /*border-top: 2px solid #191919;*/
+
+    > li {
+      border-bottom: 1px solid $color-box-line;
+
+      > span {
+        position: relative;
+        display: table;
+        width: 100%;
+        padding: 20px 0;
+
+        > span {
+          display: table-cell;
+          vertical-align: middle;
+
+          > div.preview{
+            width: 120px;
+            height:120px;
+            margin:0 auto;
+          }
+
+          > span {
+            display: inline-block;
+            width: 100%;
+            word-break: break-all;
+            color: $color-default;
+            font-family: $font-bold;
+
+            > span.title{
+              font-family: $font-normal;
+              font-size: 16px;
+              line-height: 1.5;
+              color: #666666;
+            }
+
+            &.title {
+              height: 19px;
+              font-size:16px;
+              font-family: $font-normal;
+              color:$color-light-gray;
+              margin-top:10px;
+
+
+              > em {
+                color: $color-light-gray;
+                font-family: $font-normal;
+                margin: 0 0 0 10px;
+              }
+            }
+
+            &.content {
+              line-height: 1.5;
+              font-size: 16px;
+              font-family: $font-bold;
+              padding: 8px 0 0 0;
+            }
+          }
+        }
+
+        > span:first-child {
+          width: 81.6%;
+        }
+
+        > span:last-child {
+          width: 18.4%;
+          vertical-align: top;
+
+        }
+      }
+    }
+  }
+
+  > div.bottom {
+    padding: 0 0 65px 0;
+  }
+}
+
+div.events-board-wrap {
+  padding-top: 40px;
+
+  > ul {
+    margin: 0 60px 40px 60px;
+    border-top: 2px solid $color-default;
+    /*border-top: 2px solid #191919;*/
+
+    > li {
+      border-bottom: 1px solid $color-box-line;
+
+      > span {
+        position: relative;
+        display: table;
+        width: 100%;
+        padding: 20px 0;
+
+        > span {
+          display: table-cell;
+          vertical-align: middle;
+
+          > span {
+            display: inline-block;
+            width: 100%;
+            word-break: break-all;
+            color: $color-default;
+            font-family: $font-bold;
+
+            > span.title{
+              font-family: $font-normal;
+              font-size: 16px;
+              line-height: 1.5;
+              color: #666666;
+            }
+
+            &.title {
+              height: 19px;
+              font-size:16px;
+              font-family: $font-normal;
+              color:$color-light-gray;
+              margin-top:10px;
+
+
+              > em {
+                color: $color-light-gray;
+                font-family: $font-normal;
+                margin: 0 0 0 10px;
+              }
+            }
+
+            &.content {
+              line-height: 1.5;
+              font-size: 16px;
+              font-family: $font-bold;
+              padding: 8px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > div.bottom {
+    padding: 0 0 65px 0;
+  }
+}
+
+div.events-small-business-day-wrap {
+
+  > ul {
+    //margin: 0 60px 40px 60px;
+    //border-top: 2px solid $color-default;
+    /*border-top: 2px solid #191919;*/
+
+    > li {
+      border-bottom: 1px solid $color-box-line;
+
+      > span {
+        position: relative;
+        display: table;
+        width: 100%;
+        padding: 20px 0;
+
+        > span {
+          display: table-cell;
+          vertical-align: middle;
+
+          > span {
+            display: inline-block;
+            width: 100%;
+            word-break: break-all;
+            color: $color-default;
+            font-family: $font-bold;
+
+            > span.title{
+              font-family: $font-normal;
+              font-size: 16px;
+              line-height: 1.5;
+              color: #666666;
+            }
+
+            &.title {
+              height: 19px;
+              font-size:16px;
+              font-family: $font-bold;
+              color:$color-light-gray;
+              margin-top:10px;
+
+
+              > em {
+                color: $color-light-gray;
+                font-family: $font-normal;
+                margin: 0 0 0 10px;
+              }
+            }
+
+            &.content {
+              line-height: 1.5;
+              font-size: 16px;
+              font-family: $font-normal;
+              padding: 8px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > div.bottom {
+    padding: 0 0 65px 0;
+  }
+}

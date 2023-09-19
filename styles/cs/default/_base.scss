@@ -1,0 +1,42 @@
+@import "search";
+@import "tab";
+@import "content/base";
+
+div.cs-default-wrap {
+  @include row-contents;
+
+  > div.container {
+
+    > div.top {
+
+      > h1 {
+        font-size: 28px;
+        text-align: center;
+        line-height: 160px;
+      }
+
+      > form {
+
+        > div {
+          border: 1px solid $color-disabled;
+
+          &.cs-search-wrap {
+            @include cs-default-search-wrap;
+            margin-bottom: 40px;
+          }
+        }
+      }
+
+      > div.tab-wrap {
+        @include cs-default-tab-wrap;
+      }
+    }
+
+    > div.middle {
+
+      > div {
+        @include cs-default-content;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+div.project-edit-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > div.middle {
+      padding: 30px 30px 40px 30px !important;
+
+      > div.inner {
+
+        > h3 {
+          display: block;
+          font-size: 15px !important;;
+          line-height: 1.53em;
+          text-align: center;
+        }
+
+        > span {
+          display: block;
+          padding: 10px 0;
+          width: 100%;
+          font-size: $font-large;
+          line-height: 1.69em;
+          text-align: center;
+        }
+
+        > table {
+          margin: 20px 0 0 0;
+          border-top: 1px solid $color-default;
+
+          > tbody {
+
+            > tr {
+              border-bottom: 1px solid $color-disabled;
+
+              > td {
+                line-height: 50px;
+
+                > button {
+                  float: right;
+                  color: $color-light-gray;
+                }
+
+                &:first-child {
+                  font-family: $font-bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

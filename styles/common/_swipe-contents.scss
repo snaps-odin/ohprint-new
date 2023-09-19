@@ -1,0 +1,29 @@
+div.swipe-contents-wrap {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    margin-top: -21px;
+    cursor: pointer;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+    @extend .icon-arrow-left-1630;
+
+    &:hover {
+      @extend .icon-arrow-left-over-1630;
+    }
+  }
+
+  .swiper-button-next {
+    right: 10px;
+    @extend .icon-arrow-right-1630;
+
+    &:hover {
+      @extend .icon-arrow-right-over-1630;
+    }
+  }
+}

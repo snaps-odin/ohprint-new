@@ -1,0 +1,35 @@
+@mixin header-banner {
+  /*background: url('/images/common/banner/topbanner-apparel@2x.png') center center / cover;*/
+  //background: url('/images/common/banner/topbanner-201109@2x.png') center center / cover;
+  //background: url('/images/common/banner/topbanner-190109@2x.png') center center / cover;
+
+  //이레이저 백업
+  //background: url('/images/common/banner/topbanner-top-eraser@2x.jpg') center center / cover;
+  //background: url('/images/common/banner/topbanner-210127@2x.jpg') center center / cover;
+
+
+
+
+  > div {
+    @include row-contents;
+    height: 70px;
+
+    > span {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+      &.no-action {
+        cursor: default;
+      }
+
+      > button {
+        position: absolute;
+        top: 28px;
+        right: 0;
+      }
+    }
+  }
+}

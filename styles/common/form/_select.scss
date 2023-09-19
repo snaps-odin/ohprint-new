@@ -1,0 +1,357 @@
+div.dropdown {
+
+  > div.dropdown-scope {
+    @include user-select(none);
+
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    font-size: 12px;
+
+    > input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      text-indent: -9999em;
+
+      &.input-dummy {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+    }
+
+    > button {
+      @include text-ellipsis;
+      width: 100%;
+      color: $color-default;
+      border: 0;
+      margin: 0;
+      padding: 0 14px 0 0;
+      line-height: 45px;
+      text-align: right;
+      white-space: nowrap;
+      vertical-align: middle;
+      overflow: hidden;
+      pointer-events: none;
+      @include user-select(none);
+
+      &.empty {
+        color: $color-gray;
+      }
+
+      &::before {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        text-align: center;
+        color: $color-default;
+        content: ' ';
+        background-color: transparent;
+        border-top: 0.3rem solid $color-default;
+        border-left: 0.2rem solid transparent;
+        border-right: 0.2rem solid transparent;
+      }
+    }
+
+    > div {
+      position: absolute;
+      top: 46px;
+      right: 0;
+      display: none;
+      float: left;
+      text-align: left;
+      list-style: none;
+      background-color: $color-white;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      outline: 1px solid $color-default;
+      min-width: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      z-index: 3;
+
+      > ul {
+        position: static;
+        float: none;
+        margin: 0;
+        padding: 7px 0;
+
+        > li {
+          position: relative;
+          display: block;
+          margin: 0;
+          padding: 0;
+          border: 0;
+
+          &:hover, &:focus, &.selected {
+
+            > button {
+              color: #191919;
+              text-decoration: underline;
+            }
+          }
+
+          > button {
+            @include text-ellipsis;
+            display: block;
+            width: 100%;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 14px;
+            white-space: nowrap;
+            text-decoration: none;
+            cursor: pointer;
+            color: #666;
+            text-align: left;
+          }
+        }
+      }
+
+      > div.inner {
+
+        > ul {
+          position: static;
+          float: none;
+          margin: 0;
+          padding: 7px 0;
+
+          > li {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            &:hover, &:focus, &.selected {
+
+              > button {
+                color: #191919;
+                text-decoration: underline;
+              }
+            }
+
+            > button {
+              @include text-ellipsis;
+              display: block;
+              width: 100%;
+              height: 26px;
+              line-height: 26px;
+              padding: 0 14px;
+              white-space: nowrap;
+              text-decoration: none;
+              cursor: pointer;
+              color: #666;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    &.error {
+      border-bottom: 1px solid $color-error;
+    }
+
+    &.active {
+
+      > button {
+
+        &::before {
+          @include rotate(180);
+
+          z-index: 4;
+        }
+      }
+
+      > div {
+        display: block;
+      }
+    }
+  }
+
+  &.box {
+    padding: 0 1px;
+
+    > div.dropdown-scope {
+
+      > button {
+        text-align: left;
+        font-size: 11px;
+        line-height: 34px;
+        padding: 0 10px;
+        outline: 1px solid $color-disabled;
+        background-color: $color-white;
+
+        &::before {
+          top: 15px;
+          right: 11px;
+        }
+
+        &:hover {
+          outline: 1px solid $color-default;
+        }
+
+        &:disabled {
+          color: $color-gray;
+          background: $color-button-disabled-background;
+          outline: 1px solid $color-disabled;
+        }
+      }
+
+      > div {
+        top: 0;
+        left: 0;
+
+        > ul {
+          padding: 0;
+
+          > li {
+
+            &:hover, &:focus {
+
+              > button {
+                color: $color-default;
+                background-color: $color-box-background;
+              }
+            }
+
+            > button {
+              height: 34px;
+              padding: 0 10px;
+              line-height: 34px;
+            }
+          }
+        }
+
+        > div.inner {
+
+          > ul {
+            padding: 0;
+
+            > li {
+
+              &:hover, &:focus {
+
+                > button {
+                  color: $color-default;
+                  background-color: $color-box-background;
+                }
+              }
+
+              > button {
+                height: 34px;
+                padding: 0 10px;
+                line-height: 34px;
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+
+        > button {
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &.error {
+        border: 0;
+
+        > button {
+          outline: 1px solid $color-error;
+        }
+      }
+    }
+  }
+
+  &.box2 {
+
+    > div.dropdown-scope {
+
+      > button {
+        padding: 0 20px;
+        line-height: 50px;
+        text-align: left;
+        background-color: $color-box-background;
+        vertical-align: top;
+
+        &::before {
+          top: 23px;
+          right: 11px;
+        }
+      }
+
+      > div {
+        top: 0;
+
+        > ul {
+          padding: 0;
+
+          > li {
+
+            &:hover, &:focus {
+              > button {
+                color: #191919;
+                background-color: #fafafa;
+              }
+            }
+
+            > button {
+              height: 50px;
+              padding: 0 20px;
+              line-height: 50px;
+            }
+          }
+        }
+
+        > div.inner {
+
+          > ul {
+            padding: 0;
+
+            > li {
+
+              &:hover, &:focus {
+                > button {
+                  color: #191919;
+                  background-color: #fafafa;
+                }
+              }
+
+              > button {
+                height: 50px;
+                padding: 0 20px;
+                line-height: 50px;
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+
+        > button {
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &.error {
+        border: 0;
+
+        > button {
+          outline: 1px solid $color-error;
+        }
+      }
+    }
+  }
+}

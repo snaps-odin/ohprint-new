@@ -1,0 +1,75 @@
+@mixin cs-tutorial-item {
+
+  > div {
+
+    &.top {
+      display: table;
+      height: 50px;
+      padding: 0 16px;
+
+      > ul, > div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      > ul {
+
+        > li {
+          float: left;
+          display: inline-block;
+          width: 25%;
+          height: 50px;
+          font-family: $font-bold;
+          line-height: 50px;
+          text-align: center;
+          cursor: pointer;
+
+          > span {
+            display: inline-block;
+            line-height: 44px;
+
+            &.active {
+              border-bottom: 3px solid $color-blue;
+            }
+          }
+        }
+      }
+    }
+
+    &.bottom {
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      > section {
+        padding: 0 16px;
+
+        &.tutorial-product-wrap {
+
+          > form {
+
+            > div.inner {
+
+              > section {
+
+                > div {
+                  width: 100%;
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.inner {
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      > div.guide-sticker-diy-wrap {
+        padding: 0 16px;
+      }
+    }
+  }
+}

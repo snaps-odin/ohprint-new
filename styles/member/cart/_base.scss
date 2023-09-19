@@ -1,0 +1,297 @@
+@import "product";
+
+div.cart-wrap {
+  position: relative;
+  padding: 0 0 160px 0;
+
+  > div.container {
+    position: relative;
+
+    > div.top {
+      position: relative;
+      margin: 65px 0;
+
+      > h1 {
+        font-size: 28px;
+        text-align: center;
+      }
+
+      > h2 {
+        padding-top: 16px;
+        line-height: 1.67;
+        text-align: center;
+        font-size: $font-medium;
+      }
+    }
+
+    > div.middle {
+      @include row-contents;
+
+      > form {
+
+        > div {
+
+          &.top {
+            text-align:left;
+
+            > div.cartBanner{
+              border-top: 1px solid $color-box-line;
+              padding-top: 10px;
+
+
+              > img{
+                width: 100%;
+                cursor: pointer;
+              }
+            }
+
+            > div.keywordMap{
+              position: relative;
+              width: 100%;
+              height:36px;
+              text-align: right;
+              border-bottom: 1px solid $color-box-line;
+              padding-bottom: 10px;
+              margin-top: -30px;
+
+
+
+
+              > div.dropdown{
+                display: inline-block;
+                width: 110px;
+                height:34px;
+                margin-right:4px;
+                > div.dropdown-scope{
+                  width: 100%;
+                  height:100%;
+                }
+              }
+
+              > div.searchContents{
+                display: inline-block;
+                width: 180px;
+                height: 34px;
+
+                > div.cWord{
+                  width: 100%;
+                  height:100%;
+                  > div{
+                    width: 100%;
+                    height:100%;
+
+                    > input{
+                      width: 145px;
+                      height: 20px;
+                      padding: 7px 26px 7px 10px;
+
+                    }
+                  }
+                }
+
+                > button.btn-submit{
+                  position: absolute;
+                  /* top: 45%; */
+                  top: 7px;
+                  right: 5px;
+                }
+
+
+
+
+              }
+            }
+
+            > span {
+
+              &.count {
+                font-family: $font-bold;
+                font-size: $font-medium;
+                padding-right: 10px;
+                line-height: 1.3;
+                vertical-align: middle;
+              }
+
+              &.line {
+                margin: 0 8px;
+                width: 2px;
+                height: 2px;
+                background: $color-default;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1.3;
+              }
+            }
+
+            > button {
+              line-height: 1.3;
+              vertical-align: middle;
+
+              &.active {
+                color: $color-default;
+                font-family: $font-bold;
+              }
+            }
+          }
+
+          &.middle {
+            display: inline-block;
+            width: 100%;
+
+            &.fixed {
+              position: fixed;
+              z-index: 11;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 70px;
+              padding: 0;
+              margin: 0;
+              background: $color-white;
+              vertical-align: middle;
+              border-bottom: 1px solid $color-box-line;
+            }
+
+            > div.inner {
+              position: relative;
+              width: 1140px;
+              min-width: 1140px;
+              margin: 0 auto;
+              padding: 13px 0;
+
+              > div {
+                display: inline-block;
+
+
+
+                &.left {
+                  float: left;
+                  margin: 5px 0;
+
+
+                  > button {
+                    margin: 0 6px 0 0;
+                  }
+                }
+
+                &.right {
+                  float: right;
+
+                  > span {
+                    float: left;
+                    display: inline-block;
+                    padding: 0 20px 0 0;
+                    line-height: 44px;
+                    font-family: $font-bold;
+                    font-size: $font-large;
+
+                    > em {
+                      color: $color-red;
+                    }
+                  }
+
+                  > button {
+                    float: left;
+                    padding: 0 15px;
+                  }
+
+                  &:after {
+                    display: block;
+                    clear: both;
+                    content: '';
+                  }
+                }
+              }
+
+              &:after {
+                display: block;
+                clear: both;
+                content: '';
+              }
+            }
+          }
+
+          &.bottom {
+
+            &.fixed {
+              padding: 96px 0 0 0;
+            }
+
+            > div {
+
+              &.top {
+                > div.cart-product-wrap {
+                  @include cart-product-wrap;
+                }
+              }
+
+              &.bottom {
+
+                > table {
+                  width: 1140px;
+                  margin: 80px 0 0 0;
+                  border-top: 1px solid $color-default;
+
+                  > thead {
+
+                    > tr {
+
+                      > th {
+                        height: 49px;
+                        line-height: 49px;
+                        background-color: $color-box-background;
+                        text-align: center;
+                        font-family: $font-bold;
+                      }
+                    }
+                  }
+
+                  > tbody {
+
+                    > tr {
+                      border-bottom: 1px solid $color-disabled;
+
+                      > td {
+                        padding: 36px 0;
+                        font-size: 18px;
+                        font-family: $font-bold;
+                        text-align: center;
+
+                        &.total {
+                          color: $color-error;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                > div {
+                  display: inline-block;
+                  width: 100%;
+                  margin: 20px 0 0 0;
+
+                  > button {
+                    position: relative;
+
+                    &[type=button] {
+                      float: left;
+                    }
+
+                    &[type=submit] {
+                      float: right;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > div.bottom {
+      @include row-contents;
+      padding: 80px 0 0 0;
+    }
+  }
+}

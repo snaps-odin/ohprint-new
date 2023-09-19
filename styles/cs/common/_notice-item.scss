@@ -1,0 +1,206 @@
+@mixin cs-notice-item {
+  display: block;
+  width: 100%;
+  font-family: $font-normal;
+  border: 1px solid $color-disabled;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 0 10px 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &.pop {
+    border: 0;
+  }
+
+  > div {
+    width: 100%;
+    background: $color-white;
+
+    &.top {
+      display: table;
+      position: relative;
+
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+        cursor: pointer;
+        @include box-size(border-box);
+
+        &.title {
+          max-width: 150px;
+          padding: 16px 16px 16px 16px;
+
+          > div {
+            line-height: 1.67;
+
+            > em {
+              color: $color-blue;
+
+              &.red {
+                color: #ed2e2e;
+              }
+            }
+
+            &.date {
+              font-size: $font-small;
+              color: $color-gray;
+              padding: 10px 0 0 0;
+            }
+          }
+        }
+      }
+
+      &.badge {
+
+        &:after {
+          position: absolute;
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $color-error;
+          top: 6px;
+          left: 6px;
+        }
+      }
+    }
+
+    &.bottom {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+
+      @include transition(height .3s ease-out);
+
+      > div.inner {
+        position: relative;
+
+        > div.top {
+          position: relative;
+          padding: 16px;
+
+          > span {
+
+            &.content {
+
+              > div {
+                width: 100%;
+
+                &:after {
+                  clear: both;
+                  content: '';
+                  display: block;
+                }
+
+                > div {
+                  float: left;
+                }
+
+                &.product {
+
+                  > div {
+
+                    &.thumbnail{
+                      background: #f4f5f8;
+                    }
+
+
+                    > h3 {
+                      font-family: $font-bold;
+                      font-size: $font-medium;
+                      padding: 0 0 10px 0;
+
+                      > em {
+                        color: $color-blue;
+                      }
+                    }
+
+                    > div {
+                      color: $color-default;
+
+                      &.price {
+                        color: #ed2e2e;
+                      }
+
+                      &.image {
+                        position: relative;
+                        width: 140px;
+                        height: 140px;
+
+                        > div {
+                          height: 140px;
+                        }
+                      }
+
+                      > b {
+                        font-family: $font-bold;
+                      }
+                    }
+
+                    &.info {
+                      width: 220px;
+                      padding: 0 0 0 16px;
+                    }
+                  }
+                }
+
+                &.coupon {
+
+                  > div {
+                    width: 100%;
+                    position: relative;
+                    text-align: center;
+
+                    > div {
+                      position: relative;
+
+                      &.date {
+                        color: #ed2e2e;
+                      }
+
+                      > img {
+                        max-width: 210px;
+                      }
+
+                      > span.info {
+                        position: absolute;
+                        top: 34px;
+                        left: 0;
+                        right: 0;
+                        font-family: $font-bold;
+                        font-size: 22px;
+                        line-height: 33px;
+                        color: #ffd979;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > div.bottom {
+          overflow: hidden;
+          margin: 0 0 0 auto;
+          padding: 16px;
+          border-top: 1px solid $color-disabled;
+
+          > button {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+
+    > div.bottom {
+      border-top: 1px solid $color-disabled;
+    }
+  }
+}

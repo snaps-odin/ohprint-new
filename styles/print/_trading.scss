@@ -1,0 +1,107 @@
+div.trading-wrap {
+
+  > div.container {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+
+    > h1 {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 27px;
+      font-family: $font-bold;
+    }
+
+    > table {
+      width: 100%;
+      border-bottom: 1px solid $color-box-line;
+      font-size: $font-medium;
+      text-align: center;
+
+      > caption {
+        display: none;
+      }
+
+      > tbody {
+
+        > tr {
+
+          > th {
+            padding: 7px 0;
+            border-top: 1px solid $color-box-line;
+            background-color: #f9fafc;
+            color: $color-default;
+            font-size: $font-medium;
+            font-family: $font-bold;
+
+            &.provider {
+              line-height: 50px;
+            }
+
+            &.sum {
+              padding: 7px 0 5px 0;
+              border-left: 1px solid $color-box-line;
+            }
+          }
+
+          > td {
+            padding-right: 0;
+            height: 34px;
+            line-height: 34px;
+            border-top: 1px solid $color-box-line;
+            color: $color-default;
+            border-right: 1px solid $color-box-line;
+            border-left: 1px solid $color-box-line;
+
+            &.stamp {
+              position: relative;
+
+              > img {
+                position: absolute;
+                top: -31px;
+                right: -24px;
+                width: 90px;
+                height: 90px;
+              }
+            }
+
+            &.sum {
+              text-align: right;
+              padding-right: 24px;
+
+              > span {
+                padding-left: 20px;
+              }
+            }
+          }
+
+          > th, td {
+
+            &.line {
+              border-right: 1px solid $color-box-line;
+              border-left: 1px solid $color-box-line;
+            }
+
+            &.text-left {
+              text-align: left;
+              padding-left: 20px;
+            }
+
+            &.text-right {
+              text-align: right;
+              padding-left: 20px;
+            }
+
+            &.line-top-none {
+              border-top: none;
+            }
+          }
+
+          &.total {
+            border-top: 2px solid #c4c4c4;
+          }
+        }
+      }
+    }
+  }
+}

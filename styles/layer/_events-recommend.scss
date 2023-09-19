@@ -1,0 +1,68 @@
+div.events-recommend-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+        padding: 20px 30px 0px 30px !important;
+
+        > div.inner {
+          width: 440px;
+
+          > table {
+            background: $color-box-background;
+            margin-bottom: 20px;
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  font-family: $font-bold;
+                  line-height: 60px;
+                  vertical-align: top;
+                  text-align: center;
+                }
+
+                > td {
+                  padding: 13px 0;
+
+                  > div {
+
+                    &.input {
+                      float: left;
+
+                      > div {
+
+                        input {
+                          width: 276px;
+                        }
+                      }
+                    }
+
+                    &:after {
+                      display: block;
+                      content: '';
+                      clear: both;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > div.notice {
+
+          > p {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}

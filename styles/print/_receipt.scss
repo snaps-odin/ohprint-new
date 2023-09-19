@@ -1,0 +1,128 @@
+div.receipt-wrap {
+
+  > div.container {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+
+    > h1 {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 27px;
+      font-family: $font-bold;
+    }
+
+    > table {
+      width: 100%;
+      margin: 30px 0;
+
+      > thead {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid $color-default;
+
+        > tr {
+
+          > td {
+            font-family: $font-bold;
+            font-size: 16px !important;
+          }
+        }
+      }
+
+      > tbody {
+
+        > tr {
+
+          > th {
+            background-color: $color-box-background;
+            font-family: $font-bold;
+            text-align: left;
+            padding: 15px 0 15px 16px;
+            border-bottom: 1px solid $color-disabled;
+
+            &.logo {
+              text-align: center;
+              padding: 26px 34px;
+            }
+          }
+
+          > td {
+            text-align: left;
+            padding: 15px 0 15px 16px;
+            border-bottom: 1px solid $color-disabled;
+            line-height: 20px;
+
+            > em {
+              color: $color-red;
+            }
+          }
+        }
+
+        &.style {
+
+          > tr {
+
+            > th {
+              &:nth-child(2n) {
+                text-align: center;
+                padding-left: 0;
+              }
+
+              &:nth-child(3n) {
+                text-align: right;
+                padding-right: 16px;
+              }
+            }
+
+            > td {
+
+              &:nth-child(2n) {
+                text-align: center;
+                padding-left: 0;
+              }
+
+              &:nth-child(3n) {
+                text-align: right;
+                padding-right: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      > tfoot {
+
+        > tr {
+
+          > th {
+            background-color: $color-box-background;
+            padding: 16px 0;
+            text-align: left;
+            padding-left: 16px;
+            font-family: $font-bold;
+            border-bottom: 1px solid $color-disabled;
+          }
+
+          > td {
+            background-color: $color-box-background;
+            padding: 16px 0;
+            text-align: center;
+            border-bottom: 1px solid $color-disabled;
+
+            &:last-child {
+              text-align: right;
+              padding-right: 16px;
+            }
+
+            &.sum {
+              color: $color-red;
+              font-size: 16px;
+              font-family: $font-bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+dl.attention-wrap {
+  padding-bottom: 60px;
+  text-align: left;
+
+  & dt {
+    font-family: $font-bold;
+    margin:40px 0 15px;
+    line-height: 1;
+    font-size: 16px;
+    text-align: left;
+
+    > span {
+      font-size: 12px;
+    }
+  }
+
+  & dt:first-of-type {
+    font-family: $font-bold;
+    margin:0 0 15px;
+    line-height: 1;
+    font-size: 16px;
+    text-align: left;
+
+    > span {
+      font-size: 12px;
+    }
+  }
+
+  > dd {
+    font-size: $font-medium;
+    color: $color-light-gray;
+    line-height: 1.67em;
+    background: url('#{$CDN_URL}/images/icon/svg/belit-22.svg') 0 8px no-repeat;
+    padding-left: 8px;
+
+    &.dotBlank {
+      background: none;
+    }
+
+    > em {
+      color: $color-red;
+
+      &.bold{
+        font-family: $font-bold;
+      }
+
+      &.blue {
+        color: $color-blue;
+      }
+    }
+
+    > span.gray{
+      color:$color-gray;
+    }
+
+    > strong {
+      margin-left: -8px;
+      margin-top: 10px;
+      display: inline-block;
+      font-family: $font-bold;
+    }
+
+    &:nth-child(2) {
+
+      > strong {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}

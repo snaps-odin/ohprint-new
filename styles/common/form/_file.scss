@@ -1,0 +1,197 @@
+dl.giftCardDL{
+  > dd{
+    margin: 10px 0 10px 0
+  }
+}
+
+div.file {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  > span.layerFile{
+    text-align: right;
+  }
+
+  > label {
+    width: 100%;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: default;
+    }
+
+    > span {
+      display: table;
+      width: 100%;
+      height: 50px;
+
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+
+        &.tit, &.desc {
+          line-height: 50px;
+
+          > em {
+            color: $color-red;
+          }
+        }
+
+        &.tit {
+          width: 100px;
+          font-family: $font-bold;
+        }
+
+        &.desc {
+          padding: 0 6px;
+          color: #999;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  >span.fileDelete{
+    position: absolute;
+    top:13px;
+    right:0;
+  }
+
+  > ul {
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 16px 0;
+
+    &.active {
+      height: auto;
+      padding: 1px 1px 16px 1px;
+    }
+
+    > li {
+      position: relative;
+      float: left;
+      display: block;
+      width: 96px;
+      margin: 0 6px 0 0;
+
+      > span.icon {
+        position: absolute;
+        z-index: 1;
+        top: -2px;
+        right: -2px;
+        cursor: pointer;
+      }
+
+      > img {
+        width: 96px;
+        height: 96px;
+        background: $color-box-background;
+        outline: 1px solid $color-grid-line;
+      }
+
+      &.error {
+        > img {
+          outline: 1px solid $color-error;
+        }
+      }
+
+      &:nth-of-type(4n) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+ul.giftcard{
+  > li{
+    margin-bottom:10px;
+
+    > div.fileItems{
+      display: table;
+      background: #eeeeee;
+      > span{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left:10px;
+      }
+
+      >span:nth-child(1){
+        cursor: default;
+      }
+      >span:nth-child(2){
+        cursor: pointer;
+      }
+
+    }
+
+    &.error {
+      > span {
+        display: block;
+        margin-top:5px;
+        color: $color-error;
+      }
+    }
+  }
+}
+
+ul.bulkfile{
+  > li{
+    margin-bottom:10px;
+
+    > div.fileItems{
+      display: table;
+      background: #eeeeee;
+      > span{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left:10px;
+      }
+
+      >span:nth-child(1){
+        cursor: default;
+      }
+      >span:nth-child(2){
+        cursor: pointer;
+      }
+
+    }
+
+    &.error {
+      > span {
+        display: block;
+        margin-top:5px;
+        color: $color-error;
+      }
+    }
+  }
+}
+
+div.bulk-container {
+  >div {
+    width: 100%;
+    display:table;
+  }
+
+  .guide {
+    display:table-cell;
+    height:100%;
+    width:125px;
+    verticalAlign:middle;
+    transform: translateY(-20px);
+
+    span:nth-child(1) {
+      cursor:pointer;
+      padding-right: 1px;
+      font-size: 13px;
+      text-decoration: underline;
+      text-decoration-color: #666;
+    }
+
+    span:nth-child(2) {
+      color: grey;
+    }
+  }
+
+}
+

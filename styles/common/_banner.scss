@@ -1,0 +1,21 @@
+div.banner-wrap {
+  padding: 0 0 95px 0;
+
+  > span {
+    display: inline-block;
+
+    > img.pointerCursor{
+      cursor: pointer;
+    }
+  }
+
+
+
+
+
+  &.more {
+    > span:not(:first-child) {
+      padding-left: 20px;
+    }
+  }
+}

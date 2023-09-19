@@ -1,0 +1,202 @@
+div.coupon-layer-wrap {
+  width: 718px;
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+
+        > div.inner {
+          width: 658px;
+
+          > div.title {
+            height: 50px;
+            margin-top: 54px;
+            line-height: 50px;
+            border-bottom: 1px solid $color-default;
+
+            &:nth-child(1) {
+              margin: 0;
+            }
+
+            > h3 {
+              float: left;
+              font-size: 16px !important;
+              font-family: $font-bold;
+
+              > span {
+                font-size: $font-medium;
+
+                > em {
+                  color: $color-red;
+                }
+              }
+            }
+
+            > div {
+              float: right;
+
+              > span.price {
+                font-family: $font-bold;
+                font-size: 14px;
+                color: $color-red;
+              }
+            }
+          }
+
+          > ul.coupon {
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 100%;
+
+            > li {
+              position: relative;
+              background: $color-box-background;
+              padding: 20px 16px;
+
+              &.label {
+                padding: 0 16px 20px 16px;
+              }
+
+              &:first-child {
+
+                > div {
+                  border: 0;
+                }
+              }
+
+              > div.dropdown {
+                border-top: 1px solid $color-box-line;
+
+                > label {
+                  display: inline-block;
+                  height: 50px;
+                  font-size: 13px;
+                  font-family: $font-bold;
+                  line-height: 50px;
+                }
+
+                > div.dropdown-scope {
+                  width: 100% !important;
+
+                  > button > span > em {
+                    display: none;
+                  }
+
+                  > div > div > ul > li > button > span > em {
+                    float: right;
+                    color: $color-red;
+                  }
+                }
+              }
+
+              > div.price {
+                position: absolute;
+                display: table;
+                top: 0;
+                right: 16px;
+
+                > span {
+                  display: table-cell;
+                  line-height: 50px;
+                  text-align: center;
+
+                  &.sale {
+                    padding: 0 6px 0 0;
+                    color: $color-gray;
+                    font-size: 14px;
+                    text-decoration: line-through;
+                  }
+
+                  &.sale-price {
+                    color: $color-red;
+                    font-family: $font-bold;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+
+          > div {
+
+            &.coupon-extra {
+              padding: 20px 16px;
+              background: $color-box-background;
+
+              > div.dropdown {
+
+                > div.dropdown-scope {
+                  width: 100% !important;
+                }
+              }
+            }
+
+            &.total {
+              position: relative;
+              height: 120px;
+              font-family: $font-bold;
+              border-bottom: 1px solid $color-box-line;
+
+              > dl.top {
+                position: absolute;
+                z-index: 1;
+                display: table;
+                width: 100%;
+                height: 120px;
+
+                > dd {
+                  display: table-cell;
+                  width: 144px;
+                  text-align: center;
+                  vertical-align: middle;
+
+                  &.icon {
+                    width: 28px;
+
+                    > span {
+                      display: inline-block;
+
+                      &:before {
+                        display: block;
+                      }
+                    }
+                  }
+
+                  > span {
+                    display: block;
+
+                    &.price {
+                      padding-top: 8px;
+                      font-size: 14px;
+
+                      &.sale {
+                        color: $color-red;
+                      }
+                    }
+                  }
+                }
+              }
+
+              > div.bottom {
+                position: absolute;
+                width: 157px;
+                height: 120px;
+                top: 0;
+                right: 0;
+                background: $color-box-background;
+              }
+            }
+          }
+
+          > p {
+            color: $color-gray;
+            line-height: 1.67em;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}

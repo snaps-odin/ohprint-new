@@ -1,0 +1,22 @@
+@import "util";
+@import "gnb";
+@import "banner";
+
+div.header-wrap {
+  min-width: 1200px;
+
+  > div {
+
+    &.banner {
+      @include header-banner;
+    }
+
+    &.util {
+      @include header-util;
+    }
+
+    &.gnb {
+      @include header-gnb;
+    }
+  }
+}

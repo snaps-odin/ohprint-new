@@ -1,0 +1,125 @@
+@mixin order-confirm-wrap {
+  width: 356px;
+
+  > h3 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-family: $font-bold;
+  }
+
+  > div {
+    border: 1px solid $color-disabled;
+
+    &.active {
+      border: 1px solid $color-blue;
+
+      > div.bottom {
+
+        > button {
+          background: $color-blue;
+          color: $color-white;
+        }
+      }
+    }
+
+    > div {
+
+      &.top {
+        padding: 0 20px;
+
+        > table {
+
+          th, td {
+            font-family: $font-bold;
+            font-size: 12px;
+          }
+
+          > thead {
+
+            > tr {
+              line-height: 90px;
+              border-bottom: 1px solid $color-default;
+
+              > th {
+                text-align: left;
+              }
+
+              > td {
+                color: $color-red;
+                font-size: 20px;
+                text-align: right;
+              }
+            }
+          }
+
+          > tbody {
+            padding: 40px 0;
+
+            > tr {
+              line-height: 30px;
+
+              > th {
+                text-align: left;
+              }
+
+              > td {
+                text-align: right;
+
+                > em {
+                  color: $color-red;
+                }
+              }
+
+              &:first-child {
+
+                > th, > td {
+                  padding-top: 30px;
+                }
+              }
+
+              &:last-child {
+
+                > th, > td {
+                  padding-bottom: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.bottom {
+        background: $color-box-background;
+
+        > span {
+          display: block;
+          color: $color-light-gray;
+          padding: 20px;
+          line-height: 1.67em;
+
+          > button {
+            color: $color-light-gray;
+            padding-left: 2px;
+            text-decoration: underline;
+          }
+
+          > div {
+            padding-top: 10px;
+          }
+        }
+
+        > button {
+          width: 100%;
+          height: 60px;
+          color: #ccc;
+          line-height: 60px;
+          text-align: center;
+          font-size: 15px;
+          font-family: $font-bold;
+          border-top: 1px solid $color-disabled;
+        }
+      }
+    }
+  }
+}

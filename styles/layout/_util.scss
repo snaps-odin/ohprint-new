@@ -1,0 +1,160 @@
+@mixin header-util {
+  background: #f9fafc;
+  border-bottom: 1px solid $color-box-line;
+
+  > div.container {
+    @include row-contents;
+    line-height: 34px;
+
+    > ul {
+      float: right;
+
+      > li {
+        float: left;
+        margin: 0 5px;
+        font-size: $font-small;
+        cursor: pointer;
+
+        > button {
+
+          > img.collabo{
+            width: 100px;
+            height: 24px;
+          }
+
+          &.profile {
+            display: table;
+            height: 34px;
+
+            &:hover {
+
+              > span.user {
+                text-decoration: underline;
+              }
+            }
+
+            > span {
+              display: table-cell;
+              vertical-align: middle;
+
+              &.icon {
+                padding: 0 5px 0 0;
+
+                &:before {
+                  display: block;
+                }
+              }
+
+              &.user {
+                padding: 1px 0 0 0;
+              }
+            }
+          }
+
+          strong {
+            font-family: $font-bold;
+          }
+        }
+
+        > span.line {
+          display: block;
+          width: 2px;
+          height: 2px;
+          margin: 16px 0;
+          background: $color-gray;
+        }
+      }
+
+/*      &.left {
+        float: left;
+
+        > li {
+          height: 34px;
+          margin: 0;
+
+          > button {
+            display: table;
+            height: 34px;
+
+            &:hover {
+
+              > span.app {
+                text-decoration: underline;
+              }
+            }
+
+            > span {
+              display: table-cell;
+              vertical-align: middle;
+
+              &.icon {
+                padding: 0 5px 0 0;
+
+                &:before {
+                  display: block;
+                }
+              }
+
+              &.app {
+                padding: 1px 0 0 0;
+                font-family: $font-bold;
+              }
+            }
+          }
+        }
+      }*/
+      &.left {
+        float: left;
+
+        > li {
+          height: 34px;
+          margin: 0;
+          border-left: 1px solid $color-box-line;
+
+          > a {
+            line-height: 18px;
+            padding: 8px 16px 0 16px;
+          }
+
+          > button.opm,
+          > button.snaps{
+            height: 35px;
+            line-height: 18px;
+            padding: 7px 16px 0 16px;
+            border-bottom: 1px solid transparent;
+          }
+
+          > div.oro {
+            height: 35px;
+            line-height: 35px;
+
+            > img {
+              height: 18px;
+              padding: 0 16px;
+            }
+          }
+
+          > button.opm{
+            background: $color-white;
+            /*border-right: 1px solid $color-box-line;*/
+          }
+
+          > button.snaps,
+          > div.oro {
+            &:hover {
+              background: #f9fafc;
+            }
+          }
+
+          &:last-child {
+            border-right: 1px solid $color-box-line;
+          }
+        }
+      }
+
+      &.right {
+        float: right;
+      }
+    }
+  }
+}

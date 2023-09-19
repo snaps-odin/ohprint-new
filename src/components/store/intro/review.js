@@ -1,0 +1,176 @@
+
+
+import React from 'react';
+import update from 'react-addons-update';
+
+import { getDatasetByName } from 'utils/dom';
+
+import ReviewBoard from 'components/common/review-board';
+import Pagination from 'components/common/pagination';
+
+export default class Review extends React.Component {
+	constructor(...args) {
+		super(...args);
+
+		this.state = {
+			mode: null,
+			items: [],
+			offset: 0,
+			limit: 5,
+			totalCount: 0,
+			totalPhotoCount: 0
+		};
+
+		this.buttons = [
+			{ label: '전체 리뷰', value: 'NORMAL' },
+			{ label: '포토 리뷰', value: 'PHOTO' }
+		];
+
+		this.isFocus = false;
+
+		this.onChangeOffset = this.onChangeOffset.bind(this);
+		this.onClickChangeMode = this.onClickChangeMode.bind(this);
+	}
+
+	onChangeOffset(offset) {
+		Promise.all([
+			(this.isFocus = true)
+		]).then(() => {
+			this.requestReviews(offset);
+		});
+	}
+
+	onClickChangeMode(event) {
+		let { mode: currentMode } = this.state;
+
+		let mode = getDatasetByName(event.currentTarget, 'mode');
+
+		currentMode !== mode && Promise.all([
+			this.setState(update(this.state, {
+				mode: { $set: mode }
+			}))
+		]).then(() => {
+			this.requestReviews(0);
+		});
+	}
+
+	requestReviews(offset) {
+		let { actions: { handleRequestReviews, handleFocusScroll }, params: { category, subCategory }, productApparelCode } = this.props;
+		let { mode, limit } = this.state;
+
+		let params = {
+			category,
+			subCategory,
+			offset,
+			limit,
+			reviewType: mode
+		};
+
+		handleRequestReviews(params,productApparelCode).then(result => {
+			let { reviewList, totalCount, totalPhotoCount } = result;
+
+			this.setState(update(this.state, {
+				items: { $set: reviewList },
+				offset: { $set: offset },
+				totalCount: { $set: totalCount },
+				totalPhotoCount: { $set: totalPhotoCount }
+			}));
+		}).then(() => {
+			this.isFocus && window.setTimeout(() => {
+				handleFocusScroll(3);
+			}, 100);
+		}).then(() => {
+			this.isFocus = false;
+		});
+	}
+
+	initialize() {
+		Promise.all([
+			this.setState(update(this.state, {
+				mode: { $set: this.buttons[ 0 ][ 'value' ] }
+			}))
+		]).then(() => {
+			this.requestReviews(0);
+		});
+	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		let { params: nextParams } = nextProps;
+		let { params: currentParams } = this.props;
+
+		return !(
+			Object.is(nextParams, currentParams) &&
+			Object.is(JSON.stringify(nextState), JSON.stringify(this.state))
+		)
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+		let { params: prevParams } = prevProps;
+		let { params: currentParams } = this.props;
+
+		!Object.is(JSON.stringify(prevParams), JSON.stringify(currentParams)) && this.initialize();
+	}
+
+	componentDidMount() {
+		this.initialize();
+	}
+
+	render() {
+		let { actions, states, params } = this.props;
+		let { mode, items, offset, limit, totalCount, totalPhotoCount } = this.state;
+
+    let { category, subCategory } = params;
+
+		let selectedTotalCount = (mode || '').match(/NORMAL/) ? totalCount : totalPhotoCount;
+
+    let isPen = (category || '').match(/standard-pen|basic-pen/i);
+    let isDiary = (category || '').match(/hard-diary|soft-diary|pvc-diary/i);
+
+		return (
+			<section className="store-intro-review-wrap"
+			         ref={c => {this.el = c;}}>
+
+        {isPen || isDiary ?
+          <h3>누구나 할 수 있어요.</h3> :
+          <h3>써본 사람이 직접 말해요.</h3>
+        }
+
+				<div>
+					{this.buttons.reduce((target, button) => {
+						let { label, value } = button;
+
+						let isActive = (mode || '').match(value);
+
+						target.push(
+							<span className={isActive ? 'active' : null}>
+								<button type="button"
+								        data-mode={value}
+								        onClick={this.onClickChangeMode}>
+									{`${label} ${(value || '').match(/NORMAL/) ? totalCount : totalPhotoCount}`}
+								</button>
+							</span>
+						);
+
+						return target;
+					}, [])}
+
+					{React.cloneElement(<ReviewBoard/>, {
+						actions,
+						states,
+						items,
+						offset,
+						totalCount: selectedTotalCount,
+						params
+					})}
+				</div>
+
+				{totalCount > 0 && React.cloneElement(<Pagination/>, {
+					offset,
+					limit,
+					totalCount: selectedTotalCount,
+					handleChangeOffset: this.onChangeOffset
+				})}
+			</section>
+		);
+	}
+}

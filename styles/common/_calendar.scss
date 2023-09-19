@@ -1,0 +1,33 @@
+div.calendar-wrap {
+  position: absolute;
+  z-index: 5;
+  background: #fff;
+
+  div {
+    outline: none;
+  }
+
+  > span {
+    position: absolute;
+    top: 19px;
+    cursor: pointer;
+
+    &.prev-year {
+      left: 21px;
+      @extend .icon-prev-year-1010;
+
+      &:hover {
+        @extend .icon-prev-year-1010-over;
+      }
+    }
+
+    &.next-year {
+      right: 21px;
+      @extend .icon-next-year-1010;
+
+      &:hover {
+        @extend .icon-next-year-1010-over;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": ["error", {"forbid": [">"]}]
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.ts", "*.tsx"],
+      "rules": {
+        "prettier/prettier": "off"
+      }
+    }
+  ]
+}

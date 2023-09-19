@@ -1,0 +1,12 @@
+div.image-loader-wrap {
+
+  &.not-found {
+    background: $color-thumbnail-background url("#{$CDN_URL}/images/icon/svg/error-3131.svg") center center / 33px 33px no-repeat !important;
+  }
+
+  > img.thumbnail-product-mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

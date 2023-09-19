@@ -1,0 +1,79 @@
+div.guide-sticker-layout-option-wrap {
+  padding: 70px 0 0 0;
+
+  > div.inner {
+    padding: 70px 0 0 0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+    border-top: 1px solid $color-box-line;
+
+    > h3 {
+      padding: 0 0 70px 0;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    > p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    > ul {
+
+      &.small {
+
+        > li {
+          float: none;
+          width: 100%;
+          max-width: 720px;
+          margin: 0;
+        }
+      }
+
+      > li {
+        float: left;
+        max-width: 360px;
+        margin-right: 30px;
+
+        > dl {
+
+          > dt {
+
+            > img {
+              width: 100%;
+            }
+          }
+
+          > dd {
+            text-align: left;
+            padding: 30px 15px;
+
+            > h4 {
+              font-size: 18px;
+              line-height: 1.2;
+              padding-bottom: 15px;
+            }
+
+            > p {
+
+              > em {
+                color: $color-blue;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      &:after {
+        clear: both;
+        display: block;
+        content: '';
+      }
+    }
+  }
+}

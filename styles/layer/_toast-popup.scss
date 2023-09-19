@@ -1,0 +1,53 @@
+div.toast-popup-layer-wrap {
+  position: fixed;
+  width:300px;
+  border-radius: 10px;
+  overflow: hidden;
+  bottom: 2.8%;
+  left: 2%;
+  z-index: 25;
+
+  >img {
+    width: 100%;
+  }
+
+  > button.btn-marketing-agree {
+    position: absolute;
+    top: 253px;
+    width: 210px;
+    left: 40px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  > button.close{
+    position: absolute;
+    bottom: 40px;
+    left: 109px;
+    width: 82px;
+    z-index: 10001;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  > div.contentsMap{
+    > div.btn{
+      width: 78.7%;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      >img {
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}

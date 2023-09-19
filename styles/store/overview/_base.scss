@@ -1,0 +1,52 @@
+@import "key-visual";
+@import "products";
+@import "products-fair";
+@import "review";
+@import "service/base";
+@import "recommend";
+
+div.store-overview-wrap {
+
+  > div.container {
+
+    > div {
+
+      &.top {
+
+        > div.store-overview-key-visual-wrap {
+          @include store-overview-key-visual;
+        }
+      }
+
+      &.bottom {
+
+        &.fixed {
+          margin: 50px 0 0 0;
+        }
+
+        > section {
+
+          &.store-fair-overview-product-wrap {
+            @include store-fair-overview-product;
+          }
+
+          &.store-overview-product-wrap {
+            @include store-overview-product;
+          }
+
+          &.store-overview-review-wrap {
+            @include store-overview-review;
+          }
+
+          &.store-overview-service-wrap {
+            @include store-overview-service;
+          }
+
+          &.store-overview-recommend-wrap {
+            @include store-overview-recommend;
+          }
+        }
+      }
+    }
+  }
+}

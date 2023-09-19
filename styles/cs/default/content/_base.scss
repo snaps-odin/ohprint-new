@@ -1,0 +1,42 @@
+@import "faq";
+@import "qna";
+@import "talk";
+
+@mixin cs-default-content {
+  margin-bottom: 160px;
+
+  > div.tab-wrap {
+
+    > button {
+      border: 1px solid $color-disabled;
+      border-left: none;
+      background: $color-box-background;
+
+      &:first-of-type {
+        border-left: 1px solid $color-disabled;
+      }
+
+      &.active {
+        border: 1px solid $color-default;
+        font-family: $font-bold;
+        background: $color-white;
+      }
+
+      &.prev {
+        border-right: none;
+      }
+    }
+  }
+
+  &.faq {
+    @include cs-default-content-faq;
+  }
+
+  &.qna {
+    @include cs-default-content-qna;
+  }
+
+  &.talk {
+    @include cs-default-content-talk;
+  }
+}

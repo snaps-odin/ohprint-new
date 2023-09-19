@@ -1,0 +1,210 @@
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  -ms-box-sizing: $value;
+  box-sizing: $value;
+}
+
+@mixin transition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin perspective($value) {
+  -webkit-perspective: $value;
+  -moz-perspective: $value;
+  -ms-perspective: $value;
+  -o-perspective: $value;
+  perspective: $value;
+}
+
+@mixin perspective-origin($value) {
+  -webkit-perspective-origin: $value;
+  -moz-perspective-origin: $value;
+  -ms-perspective-origin: $value;
+  perspective-origin: $value;
+}
+
+@mixin box-shadow($value...) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  -o-box-shadow: $value;
+  -ms-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
+@mixin background-size($value) {
+  -webkit-background-size: $value;
+  -moz-background-size: $value;
+  -o-background-size: $value;
+  background-size: $value;
+}
+
+@mixin rotate($value) {
+  @include transform(rotate(#{$value}deg));
+}
+
+@mixin scale($value) {
+  @include transform(scale($value));
+}
+
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin transform-style($value) {
+  -webkit-transform-style: $value;
+  -moz-transform-style: $value;
+  -ms-transform-style: $value;
+  transform-style: $value;
+}
+
+@mixin background-linear-gradient($direction, $color-stop-1, $color-stop-2) {
+  background-image: -webkit-linear-gradient($direction, $color-stop-1, $color-stop-2);
+  background-image: -moz-linear-gradient($direction, $color-stop-1, $color-stop-2);
+  background-image: -ms-linear-gradient($direction, $color-stop-1, $color-stop-2);
+  background-image: -o-linear-gradient($direction, $color-stop-1, $color-stop-2);
+  background-image: linear-gradient($direction, $color-stop-1, $color-stop-2);
+}
+
+@mixin background-radial-gradient($color-stop-1, $color-stop-2) {
+  background: -moz-radial-gradient(center, circle cover, $color-stop-1 0%, $color-stop-2 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $color-stop-1), color-stop(100%, $color-stop-2));
+  background: -webkit-radial-gradient(center, circle cover, $color-stop-1 0%, $color-stop-2 100%);
+  background: -o-radial-gradient(center, circle cover, $color-stop-1 0%, $color-stop-2 100%);
+  background: -ms-radial-gradient(center, circle cover, $color-stop-1 0%, $color-stop-2 100%);
+  background: radial-gradient(center, circle cover, $color-stop-1 0%, $color-stop-2 100%);
+  background-color: $color-stop-1;
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin ime-mode($value) {
+  -webkit-ime-mode: $value;
+  -moz-ime-mode: $value;
+  -ms-ime-mode: $value;
+  ime-mode: $value;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation($value...) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -ms-backface-visibility: $value;
+  -o-backface-visibility: $value;
+  backface-visibility: $value;
+}
+
+@mixin flex-box() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flex($value) {
+  -webkit-box-flex: $value;
+  -moz-box-flex: $value;
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (eot: "?", svg: "#" + str-replace($name, " ", "_"));
+
+  $formats: (otf: "opentype", ttf: "truetype");
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@mixin box-size($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}

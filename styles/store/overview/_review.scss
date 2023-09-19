@@ -1,0 +1,43 @@
+@mixin store-overview-review {
+  @include row-contents;
+  padding: 70px 0;
+  text-align: center;
+
+  > h3 {
+    font-size: 30px;
+  }
+
+  > div:first-of-type {
+    margin: 40px 0 50px 0;
+    text-align: left;
+
+    > span {
+
+      > button {
+        color: $color-light-gray;
+        line-height: 50px;
+        font-family: $font-normal;
+      }
+
+      &.active {
+
+        > button {
+          color: $color-default;
+          font-family: $font-bold;
+        }
+      }
+
+      &:first-of-type {
+
+        &:after {
+          display: inline-block;
+          content: '';
+          width: 2px;
+          height: 2px;
+          background: #191919;
+          margin: 3px 8px;
+        }
+      }
+    }
+  }
+}

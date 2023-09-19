@@ -1,0 +1,91 @@
+.custom-personalization-fab {
+  position: absolute;
+  border-radius: 4px;
+  z-index: 20;
+  pointer-events: all;
+  @include transition(
+    left $animation-sec / 2 $animation-easing,
+    bottom $animation-sec / 2 $animation-easing,
+    width $animation-sec / 2 $animation-easing,
+    height $animation-sec / 2 $animation-easing
+  );
+
+  &.custom-personalization-fab__maximize {
+    width: 264px;
+    left: -280px;
+    bottom: 20px;
+    border: solid 1px #cccccc;
+    box-shadow: -2px 4px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+
+    & .custom-personalization-fab__container {
+      padding: 14px;
+
+      & .custom-personalization-fab__placeholder-image {
+        float: left;
+        max-width: 41.666667%;
+      }
+
+      & .custom-personalization-fab__content {
+        float: right;
+        max-width: 58.333333%;
+      }
+    }
+  }
+
+  &.custom-personalization-fab__minimize {
+    width: 60px;
+    left: -60px;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+  &.custom-personalization-fab__active {
+    left: 20px;
+  }
+
+  .custom-personalization-fab__container {
+    position: relative;
+
+    & .custom-personalization-fab__content {
+      background-color: yellow;
+      height: 0;
+
+      & .custom-personalization-fab__content--title {
+        font-family: $font-bold;
+        font-size: 14px;
+        margin-top: 8px;
+        margin-bottom: 14px;
+      }
+
+      & .custom-personalization-fab__content--body {
+        font-size: 11px;
+        line-height: 1.45;
+
+        & p {
+          margin-bottom: 2px;
+        }
+      }
+
+      & .custom-personalization-fab__request-button {
+        font-size: 12px;
+        color: #2c83e9;
+        padding: 8px;
+        margin-left: -8px;
+        margin-right: 8px;
+        -webkit-text-decoration-line: underline;
+        -moz-text-decoration-line: underline;
+        text-decoration-line: underline;
+      }
+
+      & .close {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: -16px;
+        right: -16px;
+        overflow: hidden;
+      }
+    }
+  }
+}

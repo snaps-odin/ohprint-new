@@ -1,0 +1,178 @@
+@import "eraser-contents-1";
+@import "eraser-contents-2";
+@import "eraser-contents-3";
+@import "eraser-contents-4";
+
+div.overview-eraser-wrap {
+  position: relative;
+
+
+  >div{
+    position: relative;
+
+    @include eraser-contents-2;
+    @include eraser-contents-1;
+  }
+
+  @include eraser-contents-3;
+  @include eraser-contents-4;
+  > div.eraser-entrance{
+    width: 1140px;
+    height: 650px;
+    margin: 0 auto;
+
+
+    > div.eraser-entrance-left{
+      width:540px;
+      height:400px;
+      float: left;
+      margin-top:133px;
+
+      > span{
+        display: block;
+        &.eraser-entrance-title{
+          font-size: 48px;
+          color:$color-default;
+          line-height: 1.42;
+          font-family: $font-bold;
+
+          > span.pink{
+            color:#ff5885;
+          }
+        }
+
+        &.eraser-entrance-subTitle{
+          font-size: 20px;
+          color:$color-default;
+          margin-top:30px;
+        }
+
+      }
+
+      > div.eraser-btn-start{
+        display: table;
+        width: 200px;
+        height: 60px;
+        margin: 65px 212px 0 0;
+        /*padding: 19px 69px 20px;*/
+        border-radius: 34px;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+        background-color: #ff6d94;
+        box-sizing: border-box;
+        color:$color-white;
+        font-size:16px;
+        cursor: pointer;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        > div{
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+        }
+      }
+
+      > div.eraser-btn-start:hover{
+        background-color: #ff5885;
+      }
+
+
+
+
+
+    }
+
+    > div.eraser-entrance-right{
+      position: relative;
+      width:540px;
+      height:400px;
+      float: left;
+      background: url("#{$CDN_URL}/images/overview/eraser/cross-stripes.png") center;
+      margin-top:125px;
+      box-shadow: 60px 60px 40px 0 rgba(0, 0, 0, 0.2);
+      margin-left: 60px;
+
+      > div.image-cut,
+      > div.image-full{
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+
+      }
+
+      > div.image-cut{
+        background: url("#{$CDN_URL}/images/overview/eraser/eraser-intro-img-cut@2x.png") 0 0 / cover no-repeat;
+
+        > div.image-control{
+          position:absolute;
+          right:0;
+          width: 1px;
+          height:100%;
+          z-index: 20;
+
+          > div.image-control-map{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top:calc((50% - 40px));
+            right:-40px;
+            background: url("#{$CDN_URL}/images/overview/eraser/btn@2x.png") 0 0 / cover no-repeat;
+
+            > div.images-control-left{
+              width: 50%;
+              height:100%;
+              float: left;
+              cursor: pointer;
+            }
+
+            > div.images-control-right{
+              width: 50%;
+              height:100%;
+              float: left;
+              cursor: pointer;
+            }
+
+          }
+        }
+      }
+
+      > div.image-full{
+        background: url("#{$CDN_URL}/images/overview/eraser/eraser-intro-img-full@2x.png") 0 0 / cover no-repeat;
+
+        > div.bar{
+          position: absolute;
+          right: -2px;
+          width: 2px;
+          height: 100%;
+          background: $color-white;
+        }
+
+      }
+
+
+      > div.left-text,
+      > div.right-text{
+        position:absolute;
+        font-family: $font-bold;
+        font-size: 16px;
+        color: #191919;
+        bottom:-37px;
+      }
+
+      > div.left-text{
+        left:0;
+      }
+
+      > div.right-text{
+        right:0;
+      }
+
+    }
+
+
+  }
+
+
+}

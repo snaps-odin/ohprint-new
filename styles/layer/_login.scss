@@ -1,0 +1,113 @@
+div.login-layer-wrap {
+  position: relative;
+  width: 460px;
+  min-height: 560px;
+
+  > div.container {
+    padding: 40px 50px;
+
+    > form {
+
+      > div.top {
+
+        > h1 {
+          display: block;
+          margin: 0 auto;
+          padding: 0 0 40px 0;
+          text-align: center;
+          font-size: 24px;
+          font-weight: normal;
+        }
+      }
+
+      > div.bottom {
+        padding: 130px 0 0 0;
+
+        > button {
+          width: 100%;
+          font-size: 13px;
+        }
+
+        > div.sns {
+          display: table;
+          padding: 6px 0 40px;
+          width: 100%;
+
+          > div.classSnsSpace{
+            background: $color-box-background;
+            display: inline-block;
+            width: 6px;
+            height: 48px;
+            margin-bottom: -21px;
+          }
+
+          > button {
+            width: 120px;
+            padding: 0;
+            text-align: center;
+
+            &.btnSnsLogin{
+              margin:0 !important;
+              border:0;
+              background: $color-box-background;
+
+            }
+
+            &.classSnsNaver{
+              padding-left:3px;
+            }
+
+            &.classSnsFacebook{
+              width: 107px;
+            }
+
+            &.classSnsApple{
+              width: 127px;
+            }
+
+            &:first-of-type {
+              margin: 0 6px 0 0;
+            }
+
+            > span {
+              display: inline-block;
+              height: 22px;
+              color: $color-default;
+              text-align: center;
+              line-height: 20px;
+              vertical-align: middle;
+
+              &.naver {
+                padding: 0 0 0 26px;
+                background: url("#{$CDN_URL}/images/icon/svg/naver-2020.svg") no-repeat;
+              }
+
+              &.facebook {
+                padding: 0 0 0 26px;
+                background: url("#{$CDN_URL}/images/icon/svg/facebook-2020.svg") no-repeat;
+              }
+
+              &.apple {
+                padding: 0 0 0 26px;
+                background: url("#{$CDN_URL}/images/icon/svg/apple-2020.svg") no-repeat;
+              }
+            }
+          }
+        }
+
+        > div.find-info {
+          width: 100%;
+          clear: both;
+          text-align: center;
+
+          > span.line {
+            width: 1px;
+            height: 11px;
+            padding: 0 10px;
+            color: $color-grid-line;
+          }
+        }
+      }
+    }
+  }
+}

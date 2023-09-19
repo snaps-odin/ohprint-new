@@ -1,0 +1,85 @@
+div.sms-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+        padding: 20px 30px 0 30px !important;
+
+        > div.inner {
+          width: 440px;
+
+          > table {
+            background: $color-box-background;
+            border: 1px solid $color-grid-line;
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  font-family: $font-bold;
+                  line-height: 60px;
+                  vertical-align: top;
+                  text-align: center;
+
+                  > em {
+                    color: $color-red;
+                  }
+                }
+
+                > td {
+                  padding: 13px 0;
+
+                  > div {
+
+                    &.input {
+                      float: left;
+
+                      > div {
+
+                        input {
+                          width: 70px;
+                        }
+
+                        span.error {
+                          word-wrap: unset;
+                          width: 90px;
+                          line-height: 1.6;
+                          margin-top: 10px;
+                        }
+                      }
+                    }
+
+                    &:after {
+                      display: block;
+                      content: '';
+                      clear: both;
+                    }
+                  }
+
+                  > span {
+                    float: left;
+                    padding: 0 6px;
+                    color: $color-button-white-border;
+                    line-height: 34px;
+                  }
+                }
+              }
+            }
+          }
+
+          > p {
+            font-style: 12px;
+            color: $color-light-gray;
+            text-align: center;
+            padding-top: 20px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

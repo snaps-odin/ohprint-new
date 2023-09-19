@@ -1,0 +1,311 @@
+div.checkbox {
+
+  & {
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    vertical-align: baseline;
+    line-height: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    pointer-events: none;
+
+    > input {
+      position: absolute;
+      display: table-cell;
+      opacity: 0;
+      outline: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 16px;
+      cursor: pointer;
+      pointer-events: all;
+      z-index: 3;
+
+      &:checked {
+        & + label {
+          &::before {
+            border: 1px solid $color-blue;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    > label {
+      position: relative;
+      display: block;
+      padding-left: 22px;
+      outline: 0;
+      line-height: 16px;
+      font-size: 12px;
+
+      @include user-select(none);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        content: '';
+        width: 14px;
+        height: 14px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        text-align: center;
+        opacity: 0;
+        content: '';
+        background-color: transparent;
+        width: 9px;
+        height: 5px;
+        border-bottom: 3px solid $color-blue;
+        border-left: 3px solid $color-blue;
+
+        @include transform(scale(.8) rotate(-45deg));
+      }
+    }
+
+    > span {
+      padding-left: 22px;
+
+      &.error {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &-circle {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    pointer-events: none;
+    background-color: #f9fafc;
+
+    @include border-radius(500rem);
+
+    > input {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+      cursor: pointer;
+      pointer-events: all;
+      z-index: 3;
+
+      &:checked {
+        & + label {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:disabled {
+        cursor: default !important;
+
+        & + label {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    > label {
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      background-color: transparent;
+      border: 2px solid $color-white;
+      content: '';
+      width: 28px;
+      height: 28px;
+      box-sizing: inherit;
+
+      @include border-radius(500rem);
+
+      @include user-select(none);
+
+      &:before {
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        opacity: 0;
+        content: ' ';
+
+        @extend .icon-check-1818;
+      }
+    }
+
+    &.red > label {
+      background-color: $color-filter-red;
+    }
+
+    &.orange > label {
+      background-color: $color-filter-orange;
+    }
+
+    &.yellow > label {
+      background-color: $color-filter-yellow;
+    }
+
+    &.green > label {
+      background-color: $color-filter-green;
+    }
+
+    &.blue > label {
+      background-color: $color-filter-blue;
+    }
+
+    &.navy > label {
+      background-color: $color-filter-navy;
+    }
+
+    &.purple > label {
+      background-color: $color-filter-purple;
+    }
+
+    &.white > label {
+      border: 2px solid $color-grid-line;
+      background-color: $color-filter-white;
+    }
+
+    &.black > label {
+      background-color: $color-filter-black;
+    }
+
+    &.pink > label {
+      background-color: $color-filter-pink;
+    }
+
+    &.gray > label {
+      background-color: $color-filter-gray;
+    }
+
+    &.brown > label {
+      background-color: $color-filter-brown;
+    }
+  }
+
+  &-thumbnail {
+    position: relative;
+    outline: 0;
+    vertical-align: baseline;
+    pointer-events: none;
+    height: 50px;
+
+    > input {
+      position: absolute;
+      opacity: 0;
+      outline: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      pointer-events: all;
+
+      &:checked {
+        & + label {
+          > span > span:first-child {
+            outline: 1px solid $color-default;
+          }
+        }
+      }
+    }
+
+    > label {
+      position: relative;
+      display: block;
+      outline: 0;
+      line-height: 16px;
+      font-size: 12px;
+
+      @include user-select(none);
+
+      > span {
+
+        > span {
+          vertical-align: middle;
+
+          &:first-child {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: $color-white;
+            outline: 1px solid #ccc;
+          }
+
+          &.label {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &-multi {
+    display: table;
+    width: 100%;
+    height: 33px;
+    font-size:11px;
+
+    > input {
+      position: absolute;
+      opacity: 0;
+      outline: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      pointer-events: all;
+
+      &:checked {
+        & + label {
+          outline: 1px solid $color-default;
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    > label {
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+      text-align: center;
+      outline: none;
+
+      @include user-select(none);
+
+      /*&:before {
+        position: absolute;
+        left: 11px;
+        top: 8px;
+        opacity: 0;
+        content: ' ';
+        pointer-events: none;
+
+        @extend .icon-check-blue-1414;
+      }*/
+    }
+
+    > span.error {
+      display: none;
+    }
+  }
+}

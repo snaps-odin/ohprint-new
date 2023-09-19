@@ -1,0 +1,51 @@
+@mixin store-search-option {
+  width: 100%;
+  background: $color-white;
+
+  > div.container {
+
+    > div {
+
+      &.top {
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid $color-box-line;
+        font-family: $font-bold;
+
+        > div.inner {
+          @include row-contents;
+
+          > div {
+            display: block;
+            float: left;
+
+            &.left {
+              width: 100px;
+
+              > h2 {
+                width: 100%;
+                font-size: 18px;
+                line-height: 50px;
+              }
+            }
+
+            &.center {
+              width: 940px;
+
+              > div.tab-blue-wrap {
+
+                > div {
+
+                  > div.inner {
+                    width: 100%;
+                    padding: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

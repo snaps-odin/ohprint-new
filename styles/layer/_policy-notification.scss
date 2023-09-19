@@ -1,0 +1,68 @@
+div.policy-notification-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > div.middle {
+
+      > div.inner {
+
+        > div.top {
+
+          > h3 {
+            font-size: 22px !important;
+            line-height: 32px;
+            padding-bottom: 20px;
+          }
+
+          > p {
+            font-size: 14px;
+            line-height: 22px;
+            padding-bottom: 20px;
+
+            > em{
+              color: $color-blue;
+              &.red{
+                color:$color-red;
+              }
+            }
+
+          }
+        }
+
+        > div.bottom {
+          padding: 20px;
+          border: 1px solid $color-box-line;
+          background: $color-box-background;
+
+          > div {
+            font-size: 12px;
+            line-height: 20px;
+            /*padding-bottom: 20px;*/
+
+            > em {
+              font-family: $font-bold;
+            }
+
+            > dl {
+              font-size: 12px;
+              line-height: 20px;
+              > dd{
+                > em {
+                  font-family: $font-bold;
+                }
+              }
+            }
+
+            /*&:first-child {
+              padding-bottom: 20px;
+            }*/
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

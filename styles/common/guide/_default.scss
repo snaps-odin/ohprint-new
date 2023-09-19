@@ -1,0 +1,506 @@
+div.guide-default-wrap {
+  text-align: center;
+
+  > div {
+
+    &.top {
+      padding: 0;
+
+      > button {
+        padding: 0 15px;
+        color: $color-default;
+        font-family: $font-bold;
+        line-height: 25px;
+
+        &.active {
+          color: $color-blue;
+        }
+      }
+
+      > span {
+        color: $color-grid-line;
+      }
+
+      &.small {
+        line-height: 2.07;
+      }
+    }
+
+    &.middle {
+      display: table;
+      width: 100%;
+      padding: 60px 0 0 0;
+
+      > div {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+
+        &.left {
+          padding: 0 30px 0 0;
+
+          > div {
+            float: right;
+            &.business-card-0{
+              > div{
+                //min-height: 375px;
+              }
+
+            }
+          }
+        }
+
+        &.right {
+
+          > ul {
+            width: 516px;
+            padding: 0 24px 0 30px;
+
+            > li {
+              float: left;
+              display: table;
+              margin: 0 0 20px 0;
+
+              &:last-of-type {
+                margin: 0;
+              }
+
+              > span {
+                display: table-cell;
+                vertical-align: middle;
+
+                &.box {
+                  width: 70px;
+
+                  > span {
+                    width: 70px;
+                    height: 70px;
+                    display: inline-block;
+                    background: $color-white;
+                  }
+                }
+
+                &.desc {
+                  padding: 0 0 0 20px;
+                  text-align: left;
+
+                  > span {
+                    display: block;
+                    color: $color-default;
+                    line-height: 1.67em;
+
+                    &:first-of-type {
+                      padding: 0 0 6px 0;
+                      color: $color-light-gray;
+                      font-family: $font-bold;
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+              &.green {
+
+                > span.box {
+                  background: none;
+                  outline: none;
+
+                  > span {
+                    background: rgba(25, 151, 0, 0.2);
+                    outline: 1px solid #199700;
+                  }
+                }
+
+                > span.desc > span:first-of-type {
+                  color: #199700;
+                }
+              }
+
+              &.blue {
+
+                > span.box {
+                  background: none;
+                  outline: none;
+
+                  > span {
+                    background: #dcecff;
+                    outline: 1px solid #2c83e9;
+                  }
+                }
+
+                > span.desc > span:first-of-type {
+                  color: #2c83e9;
+                }
+              }
+
+              &.envelopeYellow {
+
+                > span.box {
+                  background: none;
+                  outline: none;
+
+                  > span {
+                    width: 50px;
+                    height: 50px;
+                    /* margin: 0 20px 0 0; */
+                    border: solid 10px #fffce4;
+                    outline: 1px dotted #98880d;
+                  }
+                }
+
+                > span.desc > span:first-of-type {
+                  color: #98880d;
+                }
+              }
+
+              &.dot {
+
+                > span.box {
+                  outline: none;
+
+                  > span {
+                    outline: 1px dotted $color-light-gray;
+                  }
+                }
+              }
+
+              &.dot-solid {
+
+                > span.box {
+                  outline: none;
+
+                  > span {
+                    outline: 1px solid $color-light-gray;
+                  }
+                }
+              }
+
+              &.red {
+
+                > span.box {
+                  outline: none;
+
+                  > span {
+                    outline: 1px solid #ed2e2e;
+                  }
+                }
+
+                > span.desc > span:first-of-type {
+                  color: #ed2e2e;
+                }
+              }
+
+              &.warning {
+
+                > span {
+
+                  &.icon {
+                    vertical-align: top;
+                  }
+
+                  &.desc {
+                    color: $color-light-gray;
+                    line-height: 18px;
+                    padding: 0 0 0 6px;
+
+                    > em {
+                      color: #ed2e2e;
+                      line-height: 18px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.apparel {
+        min-height: 266px;
+
+        > div {
+          vertical-align: middle;
+        }
+      }
+
+      &.small {
+        display: block;
+        padding: 30px 0 10px 0;
+
+        > div {
+          display: block;
+          width: 100%;
+          text-align: center;
+
+          &.left {
+
+            > div {
+              float: none;
+              display: inline-block;
+              width: 100% !important;
+              max-width: 570px;
+              padding: 0;
+            }
+          }
+
+          &.right {
+            margin: 0 auto;
+            padding: 70px 0 0 0;
+
+            > ul {
+              width: 100%;
+              max-width: 400px;
+              padding: 0;
+              display: inline-block;
+              margin: 0 auto;
+
+              > li {
+                float: left;
+                display: table;
+                margin: 0 0 20px 0;
+
+                &:last-of-type {
+                  margin: 0;
+                }
+
+                > span {
+                  display: table-cell;
+                  vertical-align: middle;
+
+                  &.box {
+                    width: 70px;
+
+                    > span {
+                      width: 70px;
+                      height: 70px;
+                      display: inline-block;
+                      background: $color-white;
+                    }
+                  }
+
+                  &.desc {
+                    padding: 0 0 0 20px;
+                    text-align: left;
+
+                    > span {
+                      display: block;
+                      color: $color-default;
+                      line-height: 1.67em;
+
+                      &:first-of-type {
+                        padding: 0 0 6px 0;
+                        color: $color-light-gray;
+                        font-family: $font-bold;
+                      }
+                    }
+                  }
+                }
+
+                &.blue {
+
+                  > span.box {
+                    background: none;
+                    outline: none;
+
+                    > span {
+                      background: #dcecff;
+                      outline: 1px solid #2c83e9;
+                    }
+                  }
+
+                  > span.desc > span:first-of-type {
+                    color: #2c83e9;
+                  }
+                }
+
+                &.dot {
+
+                  > span.box {
+                    outline: none;
+
+                    > span {
+                      outline: 1px dotted $color-light-gray;
+                    }
+                  }
+                }
+
+                &.red {
+
+                  > span.box {
+                    outline: none;
+
+                    > span {
+                      outline: 1px solid #ed2e2e;
+                    }
+                  }
+
+                  > span.desc > span:first-of-type {
+                    color: #ed2e2e;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.apparel {
+          min-height: 0;
+
+          > div {
+            vertical-align: top;
+          }
+        }
+      }
+    }
+
+    &.bottom {
+      clear: both;
+      padding: 30px 0 0 0;
+      text-align: center;
+
+      >div.commonGuideLayer{
+        cursor: pointer;
+        font-size:15px;
+        font-family: $font-bold;
+        text-decoration: underline;
+      }
+
+      > span {
+        display: block;
+
+        &.caption {
+          line-height: 1.67;
+          padding: 0 0 20px 0;
+
+          > em {
+            color: $color-blue;
+          }
+        }
+
+        &.line {
+          display: inline-block;
+          width: 16px;
+          height: 1px;
+          background: #666;
+        }
+
+        &.desc {
+          padding: 30px 0 0 0;
+        }
+
+        &.footerDesc{
+          padding: 30px 0 0 0;
+          font-size: $font-large;
+          color:$color-default;
+          line-height: 21px;
+
+          > em.blue{
+            color:$color-blue;
+          }
+        }
+
+
+
+        &.descCustoms{
+          font-family: $font-normal;
+          line-height: 1.62;
+
+          > em.blue{
+            color:$color-blue;
+          }
+        }
+      }
+
+      > ul {
+        display: table;
+        /*margin: 30px 0 0 0;
+        padding-left: 360px;*/
+        margin : 30px auto;
+
+        > li {
+          display: table-cell;
+          width: 140px;
+          font-size:$font-small;
+
+          &.orange {
+            padding: 0 3px 0 0;
+
+            > a {
+              color: #ffb31d;
+              outline: solid 2px #ffb31d;
+            }
+          }
+
+          &.purple {
+            padding: 0 3px;
+
+            > a {
+              color: #ae527e;
+              outline: solid 2px #ae527e;
+            }
+          }
+
+          &.pink {
+            padding: 0 3px;
+
+            > a {
+              color: #ff00d2;
+              outline: solid 2px #ff00d2;
+            }
+          }
+
+          &:last-of-type {
+            padding: 0 0 0 3px;
+          }
+
+          > a {
+            display: table;
+            width: 100%;
+            padding: 14px 50px;
+            @include box-size(border-box);
+
+            > span {
+              display: table-cell;
+              vertical-align: middle;
+              text-align: left;
+
+              &.icon {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+
+      &.small {
+
+        > ul {
+          width: 100%;
+          padding-left: 0;
+
+          > li {
+            width: 33.33%;
+
+            > a {
+              padding: 14px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > dl.attention-wrap {
+    padding-top: 70px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    border-top: 1px solid $color-box-line;
+
+    > dd {
+      margin-bottom: 3px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

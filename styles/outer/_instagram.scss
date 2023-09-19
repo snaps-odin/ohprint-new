@@ -1,0 +1,22 @@
+div.outer-instagram-wrap {
+  width: 1140px;
+  margin: 60px auto 104px auto;
+
+  > div {
+
+    &.top {
+      margin-bottom:60px;
+
+      > span {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &.bottom {
+      height: 466px;
+      margin: 54px 0 0 0;
+      overflow: hidden;
+    }
+  }
+}

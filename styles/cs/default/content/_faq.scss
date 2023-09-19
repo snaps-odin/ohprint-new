@@ -1,0 +1,71 @@
+@mixin cs-default-content-faq {
+
+  > div.tab-wrap {
+    margin-bottom: 30px;
+  }
+
+  > div.list {
+    line-height: 1.67em;
+    width: 100%;
+
+    > div.items {
+
+      > div {
+
+        &.item {
+          @include cs-faq-item;
+
+          > div {
+
+            &.top {
+              font-family: $font-bold;
+              font-weight: 500;
+            }
+          }
+
+          &:first-of-type {
+            border-top: 1px solid $color-disabled;
+          }
+        }
+
+        &.nothing {
+          display: table;
+          width: 100%;
+          text-align: center;
+
+          > span {
+            display: table-cell;
+            height: 415px;
+            vertical-align: middle;
+
+            > span {
+              display: block;
+
+              &:first-child {
+                line-height: 1.71em;
+                font-family: $font-bold;
+                font-size: $font-big;
+                word-break: break-all;
+
+                > em {
+                  color: $color-error;
+                }
+              }
+
+              &:last-child {
+                margin-top: 6px;
+                color: $color-gray;
+                font-size: $font-medium;
+                line-height: 1.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > div.pagination-wrap {
+    margin-top: 30px;
+  }
+}

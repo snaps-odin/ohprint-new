@@ -1,0 +1,35 @@
+@import "showcase/base";
+@import "options/base";
+
+@mixin store-intro-diy {
+  margin: 70px 0 0 0;
+  padding: 0 0 70px 0;
+  border-bottom: 1px solid $color-disabled;
+
+  > div.inner {
+    @include row-contents;
+
+    > div {
+      float: left;
+      display: block;
+
+      &.left {
+        width: 840px;
+        margin: 0 40px 0 0;
+        @include transition(margin $animation-sec*.25 $animation-easing);
+
+        > div.store-intro-diy-showcase-wrap {
+          @include store-intro-diy-showcase;
+        }
+      }
+
+      &.right {
+        width: 260px;
+
+        > div.store-intro-diy-options-wrap {
+          @include store-intro-diy-options;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@mixin store-intro-diy-option-quantity {
+  padding: 20px 0 0 0;
+
+  > div.top {
+    display: block;
+
+    > h4 {
+      font-family: $font-bold;
+      font-size: 11px;
+    }
+  }
+
+  > div.bottom {
+    display: block;
+    margin: 10px 0 0 0;
+
+    > div.input-quantity {
+
+      > div {
+        width: 100px;
+      }
+    }
+  }
+}

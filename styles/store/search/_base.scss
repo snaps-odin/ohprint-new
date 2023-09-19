@@ -1,0 +1,441 @@
+@import "tile";
+@import "filter";
+@import "option";
+
+div.store-search-wrap {
+  min-width: 1200px;
+
+  > div.container {
+
+    > form {
+
+      > div {
+
+        &.top {
+          width: 100%;
+          min-width: 1200px;
+
+          &.fixed {
+            position: fixed;
+            z-index: 10;
+            top: 0;
+          }
+
+          > div.store-search-filter-wrap {
+            @include store-search-filter;
+          }
+
+          > div.store-search-option-wrap {
+            @include store-search-option;
+          }
+        }
+
+        &.middle {
+          @include row-contents;
+
+          height: 24px;
+          line-height: 24px;
+          padding: 74px 30px 23px 30px;
+          top: 0;
+
+          @include transition(padding-top $animation-sec);
+
+          > div {
+
+            &.left {
+              float: left;
+
+              > span {
+
+                &.design-num {
+                  font-size: 12px;
+                  font-family: $font-bold;
+                  padding-right: 10px;
+                }
+
+                &.line {
+                  margin: 0 8px;
+                  width: 2px;
+                  height: 2px;
+                  background-color: $color-default;
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+              }
+            }
+
+            &.right {
+              float: right;
+
+              > ul {
+
+                > li {
+                  float: left;
+                  padding-right: 7px;
+
+                  > div.radio-icon {
+                    display: block;
+
+                    > label {
+
+                      > span {
+
+                        &.mode-thumbnail {
+                          @extend .icon-mode-box-2424;
+
+                          &:hover {
+                            @extend .icon-mode-box-2424-over;
+                          }
+                        }
+
+                        &.mode-preview {
+                          @extend .icon-mode-list-2424;
+
+                          &:hover {
+                            @extend .icon-mode-list-2424-over;
+                          }
+                        }
+
+                        &.mode-like {
+                          @extend .icon-good-b-2424;
+
+                          &:hover {
+                            @extend .icon-good-b-2424-over;
+                          }
+                        }
+                      }
+                    }
+
+                    > input {
+
+                      &:checked {
+
+                        & + label {
+
+                          > span {
+
+                            &.mode-thumbnail {
+                              @extend .icon-mode-box-2424-on;
+                            }
+
+                            &.mode-preview {
+                              @extend .icon-mode-list-2424-on;
+                            }
+
+                            &.mode-like {
+                              @extend .icon-good-y-2424;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  &:last-child {
+                    padding-right: 0;
+                  }
+                }
+
+                &:after {
+                  display: block;
+                  clear: both;
+                }
+              }
+            }
+
+            &:after {
+              display: block;
+              clear: both;
+            }
+          }
+
+          &.no-filter {
+            padding: 23px 30px 23px 30px;
+          }
+        }
+      }
+
+      &.active {
+
+        > div.top {
+
+          > div {
+
+            > div.container {
+
+              > div {
+
+                &.top {
+
+                  > div.inner > div.right > button {
+                    @extend .active;
+                  }
+                }
+
+                &.bottom {
+                  @extend .active;
+                }
+              }
+            }
+          }
+        }
+
+        > div.middle {
+          padding-top: 328px;
+
+          &.fixed {
+            padding-top: 74px;
+          }
+        }
+      }
+    }
+
+    > div {
+      @include row-contents;
+
+      > ul {
+
+        > li {
+          float: left;
+          margin: 0 30px 30px 0;
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+
+          &.nothing {
+            width: 1140px;
+            height: 326px;
+            text-align: center;
+            margin: 0;
+            padding-top: 274px;
+
+            > h2 {
+              font-size: 18px;
+              padding-bottom: 18px;
+            }
+
+            > span {
+              display: block;
+
+              > em {
+                vertical-align: top;
+                display: inline-block;
+                padding: 0 2px;
+              }
+            }
+          }
+        }
+
+        &.column-2 {
+
+          > li {
+            margin: 0 30px 30px 0;
+
+            &:nth-child(2n) {
+              margin-right: 0;
+            }
+
+            > div {
+
+              > div {
+
+                &.top {
+                  width: 555px;
+                  height: 270px;
+                }
+
+                &.bottom {
+                  width: 525px;
+
+                  > span.title {
+                    width: 500px;
+
+                    &.diy {
+                      width: auto;
+                    }
+                  }
+
+                  > button {
+                    right: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.column-4 {
+
+          > li {
+            margin: 0 20px 30px 0;
+
+            &:nth-child(4n) {
+              margin-right: 0;
+            }
+
+            > div {
+
+              > div {
+
+                &.top {
+                  width: 270px;
+                  height: 600px;
+                }
+
+                &.bottom {
+                  width: 240px;
+
+                  > span.title {
+                    width: 210px;
+
+                    &.diy {
+                      width: auto;
+                    }
+                  }
+
+                  > button {
+                    right: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+
+      > div.loading {
+        text-align: center;
+        padding-top: 60px;
+      }
+
+      &.preview {
+
+        > div.preview-diy {
+          width: 1140px;
+
+          > ul {
+            display: inline-block;
+            width: 100%;
+
+            > li {
+              float: left;
+              display: table;
+              width: 555px;
+              margin: 0 30px 0 0;
+              background-color: $color-button-disabled-background;
+
+              &:last-of-type {
+                margin: 0;
+              }
+
+              > div {
+
+                &.top {
+                  width: 100%;
+                  text-align: center;
+
+                  > span {
+                    position: relative;
+                    display: inline-block;
+
+                    > img {
+                      width: 555px;
+                    }
+                  }
+                }
+
+                &.bottom {
+                  width: 100%;
+                  vertical-align: middle;
+                  position: relative;
+                  padding: 15px;
+
+                  @include box-size(border-box);
+
+                  > span {
+                    float: left;
+                    font-size: $font-medium;
+                    color: $color-default;
+                    text-align: left;
+                    line-height: 45px;
+
+                    &.cause-icon {
+                      line-height: 0;
+                      vertical-align: top;
+                      margin: 14px 0 0 5px;
+                      cursor: pointer;
+                    }
+                  }
+
+                  > button {
+                    float: right;
+
+                    &.diy {
+                      color: $color-default;
+                      background-color: #ffce53;
+                      border-color: #ffce53;
+
+                      &:hover {
+                        background-color: #ffd979;
+                        border-color: #ffd979;
+                      }
+                    }
+                  }
+
+                  &:after {
+                    clear: both;
+                    display: block;
+                    content: '';
+                  }
+                }
+              }
+
+              &.full {
+                width: 100%;
+
+                > div.top {
+                  background-color: #fdf2ce;
+                }
+              }
+            }
+          }
+        }
+
+        > ul {
+          width: 1140px;
+          margin: 0 auto;
+
+          > li {
+            width: 1140px;
+            height: 620px;
+            margin: 60px 0 0 0;
+
+            &.nothing {
+              width: 1140px;
+              height: 326px;
+              text-align: center;
+              margin: 0;
+              padding-top: 274px;
+
+              > h2 {
+                font-size: 18px;
+                padding-bottom: 18px;
+              }
+            }
+
+            &.only-one {
+              margin: 50px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

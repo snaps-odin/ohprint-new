@@ -1,0 +1,29 @@
+@mixin home-sample-pack {
+  height: 340px;
+  padding: 82px 0;
+  text-align: center;
+  color: $color-white;
+  @include box-size(border-box);
+  background: url("#{$CDN_URL}/images/home/banner-sample-2560340.jpg") 50% 0 / cover no-repeat;
+
+  > h3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  > span {
+    display: block;
+    padding: 19px 0 30px;
+    font-size: $font-large;
+    line-height: 24px;
+  }
+
+  > button {
+    background-color: transparent;
+    border: 1px solid #9bb6e2;
+
+    &:hover {
+      border: 1px solid $color-white;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "condition";
+@import "product";
+
+div.delivery-wrap {
+  padding: 0 0 160px 0;
+
+  > div.container {
+    @include row-contents;
+
+    > form {
+
+      > div.top {
+
+        > h1 {
+          text-align: center;
+          font-size: 28px;
+          line-height: 160px;
+        }
+
+        > div.delivery-condition-wrap {
+          @include delivery-condition-wrap;
+        }
+      }
+
+      > div.middle {
+        padding: 80px 0 0 0;
+
+        > div.delivery-product-wrap {
+          @include delivery-product-wrap;
+        }
+
+        > div.pagination-wrap {
+          padding: 60px 0 0 0;
+        }
+      }
+
+      > div.bottom {
+        padding: 80px 0 0 0;
+
+        > div {
+
+          > div {
+
+            > span.tit.first {
+              padding-top: 0;
+            }
+
+            > dl.attention-wrap {
+
+              &:first-of-type {
+                padding-bottom: 55px;
+              }
+
+              &:nth-child(2) {
+
+                > dd.dotBlank {
+                  font-family: $font-bold;
+                  font-size: $font-medium;
+                  padding-left: 0;
+                  padding-top: 14px;
+
+                  &:nth-of-type(1) {
+                    padding-top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+div.error-wrap {
+  position: relative;
+  padding: 250px 0 235px 0;
+
+  > div.container {
+
+    > div.top {
+      text-align: center;
+
+      > span {
+        width: 210px;
+        height: 210px;
+        display: inline-block;
+        background: url("#{$CDN_URL}/images/icon/png/error-210210-3x.png") 0% 0% / cover no-repeat;
+      }
+    }
+
+    > div.bottom {
+      text-align: center;
+
+      > h3 {
+        padding: 20px 0 14px 0;
+        font-size: 18px;
+      }
+
+      > span {
+        color: $color-gray;
+        font-size: 13px;
+        line-height: 1.69em;
+      }
+    }
+  }
+}

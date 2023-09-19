@@ -1,0 +1,109 @@
+div.tutorial-clipart-wrap {
+  padding: 0 30px;
+
+  > h3 {
+    padding: 20px 0;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  > p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  > ul {
+
+    > li {
+      border-top: 1px solid $color-box-line;
+      padding: 70px 0 0 0;
+      margin: 70px 0 0 0;
+
+      > h4 {
+        font-size: 28px;
+        line-height: 1.2;
+        text-align: center;
+        padding: 0 0 70px 0;
+
+        > em {
+          color: $color-blue;
+        }
+      }
+
+      > ul {
+
+        > li {
+          float: left;
+          width: 560px;
+
+          > div {
+            width: 560px;
+            height: 360px;
+
+            > img {
+              width: 560px;
+              height: 360px;
+            }
+          }
+
+          > p {
+            font-size: 13px;
+            line-height: 1.54;
+            padding:20px 0;
+            text-align: center;
+
+            > em {
+              color: $color-blue;
+            }
+          }
+
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+
+        &:after {
+          clear: both;
+          display: block;
+          content: '';
+        }
+      }
+
+      &:first-child {
+
+        > h4 {
+
+          > em {
+            color: #ffa800;
+          }
+        }
+      }
+    }
+
+    &.small {
+
+      > li {
+
+        > ul {
+
+          > li {
+            float: left;
+            width: 100%;
+            height: auto;
+
+            > div {
+              width: 100%;
+              height: auto;
+
+              > img {
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@mixin home-promote-point {
+  height: 130px;
+
+  > div.inner {
+
+    > ul {
+
+      > li {
+        width: 360px;
+        margin-left: 30px;
+        float: left;
+        position: relative;
+
+        > div {
+          width: 100%;
+          height: 130px;
+          display: table;
+          padding: 25px 0 25px 55px;
+          @include box-size(border-box);
+
+          > div {
+            display: table-cell;
+            text-align: left;
+
+            &.left {
+              vertical-align: middle;
+              width: 100px;
+
+              > div {
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+            &.right {
+              vertical-align: middle;
+
+              > span {
+                display: block;
+                font-family: $font-normal;
+                color: $color-default;
+
+                &.title {
+                  font-family: $font-bold;
+                  font-size: 16px;
+                  padding: 0 0 9px 0;
+                  line-height: 1.45em;
+                }
+
+                &.sub-desc {
+                  font-size: $font-medium;
+                  line-height: 18px;
+                }
+              }
+            }
+          }
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

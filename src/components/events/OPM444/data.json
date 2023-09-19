@@ -1,0 +1,40 @@
+[
+  {
+    "key": "B5SRx_A2W",
+    "width": "26.88478035444947%",
+    "height": "1.6026442307692308%",
+    "left": "17.431419683257918%",
+    "top": "96.36478365384616%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/apparel/overview?productGroupCode=701"
+    }
+  },
+  {
+    "key": "IOlO75nTC",
+    "width": "26.2667326546003%",
+    "height": "1.5055288461538463%",
+    "left": "55.90179581447964%",
+    "top": "96.403125%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/new-stack-glass/intro/defaults"
+    }
+  },
+  {
+    "key": "AuKkxNMuB",
+    "width": "35.37837009803921%",
+    "height": "1.7259615384615383%",
+    "left": "32.43778280542987%",
+    "top": "58.218269230769224%",
+    "type": "goLink",
+    "desc": {
+      "type": "openLayerPostComment",
+      "title": "오프린트미 CM송 제목 짓기",
+      "width": 500,
+      "isNeedLogin": true
+    }
+  }
+]

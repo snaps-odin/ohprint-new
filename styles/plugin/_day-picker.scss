@@ -1,0 +1,143 @@
+/* DayPicker styles */
+
+.DayPicker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  @include user-select(none);
+}
+
+.DayPicker-Month {
+  width: 256px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  @include user-select(none);
+  outline: 1px solid $color-default !important;
+}
+
+.DayPicker-NavBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 .5rem;
+}
+
+.DayPicker-NavButton {
+  position: absolute;
+  top: 19px;
+  cursor: pointer;
+}
+
+.DayPicker-NavButton--prev {
+  left: 55px;
+  @extend .icon-prev-month-1010;
+
+  &:hover {
+    @extend .icon-prev-month-1010-over;
+  }
+}
+
+.DayPicker-NavButton--next {
+  right: 55px;
+  @extend .icon-next-month-1010;
+
+  &:hover {
+    @extend .icon-next-month-1010-over;
+  }
+}
+
+.DayPicker-Caption {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.DayPicker-Weekdays {
+  width: 100%;
+  height: 30px;
+  background: $color-box-background;
+}
+
+.DayPicker-WeekdaysRow {
+  height: 100%;
+  padding: 0 10px;
+}
+
+.DayPicker-Weekday {
+  float: left;
+  width: 33px;
+  color: $color-default;
+  font-size: 11px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.DayPicker-Body {
+  padding: 10px;
+}
+
+.DayPicker-Week {
+  display: table-row;
+}
+
+.DayPicker-Day {
+  display: table-cell;
+  width: 34px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.DayPicker--interactionDisabled .DayPicker-Day {
+  cursor: default;
+}
+
+/* Default modifiers */
+
+.DayPicker-Day--today {
+  width: 30px;
+  height: 30px;
+  opacity: 0.9;
+  color: $color-default;
+  border-radius: 100px;
+  background: #f2f4f7;
+}
+
+.DayPicker-Day--disabled {
+  cursor: default;
+  color: #ccc;
+  pointer-events: none;
+}
+
+.DayPicker-Day--outside {
+  cursor: default;
+  color: #ccc;
+  pointer-events: none;
+}
+
+/* Example modifiers */
+
+.DayPicker-Day--sunday {
+  background-color: #f7f8f8;
+}
+
+.DayPicker-Day--sunday:not(.DayPicker-Day--today) {
+  color: #dce0e0;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  width: 30px;
+  height: 30px;
+  opacity: 0.9;
+  color: $color-white;
+  border-radius: 100px;
+  background: $color-blue;
+}

@@ -1,0 +1,120 @@
+div.withdraw-wrap {
+  width: 748px;
+  margin: 0 auto;
+  padding: 0 0 160px 0;
+
+  > div.container {
+
+    > form {
+
+      > div.top {
+        padding: 56px 0;
+        text-align: center;
+
+        > h1 {
+          font-size: 28px;
+          line-height: 29px;
+        }
+
+        > div.txt {
+          padding: 18px 0 0 0;
+          font-size: $font-medium;
+          line-height: 20px;
+        }
+      }
+
+      > div.middle {
+        text-align: left;
+        font-size: 12px;
+
+        > div.top {
+
+          > div {
+            display: inline-table;
+            margin: 0 0 20px 0;
+
+            &:last-child {
+              margin: 0;
+            }
+
+            > span {
+              display: table-cell;
+              color: $color-light-gray;
+              line-height: 22px;
+              vertical-align: top;
+
+              &.desc {
+                display: block;
+                padding: 4px;
+                color: $color-default;
+                font-family: $font-bold;
+              }
+
+              &.txt {
+                display: block !important;
+                width: 100%;
+                padding-left: 4px;
+
+                &.red {
+                  color: $color-origin;
+                }
+              }
+            }
+          }
+        }
+
+        > div.bottom {
+          padding-top: 28px;
+
+          > span {
+            display: inline-block;
+
+            > span {
+              display: inline-block;
+              float: left;
+              width: 249px;
+              padding-bottom: 15px;
+            }
+          }
+
+          > div {
+            padding: 0 0 40px 0;
+
+            textarea {
+              width: 722px;
+              height: 74px;
+              min-height: 74px;
+              max-height: 74px;
+            }
+          }
+        }
+      }
+
+      > div.bottom {
+        clear: both;
+
+        div.button {
+          text-align: center;
+
+          > button.left {
+            margin-right: 6px;
+          }
+        }
+      }
+
+      > div.middle, div.bottom {
+
+        > div {
+
+          > h2 {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            font-family: $font-bold;
+            line-height: 50px;
+            border-bottom: 1px solid $color-light-gray;
+          }
+        }
+      }
+    }
+  }
+}

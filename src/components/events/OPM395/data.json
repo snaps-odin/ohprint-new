@@ -1,0 +1,75 @@
+[
+  {
+    "key": "_8yD9IYNP",
+    "width": "23.69707812060107%",
+    "height": "0.9671090691771326%",
+    "left": "38.203175862630204%",
+    "top": "58.21058739652993%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/pr/overview"
+    }
+  },
+  {
+    "key": "yNLazzxcR",
+    "width": "23.51573222392314%",
+    "height": "0.958317657256667%",
+    "left": "38.16819749436937%",
+    "top": "68.21760041661994%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/sticker/overview"
+    }
+  },
+  {
+    "key": "NTj1wkVzJ",
+    "width": "23.672774031355576%",
+    "height": "1.0361880039706002%",
+    "left": "38.138229782516895%",
+    "top": "79.310774410399%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/card/overview"
+    }
+  },
+  {
+    "key": "_C_zyhF2p",
+    "width": "23.503710772540117%",
+    "height": "0.9920577243847863%",
+    "left": "38.07900918496622%",
+    "top": "88.20498741347761%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/brochure/intro/defaults"
+    }
+  },
+  {
+    "key": "lKnhTu6jb",
+    "width": "18.23839754671664%",
+    "height": "0.9798755810634481%",
+    "left": "40.6492009893194%",
+    "top": "98.40964742127609%",
+    "type": "goLink",
+    "desc": {
+      "type": "marketingAgree",
+      "emailAgree" : true,
+      "smsAgree" : true
+    }
+  },
+  {
+    "key":"KOQlTC_zW",
+    "width":"63.804686876396865%",
+    "height":"2.3340048292923186%",
+    "left":"18.06673364164272%",
+    "top":"91.55787167957902%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/events"
+    }
+  }
+]

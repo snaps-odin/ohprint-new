@@ -1,0 +1,141 @@
+div.notice-board-wrap {
+  position: relative;
+  width: 1140px;
+  min-height: 800px;
+  margin: 0 auto;
+
+  > div.top{
+    width: 100%;
+    height: 154px;
+
+    > span{
+      display: block;
+      text-align: center;
+      font-family: $font-normal;
+      font-size: 28px;
+      color: $color-default;
+      padding: 63px 0 63px 0;
+    }
+
+  }
+
+  > div.middle{
+    > div.notice-table-container{
+      width:100%;
+      padding-bottom:160px;
+      border-top:1px solid $color-default;
+
+      > div.notice-pagination{
+        margin-top:40px;
+      }
+
+      > div.notice-table-row{
+
+        > div.row-container{
+          display: table;
+          width: 100%;
+
+          > div.td{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            font-family: $font-normal;
+            height: 50px;
+            border-bottom: 1px solid $color-box-line;
+
+            &.active{
+              font-family: $font-bold;
+            }
+          }
+
+          > div.td:nth-child(1){
+            width: 14%;
+          }
+          > div.td:nth-child(2){
+            text-align: left;
+            width: 71.9%;
+          }
+          > div.td:nth-child(3){
+            width: 14%;
+          }
+        }
+
+        > div.contents{
+          width: 100%;
+          overflow: hidden;
+          transition: 0.45s;
+          cursor: default;
+
+          > span{
+            display: block;
+            text-align: left;
+            width: 71.9%;
+            margin-left:14%;
+            padding: 26px 0 44px 0;
+            font-family: $font-normal;
+            font-size: $font-medium;
+            line-height: 22px;
+            color: $color-default;
+          }
+
+
+          &.active{
+            height: auto;
+            border-bottom: 1px solid #000000;
+          }
+        }
+
+      }
+
+      > div.notice-table-row:hover{
+        cursor: pointer;
+        //background: $color-box-line;
+      }
+
+      > div.notice-table-header{
+        display: table;
+        width: 100%;
+
+        >div{
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          height: 50px;
+          font-family: $font-bold;
+          font-size:$font-medium;
+          background: $color-box-background;
+        }
+
+        > div:nth-child(1){
+          width: 14%;
+        }
+        > div:nth-child(2){
+          width: 71.9%;
+        }
+        > div:nth-child(3){
+          width: 14%;
+        }
+      }
+
+      > div.noitce-none{
+        display: table;
+        width: 100%;
+        height: 50px;
+
+        > span{
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+
+        }
+
+      }
+
+    }
+  }
+
+  > div.bottom{
+    margin-top:40px;
+    margin-bottom:160px;
+  }
+}

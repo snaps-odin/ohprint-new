@@ -1,0 +1,84 @@
+div.review-notification-layer-wrap {
+  width: 640px;
+
+  > div.container {
+
+    > div {
+
+      &.middle {
+        padding: 30px 30px 0 30px !important;
+        display: table;
+        width: 100%;
+        height: 190px;
+        @include box-size(border-box);
+
+        > div {
+          display: table-cell;
+
+          &.left {
+            width: 190px;
+            height: 190px;
+            vertical-align: middle;
+
+            > div {
+              width: 190px;
+              height: 190px;
+            }
+          }
+
+          &.right {
+            font-family: $font-normal;
+            padding: 35px 0 35px 30px;
+            color: $color-default;
+
+            > span {
+              display: block;
+
+              &.title {
+                font-size: 22px;
+                padding: 0 0 16px 0;
+                line-height: 1.45em;
+
+                > strong {
+                  font-family: $font-bold;
+                }
+              }
+
+              &.sub-desc {
+                font-size: $font-medium;
+                line-height: 1.67em;
+
+                > em {
+                  font-family: $font-bold;
+                  color: $color-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.bottom {
+        padding: 0 !important;
+
+        > span {
+          display: block;
+
+          &.top {
+            padding: 40px 0 40px 0;
+
+            > button:first-of-type {
+              margin: 0 6px 0 0;
+            }
+          }
+
+          &.bottom {
+            padding: 12px 20px;
+            background: #fafafa;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

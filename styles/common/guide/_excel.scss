@@ -1,0 +1,159 @@
+div.guide-excel-wrap {
+  padding: 0 16px;
+
+  > section {
+    background: $color-white;
+
+    > div.inner {
+      @include row-contents;
+      padding: 70px 0;
+
+      > h3 {
+        font-size: 30px;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      > p {
+        padding: 20px 0 0 0;
+        text-align: center;
+        font-size: 14px;
+
+        > em {
+          color: $color-blue;
+        }
+      }
+
+      > ul {
+        margin-top: 70px;
+
+        > li {
+          float: left;
+          margin-left: 20px;
+          margin-top: 70px;
+
+          > div {
+
+            &.top {
+
+              > img {
+                width: 100%;
+              }
+            }
+
+            &.bottom {
+              min-height: 52px;
+              padding: 20px 0 0 0;
+
+              > p {
+                font-size: 13px;
+                line-height: 20px;
+                text-align: center;
+                margin-top: 0;
+
+                > em {
+
+                  &.blue {
+                    color: $color-blue;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.small {
+
+          > li {
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 0 20px 0;
+          }
+        }
+
+        &:after {
+          clear: both;
+          display: block;
+          content: '';
+        }
+      }
+
+      &.small {
+        width: 100% !important;
+
+        > p {
+          padding: 20px 0 0 0 !important;
+        }
+
+      }
+    }
+
+    &.border-top {
+
+      > div {
+        border-top: 1px solid $color-box-line;
+      }
+    }
+
+    &.col-2 {
+
+      > div {
+
+        > ul {
+
+          > li {
+            width: 560px;
+
+            &:nth-child(2n+1) {
+              margin-left: 0;
+            }
+
+            &:nth-child(-n+2) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.excel-attendion {
+
+      &:last-of-type {
+
+        > div.inner {
+          padding: 70px 0 0 0;
+        }
+      }
+    }
+
+    &.excel-download {
+      width: 141px;
+      text-align: center;
+      margin: 0 auto 100px auto;
+
+      > a {
+        display: table;
+        width: 92px;
+        padding: 14px 24px;
+        color: #227447;
+        outline: 2px solid #227447;
+        line-height: 0;
+
+        > span {
+          display: table-cell;
+          vertical-align: middle;
+          font-size: $font-small;
+          font-family: $font-bold;
+
+          &:first-of-type {
+            text-align: left;
+          }
+
+          &:last-of-type {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

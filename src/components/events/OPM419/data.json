@@ -1,0 +1,113 @@
+[
+  {
+    "key": "ffcEqiZqS",
+    "width": "36.56502403366459%",
+    "height": "1.4585097926256825%",
+    "left": "12.308351168382822%",
+    "top": "32.80144021413584%",
+    "type": "goLink",
+    "desc": {
+      "type": "getCouponChoice",
+      "couponNumber" : "12A14489-1574-E380",
+      "isNeedLogin": true
+    }
+  },
+  {
+    "key": "-8-3xnzlF",
+    "width": "36.77388431164192%",
+    "height": "1.4745535017389348%",
+    "left": "50.94493023128193%",
+    "top": "32.78750167903404%",
+    "type": "goLink",
+    "desc": {
+      "type": "getCouponChoice",
+      "couponNumber" : "12A144A2-FC5B-3CC5",
+      "isNeedLogin": true
+
+    }
+  },
+  {
+    "key": "SjQZqaz_b",
+    "width": "35.84480139487548%",
+    "height": "1.5665373394480424%",
+    "left": "13.72213741219668%",
+    "top": "47.25582307156134%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/basic-pen/intro/defaults"
+    }
+  },
+  {
+    "key": "RVRnPZMjd",
+    "width": "35.50916260077426%",
+    "height": "1.6003378261863963%",
+    "left": "50.988590245350416%",
+    "top": "47.245972927618205%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/standard-pen/intro/defaults"
+    }
+  },
+  {
+    "key": "UFhyDwhCX",
+    "width": "36.649350766782405%",
+    "height": "1.3813628583149395%",
+    "left": "13.370152421076789%",
+    "top": "55.65559642465584%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/light-pen/intro/defaults"
+    }
+  },
+  {
+    "key": "PnkhTHoXS",
+    "width": "36.29869872735074%",
+    "height": "1.4227204163278346%",
+    "left": "50.6431920622805%",
+    "top": "55.628134858652565%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/eco-pen/intro/defaults"
+    }
+  },
+  {
+    "key": "BahseXuJJ",
+    "width": "36.06264935294939%",
+    "height": "1.421842610525819%",
+    "left": "31.943610375259418%",
+    "top": "72.12099550381912%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/memo-pad/intro/defaults"
+    }
+  },
+  {
+    "key": "NC3RXtcTu",
+    "width": "36.32688558878113%",
+    "height": "1.5472071764637547%",
+    "left": "31.825920874740582%",
+    "top": "82.30640028489124%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/note-pad/intro/defaults"
+    }
+  },
+  {
+    "key": "-iLyXNsF-",
+    "width": "36.157935911059226%",
+    "height": "1.6004129856492508%",
+    "left": "31.920396748782725%",
+    "top": "96.97495074077167%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/md/overview"
+    }
+  }
+]

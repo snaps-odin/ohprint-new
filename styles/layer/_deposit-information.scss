@@ -1,0 +1,67 @@
+div.deposit-info-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > div.middle {
+
+      > div.inner {
+
+        > table {
+          margin-bottom: 30px;
+
+          > thead {
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid $color-default;
+
+            > tr {
+
+              > td {
+
+                > span {
+                  float: left;
+                  font-family: $font-bold;
+                  font-size: 16px !important;
+                }
+
+                > button {
+                  float: right;
+                }
+              }
+            }
+          }
+
+          > tbody {
+
+            > tr {
+
+              > th {
+                background-color: $color-box-background;
+                font-family: $font-bold;
+                text-align: left;
+                padding: 15px 0 15px 16px;
+                border-bottom: 1px solid $color-disabled;
+              }
+
+              > td {
+                text-align: left;
+                padding: 15px 0 15px 16px;
+                border-bottom: 1px solid $color-disabled;
+                line-height: 20px;
+
+                &.color {
+                  color: $color-light-gray;
+                }
+
+                > em {
+                  color: $color-red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

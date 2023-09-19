@@ -1,0 +1,63 @@
+span.swipe-text-wrap {
+  display: inline-block;
+
+  > span {
+    float: left;
+
+    &.container {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      overflow: hidden;
+
+      > span.slider {
+        position: relative;
+        display: inline-block;
+        left: 0;
+        white-space: nowrap;
+        @include transition(left .3s ease-out);
+
+        > span {
+          margin: 0 10px 0 0;
+          color: $color-light-gray;
+          cursor: pointer;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          &.line {
+            margin: 0;
+            padding: 0 12px;
+            border-right: 1px solid $color-disabled;
+
+            &:first-child {
+              padding: 0 12px 0 0;
+            }
+
+            &:last-child {
+              padding: 0 0 0 12px;
+              border: 0;
+            }
+          }
+
+          > em {
+
+            &.active {
+              color: $color-default;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    &.btn {
+
+      > button {
+        width: 16px;
+        height: 16px;
+        margin: -4px 0 0 0;
+      }
+    }
+  }
+}

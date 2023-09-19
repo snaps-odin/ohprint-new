@@ -1,0 +1,104 @@
+@mixin order-discount-wrap {
+
+  > div {
+
+    &.top {
+
+      > span {
+
+        &.notice {
+          display: inline-block;
+          margin: 0 0 0 16px;
+
+          > em {
+            display: inline-block;
+            padding: 0 0 0 22px;
+            color: $color-blue;
+            background: url("#{$CDN_URL}/images/icon/svg/info-1818.svg") no-repeat;
+            line-height: 20px;
+          }
+        }
+
+        &.desc {
+          width: 300px;
+
+          > em.icon {
+            padding: 0 0 0 22px;
+            background: url("#{$CDN_URL}/images/icon/svg/sale-1818.svg") no-repeat;
+          }
+        }
+      }
+    }
+
+    &.bottom {
+
+      > table {
+
+        > tbody {
+
+          > tr {
+
+            > td {
+
+              > div.input {
+
+                input {
+                  text-align: right;
+                }
+
+                &.red {
+
+                  input {
+                    color: $color-error;
+
+                    &:disabled {
+                      color: inherit;
+                    }
+                  }
+                }
+              }
+
+              > button {
+                margin: 0 12px 0 6px;
+              }
+
+              > span {
+                display: inline-block;
+                color: $color-gray;
+                line-height: 34px;
+
+                &.unit {
+                  padding: 0 6px;
+                  color: $color-default;
+                }
+
+                > em {
+                  color: $color-default;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > span {
+
+        &.notice {
+          display: block;
+          height: 40px;
+          padding: 0 0 0 22px;
+          background: url("#{$CDN_URL}/images/icon/svg/info-1818.svg") 0 10px no-repeat;
+          line-height: 40px;
+
+          > em {
+            color: $color-blue;
+          }
+        }
+
+        &.btn {
+          margin: 0 0 40px 0;
+        }
+      }
+    }
+  }
+}

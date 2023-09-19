@@ -1,0 +1,171 @@
+div.review-create-layer-wrap {
+  width: 840px;
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+
+        > div.inner {
+
+          > dl {
+            padding-bottom: 0;
+          }
+
+          > table {
+            margin-top: 22px;
+            border-top: 1px solid $color-default;
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  background-color: $color-box-background;
+                  font-family: $font-bold;
+                  text-align: left;
+                  padding-left: 16px;
+                  border-bottom: 1px solid $color-disabled;
+                }
+
+                > td {
+                  padding-left: 16px;
+                  border-bottom: 1px solid $color-disabled;
+
+                  &.apparel {
+                    padding: 21px 0 21px 16px;
+                  }
+
+                  > div.thumbnail {
+                    width: 90px;
+                    height: 110px;
+                    margin: 21px 0;
+                  }
+
+                  > div {
+
+                    &.image-skin-loader-wrap {
+                      width: 90px;
+                      height: 110px;
+                      position: relative;
+                      overflow: hidden;
+                      background: $color-button-gray;
+
+                      > div {
+                        width: 100%;
+                        height: 100%;
+
+                        &.design {
+                          position: absolute;
+                          top: 0;
+                        }
+                      }
+                    }
+                  }
+
+                  &.evaluation {
+
+                    > span {
+                      display: block;
+                      text-align: center;
+                      width: 100%;
+
+                      &:first-child {
+                        font-family: $font-bold;
+                        padding-top: 30px;
+                        font-size: 16px;
+                      }
+
+                      &:last-child {
+                        padding-bottom: 28px;
+                        color: $color-light-gray;
+                      }
+
+                      &:nth-child(2) {
+                        padding: 12px 0;
+                      }
+                    }
+                  }
+
+                  &.attach {
+                    padding: 0 0 0 16px;
+                    position: relative;
+
+                    > div.file {
+                      width: auto;
+
+                      > label {
+
+                        > span {
+
+                          > span.tit {
+                            width: auto;
+
+                            > em {
+                              display: none;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  > div.input.box {
+
+                    > div {
+                      padding: 16px 0 16px 0;
+                      width: 185px;
+
+                      > input {
+                        width: 608px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            > tfoot {
+
+              > tr {
+
+                > td {
+                  padding-top: 20px;
+
+                  > div.textarea {
+
+                    > div {
+                      padding: 0;
+
+                      > textarea {
+                        width: 740px;
+                        height: 140px;
+                        min-height: 140px;
+                        max-height: 140px;
+                        padding: 12px 20px;
+                      }
+
+                      > span {
+                        width: 740px;
+                        margin: 0 20px;
+                      }
+                    }
+                  }
+
+                  &:last-child {
+                    color: $color-light-gray;
+                    padding-top: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

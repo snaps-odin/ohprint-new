@@ -1,0 +1,187 @@
+div.events-apply-beforehand-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+        padding: 20px 30px 20px 30px !important;
+
+        > div.inner {
+          width: 440px;
+
+          > table {
+            background: $color-box-background;
+            border: 1px solid $color-grid-line;
+            margin-bottom: 20px;
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  font-family: $font-bold;
+                  line-height: 60px;
+                  vertical-align: top;
+                  text-align: center;
+
+                  > em {
+                    color: $color-red;
+                  }
+                }
+
+                > td {
+                  padding: 13px 0;
+
+                  > div {
+
+                    &.input {
+                      float: left;
+
+                      > div {
+
+                        input {
+                          width: 60px;
+                        }
+
+                        span.error {
+                          word-wrap: unset;
+                          width: 84px;
+                          line-height: 1.6;
+                          margin-top: 10px;
+                        }
+                      }
+                    }
+
+                    &:after {
+                      display: block;
+                      content: '';
+                      clear: both;
+                    }
+                  }
+
+                  > span {
+                    float: left;
+                    padding: 0 6px;
+                    color: $color-button-white-border;
+                    line-height: 34px;
+                  }
+                }
+              }
+            }
+          }
+
+          > dl {
+            color: $color-light-gray;
+            line-height: 1.5em;
+          }
+
+          > div.checkbox {
+            margin-bottom: 9px !important;
+
+            > input {
+              width: 16px;
+            }
+
+            > label {
+
+              > span.desc {
+                display: table-cell;
+                line-height: 17px;
+
+                > button {
+                  margin-left: 5px;
+                  line-height: 17px;
+                  vertical-align: top;
+                  text-decoration: underline !important;
+                  pointer-events: all;
+                }
+              }
+            }
+
+            &:last-of-type {
+              margin: 0 !important;
+            }
+          }
+
+          > em {
+            display: block;
+            font-family: $font-bold;
+            font-size: $font-large;
+            text-align: center;
+            line-height: 1.69em;
+          }
+
+          > h3 {
+            font-family: $font-bold !important;
+            font-size: 20px !important;
+            text-align: center;
+          }
+
+          > h4 {
+            font-family: $font-bold !important;
+            font-size: 15px !important;
+            text-align: center;
+          }
+
+          &.agreement {
+
+            > table {
+              border: none;
+              border-top: 1px solid $color-light-gray;
+
+              > tbody {
+
+                > tr {
+                  border-bottom: 1px solid $color-disabled;
+
+                  > th {
+                    background: $color-box-background;
+                    border-right: 1px solid $color-disabled;
+                    line-height: 50px;
+
+                    &:last-of-type {
+                      border-right: none;
+                    }
+                  }
+
+                  > td {
+                    padding: 15px 0;
+                    text-align: center;
+                    background: $color-white;
+                    border-right: 1px solid $color-disabled;
+
+                    &:last-of-type {
+                      border-right: none;
+                    }
+                  }
+                }
+              }
+            }
+
+            > h4 {
+              margin-bottom: 30px;
+            }
+          }
+
+          &.complete {
+
+            > div {
+              padding: 20px 0;
+              margin: 30px 0 20px 0;
+              font-size: $font-medium;
+              background: $color-box-background;
+              text-align: center;
+              line-height: 1.67em;
+
+              > em {
+                color: $color-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@mixin order-payment-wrap {
+
+  > div.bottom {
+    height: 290px;
+
+    > table {
+
+      > tbody {
+
+        > tr {
+
+          &.error {
+            border-bottom: 0;
+          }
+
+          > td {
+            height: 34px;
+            line-height: 34px;
+            vertical-align: middle;
+
+            > span {
+              color: $color-gray;
+            }
+
+            > div.radio {
+
+              span {
+                display: inline-block;
+                vertical-align: middle;
+
+                &.icon:before {
+                  display: inline-block;
+                }
+
+                &.error {
+                  display: none;
+                }
+              }
+
+              .naver-point {
+                background-color: #191919;
+                color: #fff;
+                border-radius: 11px;
+                padding: 4px 6px;
+                font-size: 11px;
+                height: 22px;
+                box-sizing: border-box;
+                margin-left: 3px;
+              }
+            }
+          }
+
+          &.option {
+            background: $color-box-background;
+
+            > th {
+              padding: 0 0 0 20px;
+              text-align: left;
+
+              > span.icon {
+                @include help-question;
+                position: relative;
+                top: 3px;
+                left: 6px;
+                height: 15px;
+
+                &:hover {
+
+                  > span {
+                    display: block;
+                  }
+                }
+
+                > span {
+                  @include tip-box;
+                  top: -90px;
+                  left: 20px;
+                  width: 482px;
+                  font-family: $font-normal;
+                }
+              }
+            }
+
+            > td {
+              padding: 0 20px 0 0;
+
+              &.cards {
+                vertical-align: top;
+                line-height: 12px;
+
+                > div {
+                  padding: 7px 0;
+                }
+              }
+
+              > div {
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > p {
+      padding: 15px 0 0 0;
+      color: $color-gray;
+    }
+
+    > div.checkbox {
+      padding: 15px 0 0 0;
+    }
+  }
+}

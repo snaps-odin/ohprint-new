@@ -1,0 +1,72 @@
+@import "diy/base";
+@import "service/base";
+@import "guide";
+@import "price";
+@import "review";
+@import "recommend";
+
+div.store-intro-wrap {
+  &.digital-plus-wrap {
+    .store-intro-services-showcase-wrap {
+      .inner {
+        &.desc {
+          .bottom {
+            padding-top: 40px !important;
+
+            p {
+              font-size: 14px !important;
+            }
+          }
+
+          ul {
+            li {
+              + li {
+                margin-top: 70px !important;
+              }
+            }
+          }
+        }
+
+        > ul {
+          margin-top: 50px !important;
+        }
+
+        .bottom {
+          p {
+            line-height: 1.71 !important;
+          }
+        }
+      }
+    }
+  }
+
+  > div.container {
+
+    > section {
+
+      &.store-intro-diy-wrap {
+        @include store-intro-diy;
+      }
+
+      &.store-intro-service-wrap {
+        @include store-intro-service;
+      }
+
+      &.store-intro-guide-wrap {
+        @include store-intro-guide;
+      }
+
+      &.store-intro-price-wrap {
+        @include store-intro-price;
+      }
+
+      &.store-intro-review-wrap {
+        @include store-intro-review;
+      }
+
+      &.store-intro-recommend-wrap {
+        @include store-intro-recommend;
+      }
+    }
+  }
+}

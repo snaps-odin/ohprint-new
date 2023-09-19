@@ -1,0 +1,136 @@
+@import "showcase";
+
+@mixin store-overview-service {
+  background: $color-box-background;
+
+  &.fixed {
+    margin: 50px 0 0 0;
+
+    &.has-child {
+      margin: 100px 0 0 0;
+    }
+  }
+
+  > div {
+
+    &.inner {
+      @include row-contents;
+      padding: 70px 0;
+
+      em {
+        color: $color-blue;
+      }
+
+      > h3 {
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+      }
+
+      > ul {
+        display: inline-block;
+        width: 100%;
+        padding: 70px 0 0 0;
+
+        > li {
+          float: left;
+          display: inline-block;
+          width: 360px;
+          margin: 0 30px 0 0;
+
+          &:nth-of-type(3n) {
+            margin: 0;
+          }
+
+          > span {
+            display: block;
+
+            &.top {
+              width: 100%;
+              text-align: center;
+
+              > span {
+                position: relative;
+                display: inline-block;
+
+                > span.icon {
+                  position: absolute;
+                  left: 10px;
+                  bottom: 10px;
+                }
+
+                > img {
+                  width: 360px;
+                }
+              }
+            }
+
+            &.bottom {
+              text-align: center;
+
+              &.box {
+                padding: 30px 20px;
+                background: $color-white;
+                text-align: left;
+              }
+
+              > h4 {
+                display: block;
+                font-family: $font-bold;
+                font-size: 18px;
+                height: 24px;
+
+                > span {
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+              }
+
+              > span {
+                display: block;
+                padding: 13px 0 0 0;
+                font-size: 13px;
+                line-height: 1.62em;
+              }
+
+              > dl {
+                display: block;
+                padding: 15px 0 0 0;
+                @include box-size(border-box);
+
+                > dd {
+                  line-height: 1.67em;
+                  margin: 6px 0 0 0;
+
+                  &:first-of-type {
+                    margin: 0;
+                  }
+
+                  &:before {
+                    display: inline-block;
+                    width: 3px;
+                    height: 3px;
+                    margin: 3px 6px 3px 0;
+                    content: '';
+                    background: $color-blue;
+                  }
+                }
+              }
+
+              > button {
+                display: inline-block;
+                padding: 10px 0 0 0;
+                color: $color-blue;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.store-overview-services-showcase-wrap {
+      @include showcase;
+    }
+  }
+}

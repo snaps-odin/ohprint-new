@@ -1,0 +1,40 @@
+@mixin step-wrap {
+  @include row-contents;
+
+  > div.step {
+    position: relative;
+
+    &.step1 {
+      @extend .icon-step-01;
+    }
+
+    &.step2 {
+      @extend .icon-step-02;
+    }
+
+    &.step3 {
+      @extend .icon-step-03;
+    }
+
+    > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1140px;
+      height: 50px;
+      line-height: 50px;
+
+      > span {
+        font-family: $font-bold;
+        width: 380px;
+        text-align: center;
+        float: left;
+        color: $color-gray;
+
+        &.select, &.done {
+          color: $color-default;
+        }
+      }
+    }
+  }
+}

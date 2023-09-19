@@ -1,0 +1,11 @@
+.custom-personalization-modal__wrapper {
+  width: 718px;
+
+  & section {
+    overflow: auto;
+
+    & .modal-main {
+      padding: 30px;
+    }
+  }
+}

@@ -1,0 +1,237 @@
+div.store-search-tile-wrap {
+  position: relative;
+
+  > div {
+
+    > div.calendarListMap{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: $color-calendar-tripod;
+
+      > img.skin{
+        position:absolute;
+        width: 100%;
+        top:0;
+        left:0;
+      }
+
+      > img.contents{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+      }
+    }
+
+    &.top {
+      position: relative;
+      overflow: hidden;
+      width: 360px;
+      height: 440px;
+      text-align: center;
+      background-color: $color-white;
+      cursor: pointer;
+
+      > div {
+        width: 100%;
+        height: 100%;
+
+        &.option {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          > span {
+            position: absolute;
+
+            &.icon {
+              left: 0;
+              top: 20px;
+
+              > span {
+                display: block;
+                background-color: $color-white;
+                border-top-right-radius: 200px;
+                border-bottom-right-radius: 200px;
+                padding: 8px 15px;
+                font-family: $font-bold;
+                font-size: 11px;
+
+                &:last-child {
+                  margin-top: 6px;
+                }
+              }
+            }
+
+            &.info {
+              left: 15px;
+              bottom: 15px;
+
+              > span {
+                font-family: $font-normal;
+                font-size: $font-medium;
+                color: $color-gray;
+              }
+            }
+
+            &.template-cnt {
+              height: 26px;
+              left: 15px;
+              bottom: 15px;
+              padding: 6px 6px 6px 6px;
+              background-color: $color-white;
+              @include box-size(border-box);
+              @include border-radius(3px);
+              border: solid 1px $color-grid-line;
+              visibility: hidden;
+              opacity: 0;
+
+              > span {
+                font-family: $font-bold;
+                font-size: $font-small;
+                color: $color-default;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+        &.image-skin-loader-wrap {
+          position: relative;
+          overflow: hidden;
+          background: $color-button-gray;
+
+          &.sky {
+            background-color: rgb(239, 241, 245);
+          }
+
+          > div {
+            width: 100%;
+            height: 100%;
+
+            &.design {
+              position: absolute;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.bottom {
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      margin: 0 15px 0 15px;
+      width: 296px;
+
+      > span {
+        display: inline-block;
+        line-height: 40px;
+        font-family: $font-bold;
+
+        &.title {
+          width: 100%;
+          font-size: $font-medium;
+
+          @include text-ellipsis;
+
+          &.diy {
+            width: auto;
+
+            &.accessory {
+              width: 280px;
+            }
+          }
+        }
+
+        &.pdf {
+          float: right;
+          font-size: $font-medium;
+          font-family: $font-normal;
+        }
+
+        &.premium-icon {
+          line-height: 0;
+          vertical-align: top;
+          margin: 7px 3px 0 -5px;
+
+          & + span.title {
+            max-width: 268px;
+          }
+        }
+
+        &.cause-icon {
+          position: absolute;
+          top: 5px;
+          line-height: 0;
+          vertical-align: top;
+          margin: 7px 0 0 5px;
+          cursor: pointer;
+        }
+      }
+
+      > button {
+        position: absolute;
+        top: 0;
+        right: -34px;
+        display: inline-block;
+        line-height: 40px;
+
+        &:before {
+          vertical-align: middle;
+        }
+
+        &.like {
+          width: 24px;
+          height: 24px;
+          margin: 8px 0;
+          background: url("#{$CDN_URL}/images/icon/png/good-b-2424-3x.png") 0% 0% / cover no-repeat;
+
+          &.active {
+            background: url("#{$CDN_URL}/images/icon/png/good-y-2424-3x.png") 0% 0% / cover no-repeat;
+          }
+        }
+
+        &.price {
+          padding: 0 0 0 12px;
+          font-size: $font-medium;
+          font-family: $font-bold;
+        }
+      }
+    }
+
+    &.diy {
+      margin: 0 15px;
+      width: auto;
+    }
+  }
+
+  &:hover {
+    @include box-shadow (0 2px 4px 0 rgba(0, 0, 0, .2));
+    @include transition (all $animation-sec $animation-easing);
+
+    > div.top {
+
+      > div.option > span.template-cnt {
+        visibility: visible;
+        opacity: 1;
+        @include transition (visibility $animation-sec $animation-easing, opacity $animation-sec $animation-easing);
+      }
+    }
+
+    > div.bottom {
+
+      > button.like {
+        display: inline-block;
+
+        background: url("#{$CDN_URL}/images/icon/png/good-b-2424-over-3x.png") 0% 0% / cover no-repeat;
+
+        &.active {
+          background: url("#{$CDN_URL}/images/icon/png/good-y-2424-over-3x.png") 0% 0% / cover no-repeat;
+        }
+      }
+    }
+  }
+}

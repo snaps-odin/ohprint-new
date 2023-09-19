@@ -1,0 +1,70 @@
+div.tab-blue-wrap {
+  display: block;
+  background: $color-white;
+
+  &.fixed {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+  }
+
+  > div {
+    height: 50px;
+
+    > div.inner {
+      @include row-contents;
+      text-align: center;
+
+      > ul {
+        display: inline-block;
+
+        > li {
+          float: left;
+          display: inline-block;
+          height: 50px;
+          padding: 0 10px;
+          cursor: pointer;
+
+          > span {
+            display: inline-block;
+            height: 47px;
+            line-height: 50px;
+            padding: 0 10px;
+            font-family: $font-bold;
+
+            &.active, &:hover {
+              border-bottom: 3px solid $color-blue;
+            }
+          }
+        }
+      }
+    }
+
+    &.top {
+      border-bottom: 1px solid $color-disabled;
+    }
+
+    &.bottom {
+      border-bottom: 1px solid $color-disabled;
+      background: $color-box-background;
+
+      > div > ul > li {
+        padding-top: 10px;
+
+        > span {
+          height: 30px;
+          line-height: 30px;
+          padding: 0 15px;
+
+          &.active, &:hover {
+            border-bottom: none;
+            color: white;
+            background: $color-blue;
+            @include border-radius(15px);
+          }
+        }
+      }
+    }
+  }
+}

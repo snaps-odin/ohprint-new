@@ -1,0 +1,44 @@
+@mixin cs-floating-content-tutorial {
+  width: 405px;
+  padding: 0 16px;
+
+  > span {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0 20px 0;
+    color: $color-light-gray;
+    line-height: 1.67em;
+    text-align: center;
+  }
+
+  > ul {
+
+    > li {
+      display: table;
+      height: 50px;
+      border-bottom: 1px solid $color-disabled;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 1px solid $color-default;
+      }
+
+      &:last-of-type {
+        border: 0;
+      }
+
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+
+        &.title {
+          width: 389px;
+        }
+
+        &.icon {
+          width: 16px;
+        }
+      }
+    }
+  }
+}

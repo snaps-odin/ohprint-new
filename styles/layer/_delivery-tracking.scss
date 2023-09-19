@@ -1,0 +1,77 @@
+div.delivery-tracking-layer-wrap {
+  width: 770px;
+
+  > div.container {
+
+    > div.middle {
+      display: table;
+      width: 710px;
+      height: 710px;
+      overflow: hidden;
+      text-align: center;
+
+      > iframe {
+        width: 100%;
+        height: 710px;
+      }
+
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      > div{
+        > table.top30margin{
+          margin-top:30px;
+        }
+        > table{
+          width: 100%;
+
+          > tbody.contents{
+            text-align: center;
+          }
+          > tbody{
+            text-align: left;
+
+            > tr.colorRed{
+              > td{
+                color:#ed2e2e;
+              }
+            }
+
+            > tr {
+              border-bottom:1px $color-box-line solid;
+
+              > th, td {
+                width: 25%;
+                padding: 16px;
+              }
+
+              > th {
+                color: $color-default;
+                background: $color-box-background;
+                font-family: $font-bold;
+                font-size: $font-medium;
+              }
+
+              > td {
+                color: $color-default;
+                font-family: $font-normal;
+                font-size: $font-medium;
+              }
+
+
+            }
+
+            > tr.top-border {
+              border-top: 1px $color-light-gray solid;
+            }
+          }
+
+
+
+        }
+      }
+    }
+  }
+}

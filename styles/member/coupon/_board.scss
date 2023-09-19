@@ -1,0 +1,170 @@
+@mixin coupon-board-wrap {
+  position: relative;
+  padding-bottom: 40px;
+  border-top: 1px solid #191919;
+
+  > div {
+    padding-bottom: 17px;
+
+    > span {
+      vertical-align: top;
+      color: $color-light-gray;
+
+      &.txt {
+        padding-top: 2px;
+        padding-left: 2px;
+        display: inline-block;
+
+        > em {
+          color: #dc1f22;
+        }
+      }
+    }
+  }
+
+  > table {
+
+    > thead {
+
+      > tr {
+
+        > th {
+          height: 50px;
+          line-height: 50px;
+          background-color: $color-box-background;
+          font-family: $font-bold;
+        }
+      }
+    }
+
+    > tbody {
+
+      > tr {
+
+        > td {
+          border-bottom: 1px solid $color-disabled;
+          padding: 15px 0 14px 0;
+          text-align: center;
+          line-height: 20px;
+
+          &.red {
+            color: $color-red;
+          }
+
+          > button {
+            text-decoration: underline;
+            position: relative;
+
+          }
+        }
+      }
+    }
+
+    &.coupon {
+
+      > tbody {
+
+        > tr {
+
+          > td {
+
+            > div {
+              position: relative;
+
+              > span {
+
+                @include tip-box;
+                padding-right: 0;
+
+                left: 44px;
+                top: 25px;
+                width: 218px;
+                display: block;
+
+                > p {
+                  font-size: 12px;
+                  font-family: $font-bold;
+                  text-align: left;
+                  padding-bottom: 10px;
+                }
+
+                > div {
+                  max-height: 150px;
+                  overflow-x: hidden;
+                  overflow-y: auto;
+                }
+
+                > button.icon {
+                  position: absolute;
+                  top: 5px;
+                  right: 5px;
+                }
+              }
+
+              > button {
+                text-decoration: underline;
+                position: relative;
+
+              }
+            }
+
+            > span {
+              margin-left: 5px;
+
+              &.extinction {
+                border-radius: 2px;
+                border: 1px solid $color-origin;
+                color: $color-red;
+                padding: 5px 5px 4px 5px;
+                font-size: $font-small;
+              }
+            }
+
+            &:nth-child(1) {
+              padding-left: 30px;
+              text-align: left;
+            }
+
+            &.empty {
+              height: 415px;
+              font-family: YoonGothicPro740;
+              font-size: 13px;
+              text-align: center;
+              color: #191919;
+            }
+          }
+        }
+      }
+    }
+
+    &.money {
+
+      > tbody {
+
+        > tr {
+
+          > td {
+
+            &.gold {
+              color: $color-gold;
+            }
+
+            &.empty {
+              height: 415px;
+              font-family: YoonGothicPro740;
+              font-size: 13px;
+              text-align: center;
+              color: #191919;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > button {
+    position: absolute;
+    right: 0;
+    bottom: -39px;
+  }
+}

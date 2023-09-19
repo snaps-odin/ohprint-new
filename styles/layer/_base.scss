@@ -1,0 +1,198 @@
+div.layer-wrap {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  > div.outer {
+    position: absolute;
+    z-index: 1;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    > div.inner {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+
+      > div.centered {
+        position: relative;
+        display: inline-block;
+        opacity: 1;
+        color: $color-default;
+        text-align: left;
+        background: $color-white;
+        @include box-shadow(2px 4px 6px 0 rgba(0, 0, 0, 0.2));
+        @include border-radius(0);
+        @include transition($animation-sec $animation-easing);
+
+        &.async {
+          min-width: 0;
+          min-height: 0;
+          overflow: hidden;
+
+          &.transparent-mode {
+            background: none;
+            @include transition(none);
+            @include box-shadow(0 0 0 0 rgba(0, 0, 0, 0));
+          }
+
+          &.round {
+            @include transition(none);
+            @include border-radius(100px);
+          }
+        }
+
+        > div {
+          position: relative;
+          min-width: 460px;
+
+          &.popup {
+            > div.container {
+              > div,
+              > form > div {
+                &.top {
+                  > h2 {
+                    height: 50px;
+                    background: $color-default;
+                    color: $color-white;
+                    font-size: 16px;
+                    font-family: $font-bold;
+                    line-height: 50px;
+                    text-align: center;
+                  }
+                }
+
+                &.middle {
+                  padding: 40px 30px 20px 30px;
+                  overflow-x: hidden;
+                  overflow-y: auto;
+
+                  h3 {
+                    font-size: 14px;
+                    font-family: $font-bold;
+                  }
+
+                  > div.inner{
+
+                    &.text-center{
+                      text-align: center;
+                    }
+
+                    > em{
+                      line-height: 1.5;
+                    }
+                  }
+                }
+
+                &.bottom {
+                  padding: 20px 30px 40px 30px;
+                  text-align: center;
+
+                  > button {
+                    margin-right: 6px;
+
+                    &:last-child {
+                      margin: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          button.close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  > div.bg {
+    width: 100%;
+    height: 100%;
+    background: $color-layer-shadow;
+
+    &.dimmed {
+      background: rgba(249, 250, 252, 0.9);
+    }
+  }
+}
+
+// common
+@import "loading";
+@import "alert";
+// member
+@import "join";
+@import "login";
+@import "policy";
+@import "password";
+@import "welcome";
+@import "zipcode";
+@import "coupon";
+@import "delivery-coupon";
+@import "delivery-tracking";
+@import "purchase-agreement";
+@import "payment";
+@import "payment-change";
+@import "payment-information";
+@import "deposit-information";
+@import "receipt-print";
+@import "tax-in-voice";
+@import "cash-receipt";
+@import "document-download";
+@import "project-save-as";
+@import "project-edit";
+@import "cart-information";
+// store
+@import "store-preview";
+@import "design-qna";
+@import "sample-pack";
+@import "offset-notice";
+@import "shipping-guide";
+@import "offset-print-guide";
+@import "template-detail";
+@import "template-confirm";
+@import "product-detail";
+@import "design-method-select";
+// review
+@import "review-create";
+@import "review-notification";
+// notification
+@import "policy-notification";
+@import "cj-delivery";
+@import "cs-write";
+// events
+@import "events-image";
+@import "events-recommend";
+@import "events-apply";
+@import "events-winner";
+@import "events-apply-beforehand";
+@import "events-post-comment";
+@import "events-fan-recommend";
+// sms
+@import "sms";
+@import "custom-personalization";
+
+@import "fair-apparel-size-alert";
+@import "coupon-payment-schedule";
+@import "advance-reservation";
+@import "marketing-agree";
+@import "design-competition";
+@import "toast-popup";
+
+@import "common-guide-layer";
+@import "events-cheer-up-recommend";
+@import "events-new-year-plan-recommend";
+@import "events-new-year-plan-success";
+@import "events-app-review";

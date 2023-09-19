@@ -1,0 +1,259 @@
+@mixin store-intro-diy-option-panel {
+  position: relative;
+  margin: 20px 0 0 0;
+
+  &:first-of-type {
+    margin: 0;
+  }
+
+  > div.smallFont{
+    font-size:$font-small;
+    font-family: $font-bold;
+  }
+
+  > div {
+
+    &.top {
+      display: block;
+      position: relative;
+
+      > h4 {
+        font-family: $font-bold;
+        font-size: 11px;
+        line-height: 17px;
+
+        > span.colorRed{
+          color:#ed2e2e;
+        }
+      }
+
+      > span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+
+        > span {
+          font-size: 11px;
+          font-family: $font-normal;
+          vertical-align: top;
+          line-height: 17px;
+          padding: 0 0 0 3px;
+        }
+      }
+
+      &.active {
+
+        > h4 {
+          padding: 0 60px 0 0;
+        }
+      }
+    }
+
+    &.middle {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 200px;
+      top: 21px;
+      left: -220px;
+      padding: 4px;
+      background: $color-white;
+      border: 1px solid $color-button-white-border;
+
+
+      > span {
+        display: block;
+        word-break:break-all;
+
+        &.top {
+          width: 200px;
+          height: 160px;
+          background: url('#{$CDN_URL}/images/common/loading/loading-8080.gif') center center / 40px 40px no-repeat;
+
+          > span:before {
+            @include scale(.5);
+            @include transform-origin(left top);
+          }
+
+          > img {
+            @include scale(.5);
+            @include transform-origin(left top);
+          }
+        }
+
+        &.middle {
+          position: absolute;
+          top: 4px;
+          left: 4px;
+        }
+
+        &.bottom {
+          padding: 15px 12px 15px 12px;
+
+          > h5 {
+            display: block;
+            font-family: $font-bold;
+            font-size: 12px;
+          }
+
+          > span {
+            display: block;
+            padding: 10px 0 0 0;
+            font-size: 11px;
+            line-height: 1.64em;
+          }
+
+          > dl {
+            display: block;
+            padding: 10px 0 0 0;
+
+            > dd {
+              display: table;
+              font-size: 11px;
+              line-height: 1.67em;
+              margin: 6px 0 0 0;
+
+              &:first-of-type {
+                margin: 0;
+              }
+
+              &:before {
+                display: inline-block;
+                width: 3px;
+                height: 3px;
+                margin: 3px 6px 3px 0;
+                content: '';
+                background: $color-blue;
+              }
+
+              > span {
+                display: table-cell;
+                > em {
+                  color: $color-blue;
+                }
+              }
+
+
+            }
+          }
+
+          > span.colors{
+            > span{
+              margin-left:6px;
+            }
+            > img{
+              width: 26px;
+              height:26px;
+              margin-left:6px;
+            }
+
+            > img:first-child{
+              margin-left:0;
+            }
+
+            > span:first-child{
+              margin-left:0;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  > ul.bottom {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    border-top: 1px solid $color-button-white-border;
+    border-left: 1px solid $color-button-white-border;
+
+    > li {
+      float: left;
+      position: relative;
+      display: inline-block;
+      width: 85px;
+      height: 33px;
+      border-right: 1px solid $color-button-white-border;
+      border-bottom: 1px solid $color-button-white-border;
+      font-size:$font-small;
+      font-family: $font-normal;
+
+      > span.icon {
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        pointer-events: none;
+      }
+
+      &[data-attribute='ENGRAVE_WALLET01'],
+      &[data-attribute='ENGRAVE_WALLET02'],
+      &[data-attribute='ENGRAVE_WALLET03'] {
+        width: 128px;
+      }
+
+      /*
+      &[data-attribute='MARGIN_FOUNDATION'] {
+        width: 128px;
+
+        > div {
+
+          > label {
+            @extend .icon-cutting-01;
+
+            line-height: 33px;
+
+            &:before {
+              vertical-align: top;
+              margin: 6px 7px 0 0;
+            }
+          }
+        }
+      }
+
+      &[data-attribute='CUSTOM_FOUNDATION'] {
+        width: 128px;
+
+        > div {
+
+          > label {
+            @extend .icon-cutting-02;
+
+            line-height: 33px;
+
+            &:before {
+              vertical-align: top;
+              margin: 6px 7px 0 0;
+            }
+          }
+        }
+      }
+      */
+    }
+
+    &.color {
+      border: none;
+
+      > li {
+        width: 40px;
+        height: 40px;
+        padding: 4px 4px 0 0;
+        border: none;
+
+        &:nth-of-type(-n+6) {
+          padding-top: 0;
+        }
+
+        &:nth-of-type(6n) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  > span.error {
+    color: $color-red;
+    padding-top: 10px;
+    line-height: 18px;
+  }
+}

@@ -1,0 +1,263 @@
+div.benefit-wrap {
+  position: relative;
+
+  > div.container {
+    @include row-contents;
+
+    > div.top {
+
+      > h1 {
+        font-size: 28px;
+        text-align: center;
+        line-height: 160px;
+      }
+
+      > dl {
+        height: 190px;
+        border: 1px solid $color-box-line;
+        background-color: $color-box-background;
+
+        > dt {
+          float: left;
+          display: table;
+          width: 738px;
+          height: 190px;
+
+          > span {
+            display: table-cell;
+            vertical-align: middle;
+
+            &.icon {
+              width: 110px;
+              padding: 0 40px;
+
+              &.welcome {
+                @extend .icon-png-level-01-110110;
+              }
+
+              &.revisit {
+                @extend .icon-png-level-02-110110;
+              }
+
+              &.thanks {
+                @extend .icon-png-level-03-110110;
+              }
+
+              &.impression {
+                @extend .icon-png-level-04-110110;
+              }
+
+              &.best {
+                @extend .icon-png-level-05-110110;
+              }
+            }
+
+            &:last-child {
+
+              > span {
+                display: block;
+
+                &:first-child {
+                  font-size: 18px;
+                  padding-bottom: 15px;
+
+                  > em {
+                    font-family: $font-bold;
+
+                    &.blue {
+                      color: $color-blue;
+                    }
+                  }
+                }
+
+                &.date {
+                  padding-top: 15px;
+                  color: $color-light-gray;
+                }
+
+                &.message {
+                  font-size: $font-large;
+                  line-height: 1.62;
+                }
+
+                &.icon-bullet-33 {
+
+                  &:before {
+                    margin-right: 6px;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > dd {
+          float: right;
+          width: 399px;
+          border-left: 1px solid $color-box-line;
+          margin-top: 35px;
+
+          > span {
+            display: block;
+            margin: 0 40px;
+
+            &:first-child {
+              font-size: 16px;
+              padding-bottom: 4px;
+
+              > em {
+                color: $color-blue;
+                font-family: $font-bold;
+              }
+            }
+
+            &:nth-child(2) {
+              margin-top: 10px;
+
+              > span {
+                display: block;
+                line-height: 1.67;
+
+                &.icon-bullet-33 {
+
+                  &:before {
+                    margin-right: 6px;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+
+            &:last-child {
+              margin-top: 10px;
+
+              > span {
+                display: block;
+                line-height: 1.67;
+                color: $color-blue;
+
+                &.icon-bullet-33 {
+
+                  &:before {
+                    margin-right: 6px;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > div.middle {
+
+      > h3 {
+        height: 54px;
+        line-height: 54px;
+        border-bottom: 1px solid $color-default;
+        font-size: 16px;
+        font-family: $font-bold;
+        margin-top: 78px;
+      }
+
+      > ul {
+
+        > li {
+          position: relative;
+          width: 194px;
+          float: left;
+          border: 1px solid $color-grid-line;
+          background: $color-white;
+          margin: 40px 40px 160px 0;
+
+          &:before {
+            @extend .icon-arrow-3021;
+
+            position: absolute;
+            top: 85px;
+            left: 206px;
+          }
+
+          > span {
+            display: block;
+
+            &:first-child {
+              text-align: center;
+              padding: 40px 0 20px 0;
+            }
+
+            &.level-name {
+              text-align: center;
+              font-family: $font-bold;
+              font-size: $font-large;
+              padding: 0 0 20px 0;
+            }
+          }
+
+          > dl {
+            min-height: 136px;
+            background: $color-box-background;
+
+            > dt {
+              font-family: $font-bold;
+              font-size: $font-large;
+              line-height: 1.62;
+              background: $color-box-background;
+              padding: 20px 15px 15px 15px;
+            }
+
+            > dd {
+              text-align: left;
+              padding: 0 15px;
+
+              > span {
+                display: block;
+                line-height: 1.67;
+
+                &.icon-bullet-33 {
+
+                  &:before {
+                    margin-right: 6px;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            margin: 40px 0 160px 0;
+
+            &:before {
+              content: none;
+            }
+
+            > ul {
+
+              > li {
+                padding-left: 15px;
+
+                > span {
+
+                  &.icon-bullet-33 {
+
+                    &:before {
+                      margin-right: 6px;
+                      vertical-align: middle;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.active {
+            border: 1px solid $color-blue;
+          }
+        }
+      }
+    }
+  }
+}

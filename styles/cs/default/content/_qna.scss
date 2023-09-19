@@ -1,0 +1,478 @@
+@mixin cs-default-content-qna {
+  overflow: hidden;
+
+  > div.description {
+    margin-bottom: 30px;
+    font-size: $font-large;
+    line-height: 1.69em;
+  }
+
+  > ul {
+    position: relative;
+    width: 300%;
+    left: 0;
+
+    > li {
+      float: left;
+      position: relative;
+      width: 1140px;
+
+      > div {
+        position: relative;
+
+        &.lock {
+          height: 1px !important;
+          overflow: hidden !important;
+        }
+
+        &.create {
+          padding-top: 30px;
+
+          > form {
+            width: 100%;
+
+            > table {
+
+              > tbody {
+
+                > tr {
+                  border-top: 1px solid #eee;
+                  height: 50px;
+
+                  > td {
+                    padding: 8px 0 0 0;
+                    vertical-align: top;
+
+                    &:last-of-type {
+                      padding-right: 1px;
+                    }
+
+                    &.tit {
+                      width: 160px;
+                      font-family: $font-bold;
+                      line-height: 50px;
+                      padding-top: 0;
+
+                      > em {
+                        color: $color-error;
+                      }
+                    }
+
+                    &.order {
+
+                      > div.dropdown {
+
+                        > div.dropdown-scope {
+
+                          > input {
+                            font-size: $font-medium;
+                            text-align: right;
+                          }
+
+                          > button > span > div {
+                            display: none;
+                          }
+
+                          > div > div > ul > li > button {
+                            height: 50px;
+                            line-height: 50px;
+
+                            > span {
+
+                              > div {
+                                float: left;
+                                width: 40px;
+                                height: 40px;
+                                margin: 5px 0;
+                                background: $color-thumbnail-background;
+                              }
+
+                              > em {
+                                float: left;
+                                padding: 0 0 0 10px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                    &.files {
+                      padding-top: 0;
+                    }
+
+                    div {
+
+                      &.input {
+
+                        &.small input {
+                          width: 300px !important;
+                        }
+
+                        &.large input {
+                          width: 959px !important;
+                        }
+                      }
+                    }
+
+                    > div {
+
+                      &.textarea {
+                        padding-bottom: 8px;
+
+                        > div {
+
+                          > textarea {
+                            height: 176px;
+                          }
+                        }
+                      }
+
+                      &.file {
+                        display: block;
+
+                        > label {
+
+                          > span {
+
+                            > span {
+
+                              &.tit {
+                                width: 160px;
+                              }
+
+                              &.desc {
+                                width: 240px;
+                                padding: 0 6px 0 0;
+                              }
+                            }
+                          }
+                        }
+
+                        > ul {
+                          padding: 0 0 24px 137px;
+                        }
+                      }
+
+                      &.btns {
+                        text-align: center;
+                        margin: 30px 0 60px 0;
+                      }
+
+                      > div {
+
+                        &.checkbox {
+                          margin: 16px 0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.list {
+
+          > div.top {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 70px;
+            background: #fff;
+
+            > span {
+              width: 100%;
+              height: 70px;
+
+              &.condition {
+                display: table;
+
+                > span, div {
+                  display: table-cell;
+                  vertical-align: middle;
+
+                  &.title {
+                    width: 65px;
+                    font-family: $font-bold;
+                  }
+                }
+
+                > form {
+                  display: table;
+                  height: 70px;
+
+                  > div.dropdown {
+
+                    > div.dropdown-scope {
+
+                      > div > div > ul > li > button {
+                        width: 100px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          > div.middle {
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 76px 0 66px 0;
+
+            > ul {
+              border-top: 1px solid $color-disabled;
+
+              > li {
+                display: table;
+                height: 50px;
+                border-bottom: 1px solid $color-box-line;
+                cursor: pointer;
+
+                > span {
+                  float: left;
+                  display: inline-block;
+                  font-size: 12px;
+                  line-height: 50px;
+                  text-align: center;
+                  vertical-align: middle;
+                  cursor: pointer;
+
+                  &.status {
+                    width: 100px;
+
+                    &.replied {
+                      color: $color-error;
+                    }
+                  }
+
+                  &.title {
+                    width: 940px;
+                    padding: 0 20px;
+                    text-align: left;
+                    @include box-size(border-box);
+                    @include text-ellipsis;
+                  }
+
+                  &.date {
+                    width: 100px;
+                  }
+                }
+
+                &:first-of-type {
+                  background: $color-box-background;
+                  border: 0;
+
+                  > span {
+                    color: $color-default;
+                    font-family: $font-bold;
+                    text-align: center;
+                  }
+                }
+
+                &.nothing {
+                  width: 100%;
+                  height: 415px;
+                  cursor: default;
+
+                  > span {
+                    float: none;
+                    display: table-cell;
+                    width: 100%;
+                    text-align: center;
+                    vertical-align: middle;
+                    cursor: default;
+                  }
+                }
+              }
+            }
+
+            > div.pagination-wrap {
+              margin: 30px 0 0 0;
+            }
+          }
+        }
+
+        &.edit {
+          margin-top: 30px;
+
+          > form {
+
+            > div {
+              @include cs-qna-item;
+
+              > div.top {
+                background: $color-white;
+                border-top: 1px solid $color-box-line;
+                padding: 0;
+
+                > div {
+                  border-bottom: 1px solid $color-box-line;
+
+                  > span {
+
+                    &.right {
+                      float: right;
+
+                      > span {
+
+                        &:last-of-type {
+                          width: 97px;
+                          padding-left: 0;
+                          text-align: center;
+                        }
+                      }
+                    }
+
+                    > span {
+                      display: inline-block;
+
+                      &:first-of-type {
+                        width: 87px;
+                      }
+
+                      &.title {
+                        font-family: $font-bold;
+                        color: $color-default;
+                        text-align: center;
+                      }
+
+                      &.line {
+                        color: $color-box-line;
+                      }
+
+                      &.value {
+                        padding-left: 20px;
+
+                        &.status {
+                          color: $color-blue;
+
+                          &.replied {
+                            color: $color-error;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              > ul.middle {
+                padding: 0;
+
+                > li {
+                  padding: 0;
+                  margin-bottom: 4px;
+
+                  &.question {
+                    padding: 16px 0 20px 0;
+                  }
+
+                  &.answer {
+                    background: $color-button-disabled-background;
+                    border-bottom: none;
+                    padding: 16px 0 20px 0;
+                  }
+
+                  &:last-of-type {
+                    margin-bottom: 20px;
+                  }
+
+                  > span {
+
+                    > span {
+
+                      > span {
+                        margin-bottom: 0;
+                      }
+
+                      > span.images {
+                        display: block;
+                        width: 500px;
+                        padding: 10px 0;
+
+                        > img {
+                          max-width: 500px;
+                          margin-bottom: 10px;
+                        }
+                      }
+
+                      > div.contents {
+                        margin-bottom: 10px;
+                      }
+
+                      > span.date {
+                        line-height: 0;
+                      }
+
+                      &.icon {
+                        width: 14px;
+                        padding-left: 20px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              > div.bottom {
+                padding: 0;
+
+                > span {
+                  border-top: 1px solid $color-box-line;
+                  padding: 30px 0;
+
+                  > span {
+
+                    &.right {
+                      vertical-align: top;
+
+                      > span {
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        &.description {
+                          color: $color-light-gray;
+                          line-height: 1.5em;
+                          margin-right: 9px;
+                        }
+
+                        &:nth-child(2) {
+                          margin-left: 6px;
+                        }
+                      }
+                    }
+                  }
+
+                  &.field {
+                    border-top: none;
+                    padding: 20px 1px 0 1px;
+                    margin: 0;
+                    @include box-sizing(border-box);
+
+                    > div.top {
+
+                      > div {
+
+                        > textarea {
+                          border: 0;
+                        }
+                      }
+                    }
+
+                    > span.bottom {
+                      margin-top: 20px;
+                      padding-top: 30px;
+                      border-top: 1px solid $color-box-line;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

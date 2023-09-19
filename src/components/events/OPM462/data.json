@@ -1,0 +1,52 @@
+[
+  {
+    "key": "57c2AoNMZ",
+    "width": "37.867177522349934%",
+    "height": "1.7441482693248533%",
+    "left": "31.625159642401023%",
+    "top": "24.222954378669275%",
+    "type": "getCoupons",
+    "desc": {
+      "type": "getCouponsV2",
+      "isNeedLogin": true,
+      "couponNumber" : "12A3F41F-61A1-186C"
+    }
+  },
+  {
+    "key": "zT4mczp_U",
+    "width": "36.2373283844189%",
+    "height": "1.8613931017612524%",
+    "left": "32.145494093231164%",
+    "top": "33.2348489481409%",
+    "type": "getCoupons",
+    "desc": {
+      "type": "getCoupons",
+      "isNeedLogin": true,
+      "couponNumber" : "12A3F421-0155-24E8"
+    }
+  },
+  {
+    "key": "o46O3BDbU",
+    "width": "35.239064495530016%",
+    "height": "1.6728649400684932%",
+    "left": "32.47226213282248%",
+    "top": "62.37425085616438%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value": "/store/business-card/intro/soft"
+    }
+  },
+  {
+    "key": "S3XUMBINK",
+    "width": "36.09365022349936%",
+    "height": "1.6973267795988258%",
+    "left": "31.86811542145594%",
+    "top": "96.60056873776908%",
+    "type": "goLink",
+    "desc": {
+      "type":  "goLink",
+      "value": "/store/business-card/overview"
+    }
+  }
+]

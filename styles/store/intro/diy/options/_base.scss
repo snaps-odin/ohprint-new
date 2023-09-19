@@ -1,0 +1,161 @@
+@import "panel";
+@import "size";
+@import "engrave";
+@import "quantity";
+@import "accessory";
+@import "price";
+@import "quantity-apparel";
+
+@mixin store-intro-diy-options {
+
+  > form {
+
+    > div {
+
+      &.top {
+
+        > h3 {
+          display: block;
+          font-family: $font-bold;
+          font-size: 20px;
+          line-height: 1.4em;
+        }
+
+        > dl {
+          padding: 20px 0 0 0;
+        }
+
+        > em{
+          display: block;
+          margin-top: 10px;
+
+          &.blue{
+            color:$color-blue;
+          }
+
+          &.red{
+            color:$color-red;
+          }
+        }
+      }
+
+      &.middle {
+        padding: 20px 0;
+
+        > div.store-intro-diy-option-panel-wrap {
+          @include store-intro-diy-option-panel;
+        }
+
+        > div.store-intro-diy-option-size-wrap {
+          @include store-intro-diy-option-size;
+        }
+
+        > div.store-intro-diy-option-engrave-wrap {
+          @include store-intro-diy-option-engrave;
+        }
+
+        > div.store-intro-diy-option-quantity-wrap {
+          @include store-intro-diy-option-quantity;
+        }
+
+        > div.store-intro-diy-option-accessory-wrap {
+          @include store-intro-diy-option-accessory;
+        }
+
+        > div.store-intro-diy-option-quantity-apparel-wrap {
+          @include store-intro-diy-option-quantity-apparel;
+        }
+
+        > div {
+
+          &:first-of-type {
+            padding: 0;
+          }
+        }
+      }
+
+      &.bottom {
+
+        > div.store-intro-diy-option-price-wrap {
+          @include store-intro-diy-option-price;
+        }
+
+        > button {
+          width: 100%;
+        }
+      }
+    }
+
+    dl.attention-wrap {
+
+      > dd {
+        position: relative;
+        margin: 6px 0 0 0;
+        font-size: 11px;
+        line-height: 1.64em;
+        background: none;
+        color: $color-default;
+        padding-left: 9px;
+
+
+        &:first-of-type {
+          margin: 0;
+        }
+
+        &:before {
+          position: absolute;
+          display: inline-block;
+          top: 6px;
+          left: 0;
+          width: 3px;
+          height: 3px;
+          content: '';
+          background: $color-blue;
+        }
+
+        > span.saleFont {
+          color:$color-red;
+        }
+
+        > span{
+          > em{
+            color:$color-blue;
+            &.red{
+              color:$color-red;
+            }
+          }
+        }
+
+      }
+    }
+
+    dl.description-wrap {
+      margin-bottom:10px;
+
+      > dd {
+        position: relative;
+        margin: 6px 0 0 0;
+        font-size: 11px;
+        line-height: 1.64em;
+        background: none;
+        color: $color-default;
+
+
+        &:first-of-type {
+          margin: 0;
+        }
+
+        > span.saleFont {
+          color:$color-red;
+        }
+
+        > span{
+          > em{
+            color:$color-blue;
+          }
+        }
+
+      }
+    }
+  }
+}

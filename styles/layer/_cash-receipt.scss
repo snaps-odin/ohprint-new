@@ -1,0 +1,107 @@
+div.cash-receipt-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+
+        > div.inner {
+
+          > table {
+            border-top: 1px solid $color-default;
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  background-color: $color-box-background;
+                  font-family: $font-bold;
+                  text-align: left;
+                  padding: 15px 0 15px 16px;
+                  border-bottom: 1px solid $color-disabled;
+
+                  > span {
+                    color: #e5362c;
+                    display: inline-block;
+                    padding-left: 4px;
+                  }
+                }
+
+                > td {
+                  padding: 8px 0 8px 16px;
+                  text-align: left;
+                  border-bottom: 1px solid $color-disabled;
+                  line-height: 20px;
+
+                  > div {
+                    float: left;
+
+                    &.input {
+
+                      &.small input {
+                        width: 62px !important;
+                      }
+
+                      &.small2 input {
+                        width: 38px !important;
+                      }
+
+                      &.medium input {
+                        width: 115px !important;
+                      }
+
+                      &.large input {
+                        width: 266px !important;
+                      }
+                    }
+                  }
+
+                  > span {
+                    float: left;
+                    color: #ccc;
+                    padding: 0 6px;
+                    line-height: 34px;
+
+                    &.title {
+                      display: inline-block;
+                      width: 100%;
+                      padding: 0 0 8px 0;
+                      color: $color-default;
+                    }
+                  }
+
+                  > em {
+                    color: $color-red;
+                  }
+
+                  &.radio {
+
+                    > div {
+
+                      &:last-child {
+                        margin-left: 20px;
+                      }
+                    }
+                  }
+
+                  &.numbers {
+
+                    span.error {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

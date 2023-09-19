@@ -1,0 +1,260 @@
+@mixin delivery-product-wrap {
+
+  > span.tit {
+    display: table;
+    width: 100%;
+    padding: 15px 0;
+    color: $color-light-gray;
+    border-bottom: 1px solid $color-default;
+
+    > span {
+      display: table-cell;
+
+      &.icon {
+        width: 15px;
+      }
+
+      &.txt {
+        padding: 4px 0 0 6px;
+        vertical-align: top;
+      }
+    }
+  }
+
+  > table {
+    width: 1140px;
+
+    > thead {
+
+      > tr {
+
+        > th {
+          height: 49px;
+          line-height: 49px;
+          font-weight: normal;
+          background-color: $color-box-background;
+          text-align: center;
+          font-family: $font-bold;
+
+          > form {
+
+            > div {
+              line-height: 12px;
+              min-height: 12px;
+            }
+          }
+        }
+
+        th.align {
+          text-align: left;
+        }
+      }
+    }
+
+    > tbody {
+
+      > tr {
+
+        > td {
+          padding: 20px 0;
+          text-align: center;
+          border-bottom: 1px solid $color-disabled;
+
+          &.nothing {
+            padding: 138px 0;
+            font-size: $font-large;
+            line-height: 1.69em;
+            border-bottom: 1px solid $color-disabled;
+          }
+
+          &.order {
+            vertical-align: top;
+            padding: 60px 0;
+
+            > span {
+              display: block;
+
+              &.date {
+                font-family: $font-bold;
+                padding-bottom: 8px;
+              }
+            }
+
+            > button {
+              border: 0;
+
+              &.payment {
+                position: relative;
+                padding: 14px 0 20px 0;
+
+                &:after {
+                  position: absolute;
+                  display: block;
+                  content: "";
+                  top: 16px;
+                  right: -8px;
+                  width: 6px;
+                  height: 6px;
+                  background-color: $color-white;
+                  border-top: 1px solid $color-default;
+                  border-right: 1px solid $color-default;
+                  @include transform(scale(0.8) rotate(45deg));
+                }
+              }
+
+              &.cancel {
+                padding-top: 25px;
+                color: $color-gray;
+                text-decoration: underline;
+              }
+            }
+          }
+
+          &.thumbnail {
+
+            > div {
+              position: relative;
+              width: 210px;
+              height: 210px;
+              text-align: left;
+              background: $color-thumbnail-background;
+            }
+          }
+
+          &.product {
+            position: relative;
+            text-align: left;
+            padding: 20px 0 20px 30px;
+
+            > span {
+              display: block;
+
+              &.danger {
+                display: table;
+                width: 100%;
+                height: 15px;
+                color: #ed2e2e;
+                margin: 10px 0 0 0;
+
+                > span {
+                  display: table-cell;
+
+                  &.icon {
+                    width: 15px;
+                  }
+
+                  &.txt {
+                    padding: 0 0 0 6px;
+                    vertical-align: middle;
+                    line-height: 1.56;
+                  }
+                }
+
+                & + span.edit-notification {
+                  margin: 0;
+                }
+              }
+
+              &.names {
+
+                > h4 {
+                  font-size: $font-big;
+                  line-height: 1.43;
+                  margin: 0 0 8px 0;
+                }
+
+                > h3 {
+                  font-size: 17px;
+                  font-family: $font-bold;
+                  line-height: 1.41;
+                }
+              }
+
+              &.option {
+                margin: 20px 0 20px 0;
+                line-height: 17px;
+                font-size: $font-medium;
+
+                > span {
+                  display: block;
+                }
+              }
+
+              &.download {
+                margin-bottom: 10px;
+                line-height: 15px;
+                font-size: $font-medium;
+
+                > a {
+                  text-decoration: underline;
+                }
+              }
+
+              &.date {
+                color: $color-blue;
+                font-size: $font-medium;
+                line-height: 15px;
+              }
+
+              &.message {
+                padding: 10px 0 0 0;
+                color: $color-red;
+                line-height: 1.45em;
+              }
+            }
+          }
+
+          &.quantity {
+
+            > span {
+              display: block;
+              line-height: 20px;
+              font-size: $font-large;
+
+              > span {
+                display: block;
+                font-size: $font-medium;
+
+                &:last-of-type {
+                  margin: 4px 0 10px 0;
+                }
+              }
+            }
+          }
+
+          &.status {
+
+            > span {
+              display: block;
+              font-size: $font-large;
+              font-family: $font-bold;
+
+              &.waiting {
+                color: $color-red;
+              }
+            }
+
+            > button, > a {
+              text-decoration: underline;
+              padding-top: 11px;
+            }
+          }
+
+          &.etc {
+
+            > span {
+
+              > button {
+                width: 74px;
+
+                &:last-child {
+                  margin-top: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+@mixin cs-floating-content-faq {
+
+  > form {
+
+    > div.search {
+      position: absolute;
+      z-index: 1;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+
+      > div.inner {
+
+        > div.top {
+          padding: 0 16px 10px 16px;
+          background: #fff;
+
+          > div {
+            width: 408px;
+            height: 40px;
+
+            input {
+              width: 352px;
+              height: 40px;
+              background: #fafafa;
+              color: #999;
+              padding: 0 40px 0 16px;
+              font-size: 12px;
+              line-height: 40px;
+              border: none;
+              outline: none;
+            }
+          }
+
+          > button {
+            position: absolute;
+            top: 12px;
+            right: 28px;
+          }
+        }
+
+        > div.bottom {
+          display: table;
+          width: 408px;
+          height: 50px;
+          padding: 0 16px;
+          background: $color-white;
+          border-bottom: 1px solid #eee;
+
+          > span.swipe-text-wrap {
+            display: table-cell;
+            vertical-align: middle;
+
+            > span.container {
+              margin: 0;
+
+              > span.slider {
+
+                > span {
+                  font-size: $font-small;
+                }
+              }
+            }
+
+            > span.btn {
+              padding: 0 0 0 15px;
+            }
+          }
+        }
+      }
+    }
+
+    > div.list {
+      padding: 100px 16px 0 16px;
+      line-height: 1.67em;
+      width: 408px;
+
+      > div.sub-title {
+        display: table;
+        width: 100%;
+        height: 47px;
+        padding-top: 3px;
+        border-bottom: 1px solid $color-disabled;
+
+        > span {
+          display: table-cell;
+          vertical-align: middle;
+
+          > em {
+            color: #e5362c;
+          }
+        }
+      }
+
+      > div.items {
+
+        > div {
+
+          &.item {
+            @include cs-faq-item;
+          }
+
+          &.nothing {
+            display: table;
+            width: 100%;
+            text-align: center;
+
+            > span {
+              display: table-cell;
+              height: 305px;
+              max-height: 305px;
+              vertical-align: middle;
+
+              > span {
+                display: block;
+
+                &:first-child {
+                  line-height: 1.71em;
+                  font-family: $font-bold;
+                  font-size: $font-big;
+                  word-break: break-all;
+
+                  > em {
+                    color: $color-error;
+                  }
+                }
+
+                &:last-child {
+                  margin-top: 6px;
+                  color: $color-gray;
+                  font-size: $font-medium;
+                  line-height: 1.5em;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > div.more {
+        height: 50px;
+        color: $color-default;
+        line-height: 50px;
+        text-align: center;
+
+        > button {
+          font-family: $font-bold;
+          font-size: $font-medium;
+        }
+      }
+    }
+  }
+}

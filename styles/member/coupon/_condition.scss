@@ -1,0 +1,58 @@
+@mixin coupon-condition-wrap {
+  height: 100px;
+  margin: 0 auto;
+  background-color: #f9fafc;
+	border: solid 1px #eeeeee;
+  margin-bottom: 80px;
+
+  > span {
+    display: table;
+    margin: 0 auto;
+    margin-top: 28px;
+    margin-bottom: 5px;
+
+    > div {
+
+      &.label {
+        height: 44px;
+        padding-right: 30px;
+        vertical-align: middle;
+        font-family: $font-bold;
+        font-size: $font-big;
+      }
+
+      > label {
+        vertical-align: middle;
+      }
+    }
+
+    > span {
+      width: 466px;
+      display: table-cell;
+      vertical-align: top;
+
+      > div {
+
+        &.input {
+
+          > div {
+
+            > input {
+              width: 440px;
+              height: 44px;
+              padding: 0 10px;
+              line-height: 40px;
+              font-size: $font-medium;
+            }
+          }
+        }
+      }
+    }
+
+    > button {
+      display: table-cell;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+  }
+}

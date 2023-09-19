@@ -1,0 +1,142 @@
+@mixin home-best-review {
+  background: #f9fafc;
+  padding: 60px 0;
+
+  > div {
+
+    &.top {
+
+      > h3 {
+        font-size: 30px;
+        line-height: 31px;
+        text-align: center;
+      }
+    }
+
+    &.bottom {
+      margin: 54px 0 0 0;
+
+      > div.swipe-contents-wrap {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+
+        > div.swiper-container {
+          padding-bottom: 50px;
+
+          > div.swiper-wrapper {
+
+            > div.swiper-slide {
+              width: 1140px;
+              padding: 0 5px;
+              @include box-size(border-box);
+
+              > div.box {
+                float: left;
+                width: 555px;
+                height: 250px;
+                background: #fff;
+
+                > div {
+                  @include box-size(border-box);
+                  display: inline-block;
+
+                  &.left {
+                    width: 250px;
+                    height: 250px;
+                    overflow: hidden;
+
+                    > div {
+                      height: 250px;
+                    }
+                  }
+
+                  &.right {
+                    width: 305px;
+                    height: 250px;
+                    padding: 30px;
+                    vertical-align: top;
+
+                    > h4 {
+                      font-size: 16px;
+                      line-height: 1.44;
+                      margin-bottom: 10px;
+                      font-family: $font-bold;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    }
+
+                    > span {
+                      display: block;
+                      font-size: 12px;
+                      line-height: 1.2;
+                      margin-bottom: 10px;
+                      font-family: $font-bold;
+
+                      > em {
+                        padding: 0 10px;
+                        color: #ddd;
+                        font-family: $font-normal;
+                      }
+                    }
+
+                    > p {
+                      font-size: 12px;
+                      line-height: 22px;
+                      max-height: 110px;
+                      overflow: hidden;
+                    }
+                  }
+
+                }
+
+                &.left {
+                  margin-right: 30px;
+                }
+
+                &.right {
+
+                }
+
+                &:hover {
+                  cursor: pointer;
+                  @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.2));
+                }
+              }
+            }
+          }
+
+          > div.swiper-pagination {
+            top: 290px;
+
+            > span {
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              @include border-radius(5px);
+
+              &.swiper-pagination-bullet {
+                background: $color-grid-line;
+                opacity: 1;
+              }
+
+              &.swiper-pagination-bullet-active {
+                background: $color-default;
+              }
+            }
+          }
+
+          > div.swiper-button-prev {
+            display: none;
+          }
+
+          > div.swiper-button-next {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

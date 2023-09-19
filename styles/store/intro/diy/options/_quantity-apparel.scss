@@ -1,0 +1,209 @@
+@mixin store-intro-diy-option-quantity-apparel {
+  padding: 20px 0 0 0;
+
+  > div {
+    display: block;
+
+    &.top {
+      position: relative;
+
+      > h4 {
+        font-family: $font-bold;
+        font-size: 11px;
+        line-height: 17px;
+        padding: 0 60px 0 0;
+
+        > em {
+          color: $color-gray;
+        }
+      }
+
+      > span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+
+        > span {
+          font-size: 11px;
+          vertical-align: top;
+          line-height: 17px;
+          padding: 0 0 0 3px;
+        }
+      }
+
+      > em {
+        color: $color-red;
+      }
+    }
+
+    &.middle {
+      margin: 10px 0 0 0;
+
+      > div.dropdown {
+        margin: 8px 0 0 0;
+
+        &:first-of-type {
+          margin: 0;
+        }
+
+        ul {
+
+          > li {
+            display: block;
+
+            &:last-of-type {
+              border: 0;
+            }
+
+            > button {
+              height: 100%;
+              padding: 10px;
+              line-height: inherit;
+
+              > span {
+                display: table;
+
+                > div {
+                  display: table-cell;
+                  width: 40px;
+                  height: 48px;
+                  border: 1px solid $color-grid-line;
+                }
+
+                > span {
+                  display: table-cell;
+                  padding: 0 0 0 10px;
+                  font-size: 11px;
+                  vertical-align: middle;
+
+                  > em {
+                    display: block;
+                    padding: 6px 0 0 0;
+                    font-family: $font-bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > div.input-quantity {
+        display: none;
+      }
+    }
+
+    &.bottom {
+
+      > ul {
+        display: inline-block;
+        width: 240px;
+        padding: 0 10px;
+        margin: 10px 0 0 0;
+        background: $color-box-background;
+
+        > li {
+          display: inline-block;
+          width: 100%;
+          padding: 10px 0;
+          border-bottom: 1px solid $color-box-line;
+
+          &:last-of-type {
+            border: 0;
+          }
+
+          > span {
+            display: block;
+
+            &.top {
+
+              > h5 {
+                font-size: 11px;
+                line-height: 1.64em;
+
+                > span {
+                  display: block;
+                  color: $color-gray;
+                  font-size: 11px;
+                  line-height: 1.64em;
+                }
+              }
+            }
+
+            &.middle {
+              padding: 10px 0 0 0;
+
+              > div.input {
+
+                > div {
+
+                  > input {
+                    width: 220px;
+                    font-size: $font-small;
+                  }
+
+                  > div.count {
+                    font-size: $font-small;
+                    line-height: 36px;
+                  }
+
+                  > span.error {
+                    font-size: $font-small;
+                  }
+                }
+              }
+            }
+
+            &.bottom {
+              display: table;
+              padding: 10px 0 0 0;
+
+              > span {
+                display: table-cell;
+
+                &.left {
+
+                  > div.input-quantity {
+                    background: $color-white;
+
+                    span.error {
+                      display: none;
+                    }
+                  }
+                }
+
+                &.right {
+                  width: 165px;
+                  vertical-align: middle;
+
+                  > * {
+                    float: right;
+                    display: inline-block;
+                  }
+
+                  > button:before {
+                    display: block;
+                  }
+
+                  > span {
+                    margin: 0 6px 0 0;
+                    font-family: $font-bold;
+                    font-size: 11px;
+                    line-height: 1.64em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > span.error {
+        color: $color-red;
+        padding-top: 10px;
+        line-height: 18px;
+      }
+    }
+  }
+}

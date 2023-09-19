@@ -1,0 +1,91 @@
+div.input-quantity {
+  position: relative;
+  padding: 0 1px;
+
+  > div {
+    display: table;
+    width: 72px;
+    height: 32px;
+    outline: 1px solid $color-box-line;
+    pointer-events: all;
+
+    > button, div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    > button {
+      width: 26px;
+      height: 34px;
+
+      &.minus {
+        @extend .icon-minus-2432;
+
+        &:hover {
+          @extend .icon-minus-2432-over;
+        }
+
+        &:disabled {
+          @extend .icon-minus-2432-off;
+        }
+      }
+
+      &.plus {
+        @extend .icon-plus-2432;
+
+        &:hover {
+          @extend .icon-plus-2432-over;
+        }
+
+        &:disabled {
+          @extend .icon-plus-2432-off;
+        }
+      }
+    }
+
+    > div {
+      width: 37px;
+
+      > input {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        border: 0;
+        text-align: center;
+
+        &:read-only {
+          color: $color-gray;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &:hover {
+      outline: 1px solid $color-default;
+    }
+
+    &.error {
+      outline: 1px solid $color-error !important;
+    }
+  }
+
+  &.disabled {
+
+    > div {
+      pointer-events: none;
+      outline: 1px solid $color-disabled;
+
+      > button {
+
+        &.minus {
+          @extend .icon-minus-2432-off;
+        }
+
+        &.plus {
+          @extend .icon-plus-2432-off;
+        }
+      }
+    }
+  }
+}

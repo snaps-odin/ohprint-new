@@ -1,0 +1,137 @@
+div.comment-wrap {
+
+  > form {
+
+    > ul {
+      padding: 20px 0 0 0;
+
+      > li {
+        border-bottom: 1px solid $color-disabled;
+      }
+    }
+
+    span.comment-input-wrap {
+      position: relative;
+      display: block;
+
+      > div.textarea {
+
+        > div {
+
+          > textarea {
+            width: 950px;
+            height: 76px;
+            min-height: 76px;
+            max-height: 76px;
+            padding: 12px 75px 12px 12px;
+          }
+        }
+      }
+
+      > button {
+        position: absolute;
+        display: block;
+        height: 76px;
+        width: 63px;
+        top: 0;
+        right: 0;
+        margin: 12px 0;
+        line-height: 76px;
+        border-left: 1px solid $color-disabled;
+      }
+
+      &.reply {
+        padding: 8px 8px 8px 44px;
+        background: $color-box-background;
+        border: 1px solid $color-disabled;
+        border-left: 0;
+        border-right: 0;
+
+        > span.icon {
+          position: absolute;
+          top: 18px;
+          left: 14px;
+        }
+
+        > div.textarea {
+
+          > div {
+
+            > textarea {
+              width: 900px;
+            }
+          }
+        }
+
+        > button {
+          margin: 20px 8px 20px 0;
+        }
+      }
+    }
+
+    span.comment-item-wrap {
+      position: relative;
+      display: table;
+      width: 100%;
+      padding: 20px 0;
+
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+
+        &:last-child {
+          width: 100px;
+
+          > span, > button {
+            float: right;
+          }
+        }
+
+        > span {
+          display: block;
+          padding: 8px 0 0 0;
+
+          &.title {
+            padding: 0;
+            font-family: $font-bold;
+            font-size: $font-medium;
+
+            > em {
+              margin: 0 0 0 10px;
+              color: $color-gray;
+              font-family: $font-normal;
+            }
+          }
+
+          &.content {
+            line-height: 1.83em;
+          }
+
+          &.line {
+            padding: 0 10px;
+          }
+        }
+      }
+
+      &.reply {
+        padding: 0;
+
+        > span {
+          padding: 20px 0;
+          border-bottom: 1px solid $color-disabled;
+
+          &.icon {
+            width: 30px;
+            padding: 20px 0 0 14px;
+            border: 0;
+            vertical-align: top;
+          }
+
+          &.last {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}

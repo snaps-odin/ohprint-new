@@ -1,0 +1,74 @@
+div.offset-print-guide-layer-wrap {
+  width: 840px;
+
+  > div.container {
+    .top {
+      >h2 {
+        height: 50px;
+        background: #2c313a;
+        color: #fff;
+        font-size: 16px;
+        font-family: "YoonGothicPro760";
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+
+    .middle {
+      padding: 0 30px;
+      text-align: center;
+      color: #191919;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 750px;
+
+      .section {
+        padding: 70px 0;
+        border-bottom: 1px solid #eee;
+
+        >h3 {
+          font-size: 30px;
+          line-height: 1.53;
+          margin-bottom: 20px;
+        }
+
+        >span {
+          font-size: 14px;
+          line-height: 1.54;
+
+          >em {
+            color: #2c83e9;
+          }
+        }
+
+        >ul {
+          >li {
+            display: inline-block;
+            vertical-align: top;
+            width: 380px;
+            margin-left: 20px;
+            margin-top: 40px;
+
+            &:nth-child(2n+1) {
+              margin-left: 0;
+            }
+
+            >img {
+              width: 100%;
+            }
+
+            >p {
+              margin-top: 20px;
+              font-size: 13px;
+              line-height: 1.54;
+            }
+          }
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

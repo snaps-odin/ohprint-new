@@ -1,0 +1,382 @@
+div.guide-effect-option-wrap {
+
+  > section {
+    background: $color-white;
+
+    &.bg-gray {
+      background: $color-box-background;
+    }
+
+    &.bg-white {
+      background: $color-white;
+    }
+
+    &.border-top {
+
+      > div {
+        border-top: 1px solid $color-box-line;
+      }
+    }
+
+    &.border-bottom {
+      border-bottom: 1px solid $color-box-line;
+    }
+
+    &.vertical-border {
+
+      > div {
+
+        &.inner {
+          padding-bottom: 0;
+
+          > h3{
+            &:after {
+              content: '';
+              display: block;
+              width: 1px;
+              height: 40px;
+              margin: 40px auto 0;
+              background: $color-button-white-border;
+            }
+          }
+
+          > ul {
+            > li {
+              &:first-child {
+                border-top: none;
+                padding-top: 0;
+                margin-top: -30px;
+              }
+            }
+          }
+        }
+      }
+
+      & + div {
+
+        > div.inner {
+          padding-top: 40px;
+        }
+      }
+    }
+
+    > div.inner {
+      @include row-contents;
+      padding: 70px 0;
+      //border-top: 1px solid $color-box-line;
+
+      &.small {
+        width: 100% !important;
+      }
+
+      &.paddingTopNone {
+        padding-top: 0;
+      }
+
+      > h3 {
+        font-size: 30px;
+        line-height: 42px;
+        text-align: center;
+
+        > em {
+          color: $color-blue;
+
+          &.yellow {
+            color: #ffa800;
+          }
+        }
+      }
+
+      > p {
+        padding: 20px 0 0 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+
+        > em {
+          color: $color-blue;
+        }
+      }
+
+      > ul {
+        padding: 70px 0 0 0;
+
+        &.firstArea {
+          padding-top: 0;
+
+          >li {
+            &:first-child {
+              border-top: none;
+              padding-top: 0;
+            }
+          }
+        }
+
+        > li {
+          padding: 70px 0;
+          border-top: 1px solid $color-box-line;
+
+          > h4 {
+            font-size: 30px;
+            line-height: 42px;
+            text-align: center;
+            padding: 0 0 70px 0;
+
+            > em {
+              color: $color-blue;
+
+              &.yellow {
+                color: #ffa800;
+              }
+            }
+          }
+
+          > p {
+            font-size: 14px;
+            line-height: 26px;
+            text-align: center;
+            padding-bottom: 70px;
+            margin-top: -50px;
+
+            > em {
+              color: $color-blue;
+            }
+          }
+
+          > ul {
+
+            > li {
+
+              > div {
+
+                &.top {
+
+                  > img {
+                    width: 100%;
+                  }
+                }
+
+                &.bottom {
+
+                  > h4 {
+                    margin-top: 20px;
+                    font-size: 16px;
+                    text-align: center;
+                  }
+
+                  > p {
+                    font-size: 13px;
+                    line-height: 1.54em;
+                    padding: 20px 0;
+                    text-align: center;
+
+                    > span {
+                      display: block;
+                      padding: 0 0 8px 0;
+
+                      &:last-of-type {
+                        padding: 0;
+                      }
+
+                      > em {
+                        color: $color-blue;
+                      }
+                    }
+                  }
+
+                  > dl {
+                    padding-top: 20px;
+
+                    > dd {
+                      position: relative;
+                      background: none;
+                      color: $color-default;
+                      margin-top: 4px;
+                      font-size: 13px;
+
+                      > em {
+
+                        &.blue {
+                          color: $color-blue;
+                        }
+
+                        &.red {
+                          color: #ed2e2e;
+                        }
+
+                        &.bold {
+                          color: $color-default;
+                          font-family: $font-bold;
+                        }
+                      }
+
+                      &:before {
+                        position: absolute;
+                        left: 0;
+                        top: 8px;
+                        content: '';
+                        width: 3px;
+                        height: 3px;
+                        background: $color-blue;
+                      }
+
+                      &:first-of-type {
+                        margin-top: 0;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(2n) {
+                margin: 0 0 70px 0;
+              }
+
+              &:nth-child(2n-1) {
+                margin: 0 20px 0 0;
+              }
+
+              &:last-of-type {
+                margin: 0;
+              }
+            }
+
+            &.border-top {
+              border-top: 1px solid $color-box-line;
+            }
+
+            &.col-2 {
+
+              > li {
+                float: left;
+                width: 560px;
+
+                &:nth-child(2n+1) {
+                  margin-left: 0;
+                }
+
+                &:nth-child(-n+2) {
+                  margin-top: 0;
+                }
+              }
+            }
+
+            &.box {
+
+              > li {
+
+                > span {
+
+                  &.bottom {
+                    padding: 30px 0;
+                    background: $color-white;
+
+                    > p {
+                      padding: 20px 0 0 0;
+                    }
+                  }
+                }
+              }
+
+              &.thin {
+
+                > li {
+
+                  > div {
+
+                    &.bottom {
+                      padding: 0;
+
+                      > p {
+                        padding: 18px 0;
+
+                        > span {
+                          display: inline-block;
+                          line-height: 1em;
+                          vertical-align: middle;
+
+                          > dl {
+                            display: table;
+
+                            > dd {
+                              display: table-cell;
+                              vertical-align: middle;
+                              line-height: 1.54em;
+                              text-align: left;
+                              font-family: $font-bold;
+
+                              > em {
+                                color: $color-blue;
+
+                                &.red {
+                                  color: $color-red;
+                                }
+                              }
+
+                              > span.icon {
+                                display: inline-block;
+                                padding: 0 6px 0 0;
+                              }
+
+                              &:first-of-type {
+                                line-height: 1;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &.row-2 {
+
+                  > li:last-of-type {
+
+                    > span.bottom {
+
+                      > p {
+                        padding: 27px 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            &.small {
+
+              > li {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 0 20px 0;
+              }
+            }
+
+            &:after {
+              display: block;
+              clear: both;
+              content: '';
+            }
+          }
+
+          &:last-of-type {
+            padding: 70px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.tutorial {
+
+    > section {
+      background: $color-white;
+      padding: 70px 0 0 0;
+
+      > div.inner {
+        padding: 70px 0 0 0;
+      }
+    }
+  }
+}

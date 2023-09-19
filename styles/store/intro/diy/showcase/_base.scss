@@ -1,0 +1,277 @@
+@mixin store-intro-diy-showcase {
+
+  > div {
+    display: block;
+
+    &.top {
+      position: relative;
+      width: 840px;
+      height: 580px;
+
+      > ul {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 580px;
+
+        > li {
+          display: none;
+          width: 840px;
+          height: 580px;
+
+
+
+          &.active {
+            display: block;
+          }
+
+          > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            > div.store-search-tile-wrap{
+              position: relative;
+              > div.top{
+                position: relative;
+                overflow: hidden;
+                width: 840px;
+                height: 580px;
+                text-align: center;
+                background-color: #fff;
+                margin : 0 auto;
+                > div.image-skin-loader-wrap{
+                  position: relative;
+                  overflow: hidden;
+                  background: #c7cdd3;
+                }
+              }
+
+              > div {
+                width: 100%;
+                height: 100%;
+              }
+
+              > div.top{
+                > span.icon{
+                  position: absolute;
+                  top: 20px;
+                  right: 0;
+                }
+              }
+            }
+
+            &.left {
+              @include animation(slide-right $animation-sec);
+            }
+
+            &.right {
+              @include animation(slide-left $animation-sec);
+            }
+
+            > img {
+              width: 100%;
+              height: 100%;
+            }
+
+            .overrideMask {
+              position: relative;
+              width: 100%;
+              height: 100%;
+
+              >div {
+                position: absolute;
+                width: 100%;
+                height:100%;
+              }
+
+              >img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+
+          > span {
+            position: absolute;
+            width: 790px;
+            left: 0;
+            bottom: 0;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.5);
+
+            > h5 {
+              display: block;
+              color: $color-white;
+              font-family: $font-bold;
+              font-size: 17px;
+              line-height: 23px;
+            }
+
+            > p {
+              display: block;
+              padding: 10px 0 0 0;
+              color: $color-white;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      > span {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+
+        > button {
+          margin-top: -22px;
+
+          &.prev {
+            float: left;
+            padding: 0 0 0 20px;
+            @extend .icon-arrow-left-4040;
+
+            &:not(:disabled) {
+
+              &:hover {
+                @extend .icon-arrow-left-over-4040;
+                cursor: pointer;
+              }
+            }
+
+            &:disabled {
+              @extend .icon-arrow-left-off-4040;
+            }
+          }
+
+          &.next {
+            float: right;
+            padding: 0 20px 0 0;
+            @extend .icon-arrow-right-4040;
+
+            &:not(:disabled) {
+
+              &:hover {
+                @extend .icon-arrow-right-over-4040;
+                cursor: pointer;
+              }
+            }
+
+            &:disabled {
+              @extend .icon-arrow-right-off-4040;
+            }
+          }
+        }
+      }
+
+      &:hover {
+
+        > span {
+          display: inline-block;
+        }
+      }
+    }
+
+    &.bottom {
+      text-align: center;
+      padding: 20px 0 0 0;
+      width: 790px;
+      margin: 0 auto;
+
+      > ul {
+        display: inline-block;
+
+        > li {
+          float: left;
+          position: relative;
+          width: 70px;
+          height: 70px;
+          margin: 0 10px 10px 0;
+          outline: 1px solid $color-button-white-border;
+          cursor: pointer;
+          @include transition($animation-sec*.25 $animation-easing);
+
+            > div.store-search-thumbnail-tile-wrap{
+              position: relative;
+              > div.top{
+                position: relative;
+                overflow: hidden;
+                width: 70px;
+                height: 70px;
+                text-align: center;
+                background-color: #fff;
+                margin : 0 auto;
+                > div.image-skin-loader-wrap{
+                  position: relative;
+                  overflow: hidden;
+                  background: #c7cdd3;
+                  width: 70px;
+                  height:70px;
+
+                  > div.image-loader-wrap{
+                    position: absolute;
+                    width: 70px;
+                    height:70px;
+                    top:0;
+                  }
+                }
+              }
+
+              > div {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+          &:last-of-type {
+            margin: 0;
+          }
+
+          &:nth-of-type(10n) {
+            margin-right: 0;
+          }
+
+          &.active, &:hover {
+            outline: 1px solid $color-default;
+          }
+
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+
+          > span {
+            position: absolute;
+            left: 17px;
+            top: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include keyframes(slide-right) {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@include keyframes(slide-left) {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 0;
+  }
+}

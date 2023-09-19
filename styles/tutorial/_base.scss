@@ -1,0 +1,30 @@
+@import "product";
+@import "logo";
+@import "clipart";
+@import "qr";
+
+div.tutorial-wrap {
+  position: relative;
+
+  > div.container {
+    position: relative;
+    min-width: 1200px;
+
+    > div {
+      &.fixed {
+        padding: 51px 0 0 0;
+      }
+
+      > section {
+
+        > div, > form > ul > li {
+
+          > div.inner {
+            width: 1140px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1144 @@
+div.template-preview-wrap {
+  @include row-contents;
+  position: relative;
+  height: 620px;
+  padding: 0;
+  overflow: hidden;
+
+  > form {
+
+    > div.container {
+
+      > div {
+
+        &.left {
+          position: relative;
+          float: left;
+          width: 860px;
+          height: 620px;
+          background: #f2f4f7;
+
+          > div {
+            width: 100%;
+
+
+              > div.tableCellDisabled{
+                vertical-align: unset !important;
+                text-align:unset !important;
+              }
+
+            &.top {
+              display: table;
+              height: 478px;
+
+              > div {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+
+                > span {
+                  display: inline-block;
+                  @include box-shadow (0 2px 4px 0 rgba(0, 0, 0, .2));
+
+                  &.shadow-none {
+                    @include box-shadow(none);
+                  }
+
+                  &.round {
+                    @include border-radius(18px);
+                  }
+
+                  > span.mask-image {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 480px;
+                  }
+
+                  > div.preview-folder-wrap {
+                    position: relative;
+                    margin: 0 auto;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    @include transform-style(preserve-3d);
+                    @include transform(translate(0, 0) scale(1) rotateY(0deg));
+                    @include transition(transform $animation-sec $animation-easing);
+                    @include transform-origin(center center);
+
+                    > div.page {
+                      position: relative;
+                      float: left;
+
+                      > div {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        @include transition(transform $animation-sec $animation-easing);
+
+                        &.top {
+                          z-index: 31;
+                          @include transform-origin(left bottom);
+
+                          > div {
+                            @include transition(transform $animation-sec $animation-easing);
+                            @include backface-visibility(hidden);
+
+                            &.front {
+                              @include transform(rotateX(180deg));
+                            }
+                          }
+                        }
+
+                        &.bottom {
+                          @include transform-origin(left top);
+                          @include transform(rotateX(0deg));
+                        }
+
+                        &.left {
+                          position: absolute;
+                          z-index: 31;
+                          @include transform-origin(right top);
+                          @include transform(rotateY(0deg));
+
+                          > div {
+                            @include transition(transform $animation-sec $animation-easing);
+                            @include backface-visibility(hidden);
+
+                            &.front {
+                              @include transform(translateZ(100em) rotateY(180deg));
+                            }
+                          }
+                        }
+
+                        &.right {
+                          position: absolute;
+                          @include transform-origin(left top);
+                          @include transform(translate(100%, 0) rotateY(0deg));
+                        }
+
+                        &.middle, &.center {
+                          position: absolute;
+                          @include transform-origin(left top);
+                          @include transform(translate(100%, 0) rotateY(0deg));
+                        }
+
+                        > div {
+                          position: absolute;
+                          width: 100%;
+                          height: 100%;
+                        }
+                      }
+                    }
+
+                    &.tri {
+
+                      > div.page {
+
+                        > div {
+
+                          &.right {
+                            @include transform(translate(200%, 0) rotateY(0deg) skewY(0deg));
+                          }
+                        }
+                      }
+
+                      &.a4, &.a5 {
+                        @include transform(translate(0, 0) scale(1) rotateY(0deg));
+                      }
+
+                      &.square {
+                        @include transform(translate(-50px, 0) scale(0.73) rotateY(0deg));
+                      }
+                    }
+
+                    &.flipped {
+                      @include transform(translate(0, 0) scale(1) rotateY(-180deg));
+
+                      > div.page {
+
+                        > div {
+
+                          > div {
+
+                            &.front {
+                              z-index: 21;
+                              @include animation(backface-visible $animation-sec $animation-easing forwards);
+                              @include backface-visibility(visible);
+                            }
+
+                            &.back {
+                              @include animation(backface-hidden $animation-sec $animation-easing forwards);
+                            }
+                          }
+
+                          &.left {
+
+                            > div.back {
+                              @include animation(backface-visible $animation-sec $animation-easing forwards);
+                              @include animation(opacity-visible $animation-sec $animation-easing forwards);
+                              @include backface-visibility(visible);
+                            }
+                          }
+
+                          &.center, &.right {
+
+                            > div.front {
+                              @include transform(translateZ(100em) rotateY(180deg));
+                            }
+                          }
+                        }
+                      }
+
+                      &.tri {
+
+                        &.a4, &.a5 {
+                          @include transform(translate(0, 0) scale(1) rotateY(-180deg));
+                        }
+
+                        &.square {
+                          @include transform(translate(-50px, 0) scale(0.73) rotateY(-180deg));
+                        }
+                      }
+                    }
+
+                    &.folded {
+
+                      &.vertical, &.square {
+                        @include transform(translate(-25%, 0) scale(1) rotateY(0deg));
+                      }
+
+                      &.horizontal {
+                        @include transform(translate(0, -25%) scale(1.32) rotateY(0deg));
+                      }
+
+                      > div.page {
+
+                        > div {
+
+                          &.top {
+                            @include transform(rotateX(-180deg));
+
+                            > div {
+                              @include animation(backface-visible $animation-sec $animation-easing forwards);
+                              @include animation(opacity-visible $animation-sec $animation-easing forwards);
+                              @include backface-visibility(visible);
+
+                              &.front {
+                                z-index: 21;
+                              }
+                            }
+                          }
+
+                          &.bottom {
+                            @include transform(rotateX(-20deg) skewX(10deg));
+                          }
+
+                          &.left {
+                            @include transform(rotateY(180deg));
+
+                            > div {
+
+                              &.front {
+                                z-index: 21;
+                                @include animation(backface-visible $animation-sec $animation-easing forwards);
+                                @include animation(opacity-visible $animation-sec $animation-easing forwards);
+                                @include backface-visibility(visible);
+                              }
+
+                              &.back {
+                                @include animation(backface-hidden $animation-sec $animation-easing forwards);
+                                @include animation(opacity-hidden $animation-sec $animation-easing forwards);
+                              }
+                            }
+                          }
+
+                          &.right {
+                            @include transform(translate(100%, 0) rotateY(20deg) skewY(-5deg));
+                          }
+                        }
+                      }
+
+                      &.tri {
+                        @include transform(translate(0, 0) scale(1.16) rotateY(0deg));
+
+                        > div.page {
+
+                          > div {
+
+                            &.right {
+                              @include transform(translate(195%, -10%) rotateY(120deg) skewY(6deg));
+
+                              > div {
+
+                                &.front {
+                                  z-index: 21;
+                                  @include animation(backface-visible $animation-sec $animation-easing forwards);
+                                  @include animation(opacity-visible $animation-sec $animation-easing forwards);
+                                  @include backface-visibility(visible);
+                                }
+
+                                &.back {
+                                  @include animation(backface-hidden $animation-sec $animation-easing forwards);
+                                  @include animation(opacity-hidden $animation-sec $animation-easing forwards);
+                                }
+                              }
+                            }
+
+                            &.center {
+                              @include transform(translate(100%, 0) rotateY(20deg) skewY(-8deg));
+                            }
+                          }
+                        }
+
+                        &.square {
+                          @include transform(translate(-50px, 0) scale(1) rotateY(0deg));
+
+                          > div.page {
+
+                            > div.right {
+                              @include transform(translate(195%, -15%) rotateY(120deg) skewY(6deg));
+                            }
+                          }
+                        }
+
+                        &.long {
+                          @include transform(translate(0, 0) scale(1) rotateY(0deg));
+
+                          > div.page {
+
+                            > div.right {
+                              @include transform(translate(194%, -6%) rotateY(120deg) skewY(6deg));
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                    &.hidden {
+                      visibility: hidden;
+                    }
+
+                    &.visible {
+                      @include animation(show $animation-sec $animation-easing forwards);
+                    }
+                  }
+                }
+
+                > div {
+                  display: block;
+                  position: relative;
+                  margin: 0 auto;
+
+                  > span {
+
+                    &.skin {
+                      display: block;
+                    }
+
+                    &.design {
+                      position: absolute;
+                      left: 0
+                    }
+
+                    &.strap {
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                    }
+                  }
+                }
+
+                &.error {
+                  font-size: $font-big;
+                }
+              }
+
+              &.half {
+
+                > div {
+
+                  > span {
+
+                    > span.mask-image {
+                      width: 50%;
+                    }
+                  }
+
+                  &:last-child {
+                    width: 429px;
+                    border-left: 1px solid $color-grid-line;
+
+                    > span {
+
+                      > span.mask-image {
+                        left: 431px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.expand {
+                height: 620px;
+
+                > div {
+
+                  > span {
+
+                    > span.mask-image {
+                      height: 620px;
+                    }
+                  }
+                }
+              }
+
+              &.selection {
+                height: 442px;
+
+                > div {
+
+                  > span {
+
+                    > span.mask-image {
+                      height: 442px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.isCalendarDeskHeight{
+              height: 460px;
+
+              > div.calendarView{
+                width:100%;
+                height:100%;
+
+                > div.contentMap{
+                  position : relative;
+                  margin : 0 auto;
+                  width : 596px;
+                  height : 460px;
+                  background : #6a6a6b;
+
+                  > img.content{
+                    position : absolute;
+                    top : 33px;
+                    left : 30px;
+                    width :  538px;
+                    height : 332px;
+                  }
+
+                  > img.skin{
+                    width : 100%;
+                    position : absolute;
+                    top : 0;
+                    left : 0;
+                  }
+
+                  > img.tripod{
+                    position : absolute;
+                    bottom :  41px;
+                    left :  68px;
+                    width : 460px;
+                    height : 47px;
+                  }
+
+                }
+
+              }
+
+            }
+
+            &.bottom {
+
+              > div.thumbnail-wrap {
+                position: relative;
+                height: 170px;
+                background: #edf0f4;
+                border-top: 1px solid $color-grid-line;
+                text-align: center;
+                overflow: hidden;
+                overflow-x: auto;
+
+                &.lock-scroll {
+                  overflow-x: hidden;
+                }
+
+                > div {
+                  display: table;
+                  height: 140px;
+
+                  > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 18px 12px;
+
+                    &.calendarDesk{
+                      padding: 18px 20px 22px 20px;
+                    }
+
+
+
+                    > ul {
+
+                      > li {
+                        position: relative;
+                        display: inline-block;
+                        cursor: pointer;
+
+                        > div {
+
+                          > div.select-area {
+                            margin-bottom: 4px;
+
+                            > div.checkbox {
+                              width: 16px;
+
+                              > span.error {
+                                display: none;
+                              }
+                            }
+                          }
+
+                          > span {
+                            position: relative;
+                            display: inline-block;
+                            cursor: pointer;
+                            vertical-align: middle;
+                            padding: 12px;
+
+                            > img.tripod{
+                              position: absolute;
+                              /* bottom: 41px; */
+                              /* left: 68px; */
+                              width: 75%;
+                              bottom: 13%;
+                              left: 12%;
+                              /* height: 47px;*/
+                            }
+
+                            > div.calendarDesc{
+                              position: absolute;
+                              display: block;
+                              left: -32px;
+                              bottom: -20px;
+                              width: 60px;
+                              height: 12px;
+                              text-align: center;
+                              font-size: 10px;
+                              padding: 0;
+                              border: 0;
+                            }
+
+                            > div.calendarSign{
+                              text-align: center;
+                              position: absolute;
+                              bottom: -18.3%;
+                              left: 50%;
+                              transform: translate(-50%, 0);
+                              font-size: 10px;
+                            }
+
+                            > div.calendarDescBar{
+                              position: absolute;
+                              display: block;
+                              right: -10px;
+                              top: 50%;
+                              width: 1px;
+                              height:80px;
+                              background: $color-grid-line;
+                              transform: translate(0, -50%);
+                            }
+
+                            > span {
+                              display: inline-block;
+
+                              > img.skin{
+                                position:absolute;
+                                width: 100%;
+                                top:0;
+                                left:0;
+                              }
+
+                              > img.contents{
+                                position:absolute;
+                                top: 0;
+                                left: 0;
+                                width:100%;
+                              }
+
+                              &.round {
+                                @include border-radius(4px);
+                              }
+
+                              > span.mask-image {
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                              }
+                            }
+                          }
+                        }
+
+                        &.apparel {
+                          padding: 12px;
+
+                          > div {
+                            display: block;
+                            position: relative;
+                            margin: 0 auto;
+
+                            > span {
+                              padding: 0;
+
+                              &.skin {
+                                display: block;
+                              }
+
+                              &.design {
+                                position: absolute;
+                                left: 0
+                              }
+                            }
+                          }
+                        }
+
+                        &.folded {
+
+                          > div {
+
+                            > span {
+
+                              > span {
+                                position: absolute;
+                                left: 12px;
+
+                                &.back {
+                                  @include transform(translate(-2%, -6%) rotateY(-20deg) skewY(-6deg));
+                                }
+
+                                &.center {
+                                  @include transform(translate(20%, -9%) rotateY(60deg) skewY(-6deg));
+                                }
+                              }
+                            }
+                          }
+
+                          &.horizontal {
+
+                            > div {
+
+                              > span {
+
+                                > span {
+                                  top: 30%;
+
+                                  &.back {
+                                    @include transform(translate(6%, -2%) rotateX(-20deg) skewX(10deg));
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+
+                        &.pleated, &.flipped {
+
+                          > div {
+
+                            > span {
+
+                              > span {
+                                display: block;
+                              }
+                            }
+                          }
+                        }
+
+                        &.active {
+
+                          > div {
+
+                            > span {
+                              outline: 1px solid $color-default;
+                            }
+                          }
+
+                          &.apparel {
+                            outline: 1px solid $color-default;
+                            padding: 12px;
+
+                            > div {
+
+                              > span {
+                                outline: none;
+                                padding: 0;
+                              }
+                            }
+                          }
+                        }
+                      }
+
+
+                    }
+
+
+                    > ul.calendar{
+
+
+                      > li:nth-child(2n-2){
+                        &.before{
+
+                        }
+                        margin-left:21px;
+                      }
+
+                      > li:nth-child(2n-1){
+                        margin-left:2px;
+                      }
+
+                      >li:first-child{
+                        margin-left:0;
+                      }
+
+                    }
+
+
+
+                    > div.selected-info {
+                      position: absolute;
+                      width: 100%;
+                      bottom: 14px;
+
+                      > em {
+                        color: $color-blue;
+                      }
+                    }
+                  }
+                }
+              }
+
+              > div.calendarHeight{
+                height: 160px;
+              }
+
+              &.selection {
+
+                > div.thumbnail-wrap {
+                  height: 176px;
+
+                  > div {
+                    height: 100%;
+
+                    > div {
+                      vertical-align: top;
+                      padding: 0 12px;
+                    }
+                  }
+                }
+
+                &.vertical {
+
+                  > div.thumbnail-wrap {
+
+                    > div {
+
+                      > div {
+                        padding-top: 15px;
+                      }
+                    }
+                  }
+                }
+
+                &.horizontal {
+
+                  > div.thumbnail-wrap {
+
+                    > div {
+
+                      > div {
+                        padding-top: 30px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.right {
+          width: 280px;
+          float: right;
+          background-color: #f9fafc;
+
+          > div.options-wrap {
+            position: relative;
+            display: block;
+            height: 620px;
+
+            > div.top {
+              position: relative;
+              padding: 43px 30px 24px 30px;
+
+              > span {
+                font-size: 12px;
+                font-weight: normal;
+                line-height: 20px;
+
+                &.title {
+                  font-size: 20px;
+                  padding-bottom: 20px;
+                  font-weight: normal;
+                  line-height: 28px;
+                  font-family: $font-bold;
+                }
+
+                &.designer-area {
+
+                  > span {
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-family: $font-bold;
+
+                    &.name {
+                      padding-left: 2px;
+                      padding-bottom: 4px;
+                    }
+                  }
+                }
+              }
+
+              > div {
+                display: table;
+
+                &.title {
+                  font-size: 20px;
+                  padding-bottom: 20px;
+                  font-weight: normal;
+                  line-height: 28px;
+                  font-family: $font-bold;
+                  word-break: break-all;
+
+                  &.premium {
+                    padding: 5px 0 10px 0;
+                  }
+                }
+
+                &.desc {
+                  font-size: 12px;
+                  font-weight: normal;
+                  line-height: 20px;
+                  padding-bottom: 20px;
+                }
+
+                &.template-cnt {
+                  font-size: 12px;
+                  font-weight: normal;
+                  line-height: 20px;
+                  color: $color-default;
+                  padding-bottom: 20px;
+
+                  > b {
+                    font-family: $font-bold;
+                  }
+                }
+
+                &.help-icon {
+
+                  > span {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    &:first-child {
+                      width: 34px;
+                    }
+
+                    &:nth-child(2) {
+                      text-align: left;
+                    }
+                  }
+                }
+
+                &.premium-icon {
+                  margin-top: 20px;
+
+                  > div {
+                    padding: 5px 0 0 0;
+                    line-height: 1.67;
+                  }
+                }
+
+                &.default-info {
+
+                  > span {
+                    display: block;
+                    position: relative;
+                    padding-left: 9px;
+
+                    > span {
+                      font-size: 11px;
+                      line-height: 1.82;
+                      background: none;
+                      color: $color-default;
+
+                      &:before {
+                        position: absolute;
+                        display: inline-block;
+                        top: 8px;
+                        left: 0;
+                        width: 3px;
+                        height: 3px;
+                        content: '';
+                        background: $color-blue;
+                      }
+
+                      &:nth-child(2) {
+                        padding-left: 6px;
+                        font-size: $font-small;
+                      }
+                    }
+
+                    &.more {
+                      font-size: $font-small;
+
+                      > button {
+                        position: relative;
+
+                        &::after {
+                          position: absolute;
+                          display: block;
+                          content: '';
+                          top: 2px;
+                          left: 35px;
+                          width: 4px;
+                          height: 4px;
+                          background-color: $color-white;
+                          border-top: 1px solid $color-default;
+                          border-right: 1px solid $color-default;
+
+                          @include transform(scale(1) rotate(-225deg));
+                        }
+                      }
+                    }
+
+                    &:not(last-child) {
+                      margin-bottom: 8px;
+                    }
+                  }
+                }
+              }
+            }
+
+            > div.middle {
+              position: absolute;
+              bottom: 50px;
+              left: 0;
+              width: 100%;
+
+              > div {
+                padding: 0 30px;
+
+                &.quantity {
+                  margin-bottom: 20px;
+
+                  > span {
+                    display: table;
+                    width: 100%;
+                    height: 34px;
+
+                    > span {
+                      display: table-cell;
+
+                      &:first-child {
+                        width: 40px;
+                        font-family: $font-bold;
+                        vertical-align: middle;
+                      }
+
+                      &:nth-child(2) {
+                        text-align: right;
+                      }
+
+                      > div.input-quantity {
+
+                        > div {
+                          width: 90px;
+                          background: $color-white;
+
+                          > div {
+                            width: 35px;
+                          }
+                        }
+                      }
+                    }
+
+                    &:first-child {
+                      margin-bottom: 6px;
+                    }
+
+                    span.error {
+                      text-align: left;
+                    }
+                  }
+                }
+
+                &.price {
+
+                  > span {
+                    display: table;
+                    width: 100%;
+                    height: 60px;
+                    border-top: 1px solid #eee;
+
+                    > span {
+                      display: table-cell;
+                      vertical-align: middle;
+
+                      &:first-child {
+                        width: 100px;
+                        font-size: $font-small;
+                        font-family: $font-bold;
+                      }
+
+                      &:nth-child(2) {
+                        text-align: right;
+
+                        > span {
+
+                          &.normal {
+                            text-decoration: line-through;
+                          }
+
+                          &.sale {
+                            color: #e5362c;
+                          }
+
+                          &.total {
+                            color: #e5362c;
+                            font-size: $font-large;
+                            font-family: $font-bold;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            > div.bottom {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+
+              > div {
+
+                &.button {
+                  display: table;
+
+                  > button {
+                    height: 50px;
+                    display: table-cell;
+
+                    &.left {
+                      width: 230px;
+
+                      &:disabled {
+                        outline: none;
+                      }
+                    }
+
+                    &.right {
+                      position: relative;
+                      width: 50px;
+                      padding: 12px;
+                      border-left: 1px solid rgba(#000, 0.2);
+                      background: $color-blue url("#{$CDN_URL}/images/icon/png/good-w-b-2424-3x.png") 50% 50% / 24px 24px no-repeat;
+
+                      &.active {
+                        background: $color-blue url("#{$CDN_URL}/images/icon/png/good-y-b-2424-3x.png") 50% 50% / 24px 24px no-repeat;
+                      }
+
+                      &:hover {
+                        background: $color-light-blue url("#{$CDN_URL}/images/icon/png/good-w-b-2424-over-3x.png") 50% 50% / 24px 24px no-repeat;
+
+                        &.active {
+                          background: $color-light-blue url("#{$CDN_URL}/images/icon/png/good-y-b-2424-over-3x.png") 50% 50% / 24px 24px no-repeat;
+                        }
+                      }
+                    }
+
+                    &.full {
+                      width: 280px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:after {
+          display: block;
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
+@include keyframes(backface-visible) {
+  from {
+    @include backface-visibility(hidden);
+  }
+
+  to {
+    @include backface-visibility(visible);
+  }
+}
+
+@include keyframes(backface-hidden) {
+  from {
+    @include backface-visibility(hidden);
+  }
+
+  to {
+    @include backface-visibility(hidden);
+  }
+}
+
+@include keyframes(opacity-visible) {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(opacity-hidden) {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@include keyframes(show) {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: visible;
+  }
+}

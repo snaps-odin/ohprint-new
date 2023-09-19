@@ -1,0 +1,156 @@
+@mixin eraser-contents-3{
+
+  > div.eraser-contents-3 {
+    Position: relative;
+    top: 0;
+    background: url("#{$CDN_URL}/images/overview/eraser/eraser-bg-03@2x.jpg") 50% 0 / cover no-repeat;
+    min-width: 1200px;
+    height: 1000px;
+    transition: 1s;
+
+
+    > div.eraser-contents-3-selected{
+      width: 100%;
+      height: 100px;
+      margin-top:40px;
+
+      > div.eraser-contents-3-btnMap{
+        width: 170px;
+        height: 100%;
+        margin : 0 auto;
+
+        > div.eraser-contents-3-delete,
+        > div.eraser-contents-3-restore{
+          float: left;
+          width: 70px;
+          height: 93px;
+        }
+
+        > div.eraser-contents-3-delete{
+          > div.eraser-contents-3-delete-img{
+            width: 70px;
+            height:70px;
+            cursor: pointer;
+
+            &.on{
+              background: url("#{$CDN_URL}/images/overview/eraser/btn-eraser-on@2x.png") 50% 0 / cover no-repeat;
+            }
+
+            &.off{
+              background: url("#{$CDN_URL}/images/overview/eraser/btn-eraser-off@2x.png") 50% 0 / cover no-repeat;
+            }
+
+            &.off:hover{
+              background: url("#{$CDN_URL}/images/overview/eraser/btn-eraser-on@2x.png") 50% 0 / cover no-repeat;
+            }
+          }
+
+
+
+          > div.eraser-contents-3-delete-img{
+            background: url("#{$CDN_URL}/images/overview/eraser/btn-eraser-on@2x.png") 50% 0 / cover no-repeat;
+          }
+
+          > div.eraser-contents-3-delete-text{
+            display: table;
+            width: 100%;
+            height: 13px;
+            margin-top:10px;
+            > span{
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              width: 100%;
+              height: 100%;
+              color:$color-white;
+              font-size: 15px;
+            }
+
+          }
+        }
+
+        > div.eraser-contents-3-restore{
+          margin-left:30px;
+          > div.eraser-contents-3-restore-img{
+            width: 70px;
+            height:70px;
+            cursor: pointer;
+
+            &.on{
+              background: url("#{$CDN_URL}/images/overview/eraser/btn-restore-on@2x.png") 50% 0 / cover no-repeat;
+            }
+
+            &.off{
+              background: url("#{$CDN_URL}/images/overview/eraser/btn-restore-off@2x.png") 50% 0 / cover no-repeat;
+            }
+
+            &.off:hover{
+              background: url("#{$CDN_URL}/images/overview/eraser/btn-restore-on@2x.png") 50% 0 / cover no-repeat;
+            }
+          }
+
+
+
+          > div.eraser-contents-3-restore-text{
+            display: table;
+            width: 100%;
+            height: 13px;
+            margin-top:10px;
+            > span{
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              width: 100%;
+              height: 100%;
+              color:$color-white;
+              font-size: 15px;
+            }
+          }
+        }
+
+
+      }
+
+    }
+
+    > div.eraser-contents-3-video{
+      width: 1140px;
+      height: 590px;
+      margin: 0 auto;
+      margin-top:40px;
+      > video{
+        width: 100%;
+        height: 100%;
+        background: url("#{$CDN_URL}/images/overview/eraser/eraser-editor-shadow@2x.png") 50% 0 / cover no-repeat;
+      }
+    }
+
+    > img.eraser-contents-3-bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    > div.eraser-contents-3-title {
+      > h1 {
+        font-family: $font-bold;
+        font-size: 48px;
+        line-height: 1.42;
+        color: $color-white;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      > h3 {
+        font-family: $font-normal;
+        font-size: 20px;
+        line-height: 1.6;
+        color: $color-white;
+        text-align: center;
+        padding-top: 30px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,165 @@
+div.policy-wrap {
+  @include row-contents;
+  padding: 0 30px 160px 30px;
+
+  > div.container {
+
+    > div.top {
+      position: relative;
+      margin: 0 0 15px 0;
+      border-bottom: 1px solid $color-default;
+
+      > div.top {
+        position: relative;
+
+        > h1 {
+          font-size: 24px;
+          text-align: center;
+          line-height: 160px;
+        }
+      }
+
+      > div.bottom {
+        position: relative;
+        height: 45px;
+        line-height: 45px;
+
+        > h2 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: 16px;
+          font-family: $font-bold;
+        }
+
+        > div {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+
+    > div.bottom {
+    }
+  }
+}
+
+div.policy-contents-wrap {
+
+  > div.section {
+    padding-bottom: 20px;
+    line-height: 22px;
+    text-align: justify;
+
+    > span {
+      display: block;
+    }
+
+    &.line {
+      border-bottom: 1px solid $color-default;
+      padding-bottom: 10px;
+    }
+
+    > h4 {
+      font-family: $font-bold;
+      font-weight: normal;
+      font-size: $font-medium;
+    }
+
+    > span > i {
+      width: 12px;
+      height: 10px;
+      display: inline-block;
+    }
+  }
+
+  > div.info-list {
+    background-color: $color-box-background;
+    padding: 15px 16px;
+    display: inline-block;
+    margin-bottom: 38px;
+
+    > ol {
+      float: left;
+      width: 277px;
+
+      > li {
+        line-height: 22px;
+
+        > span {
+          vertical-align: top;
+        }
+
+        > a {
+          width: 252px;
+          text-decoration: underline;
+        }
+
+        &.pt {
+          padding-top: 32px;
+        }
+      }
+    }
+  }
+
+  > h3 {
+    padding: 20px 0 20px 0;
+    font-size: 16px;
+
+    &.line {
+      border-bottom: 1px solid $color-default;
+      padding-bottom: 10px;
+    }
+
+    &.pt-0 {
+      padding-top: 0px;
+    }
+  }
+
+  > table {
+    border-bottom: 1px solid $color-box-line;
+    width: 100%;
+    margin-bottom: 20px;
+
+    > tbody {
+
+      > tr {
+
+        > th {
+          padding: 15px;
+          background-color: $color-box-background;
+          border-right: 1px solid $color-box-line;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+
+        > td {
+          padding: 15px;
+          vertical-align: top;
+          line-height: 20px;
+          border-right: 1px solid $color-box-line;
+          border-bottom: 1px solid $color-box-line;
+
+          &:last-child {
+            border-right: none;
+          }
+
+          > strong {
+            font-family: $font-bold;
+          }
+        }
+      }
+    }
+
+    &.bg {
+      background-color: #f4f4f4;
+
+      > td {
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+  }
+}

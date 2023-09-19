@@ -1,0 +1,318 @@
+@mixin cs-floating-content-qna {
+  overflow: hidden;
+
+  > ul {
+    position: relative;
+    width: 300%;
+    left: 0;
+
+    > li {
+      float: left;
+      position: relative;
+      width: 440px;
+
+      > div {
+        position: relative;
+
+        &.lock {
+          height: 1px !important;
+          overflow: hidden !important;
+        }
+
+        &.create {
+          width: 405px;
+          padding: 0 16px;
+
+          > form {
+            width: 100%;
+
+            > div {
+              display: table;
+              width: 100%;
+              height: 50px;
+              border-top: 1px solid #eee;
+
+              > div, > span {
+                display: table-cell;
+                vertical-align: middle;
+
+                &.tit {
+                  width: 90px;
+                  font-family: $font-bold;
+                  line-height: 50px;
+                  vertical-align: top;
+
+                  > em {
+                    color: $color-error;
+                  }
+                }
+              }
+
+              &.category {
+
+                > div.dropdown {
+                  vertical-align: top;
+                  padding: 3px 0;
+                }
+
+                > span.gap {
+                  width: 10px;
+                }
+              }
+
+              &.order {
+
+                > div.dropdown {
+
+                  > div.dropdown-scope {
+
+                    > input {
+                      font-size: $font-medium;
+                      text-align: right;
+                    }
+
+                    > button > span > div {
+                      display: none;
+                    }
+
+                    > div > div > ul > li > button {
+                      height: 50px;
+                      line-height: 50px;
+
+                      > span {
+
+                        > div {
+                          float: left;
+                          width: 40px;
+                          height: 40px;
+                          margin: 5px 0;
+                          background: $color-thumbnail-background;
+                        }
+
+                        > em {
+                          float: left;
+                          padding: 0 0 0 10px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.phone, &.title {
+
+                input {
+                  font-size: $font-medium;
+                  text-align: right;
+                }
+              }
+
+              &.textarea {
+
+                > div {
+
+                  > textarea {
+                    width: 408px;
+                    height: 165px;
+                  }
+                }
+              }
+
+              &.btns {
+                padding: 15px 0 0 0;
+
+                > button {
+                  float: right;
+
+                  &:first-child {
+                    margin-left: 6px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.list {
+          width: 405px;
+          padding: 0 16px;
+
+          > div.top {
+            display: block;
+            position: absolute;
+            width: 405px;
+            height: 100px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+
+            > span {
+              width: 100%;
+              height: 50px;
+
+              &.desc {
+                display: block;
+                font-family: $font-bold;
+                line-height: 50px;
+                border-bottom: 1px solid $color-box-line;
+              }
+
+              &.condition {
+                display: table;
+
+                > span, div {
+                  display: table-cell;
+                  vertical-align: middle;
+
+                  &.title {
+                    width: 65px;
+                  }
+                }
+
+                > form {
+                  display: table;
+                  height: 50px;
+                }
+              }
+            }
+          }
+
+          > div.middle {
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 435px;
+            padding: 101px 0 66px 0;
+
+            > ul {
+              width: 405px;
+              border-top: 1px solid $color-default;
+
+              > li {
+                display: table;
+                height: 50px;
+                border-bottom: 1px solid $color-box-line;
+                cursor: pointer;
+
+                > span {
+                  float: left;
+                  display: inline-block;
+                  font-size: 12px;
+                  line-height: 50px;
+                  text-align: center;
+                  vertical-align: middle;
+                  cursor: pointer;
+
+                  &.status {
+                    width: 80px;
+
+                    &.replied {
+                      color: $color-error;
+                    }
+                  }
+
+                  &.title {
+                    width: 228px;
+                    padding: 0 8px;
+                    text-align: left;
+                    @include text-ellipsis;
+                  }
+
+                  &.date {
+                    width: 80px;
+                    color: #999;
+                  }
+
+                  &.more {
+                    font-family: $font-bold;
+                  }
+                }
+
+                &:first-of-type {
+                  background: $color-box-background;
+                  border: 0;
+
+                  > span {
+                    color: $color-default;
+                    font-family: $font-bold;
+                    text-align: center;
+                  }
+                }
+
+                &.nothing {
+                  width: 100%;
+                  height: 237px;
+                  min-height: 50px !important;
+                  cursor: default;
+
+                  > span {
+                    float: none;
+                    display: table-cell;
+                    width: 100%;
+                    text-align: center;
+                    vertical-align: middle;
+                    cursor: default;
+                  }
+                }
+
+                &.more {
+                  width: 100%;
+                  line-height: 50px;
+                  border: 0;
+                  text-align: center;
+                  cursor: default;
+                }
+              }
+            }
+          }
+
+          > div.bottom {
+            position: absolute;
+            display: block;
+            bottom: 0;
+            width: 405px;
+            height: 34px;
+            padding: 16px 0;
+            background: $color-white;
+
+            > button {
+              float: right;
+            }
+          }
+        }
+
+        &.edit {
+
+          > form {
+
+            > div {
+              @include cs-qna-item;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > div.lock {
+    display: table;
+    width: 450px;
+    height: 500px;
+    min-height: 184px !important;
+    max-height: 500px !important;
+    text-align: center;
+
+    > span {
+      display: table-cell;
+      vertical-align: middle;
+
+      > span {
+        display: block;
+        line-height: 1.57em;
+        font-size: $font-big;
+      }
+
+      > button {
+        margin-top: 30px;
+      }
+    }
+  }
+}

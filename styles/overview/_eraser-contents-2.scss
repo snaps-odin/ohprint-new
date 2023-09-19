@@ -1,0 +1,135 @@
+@mixin eraser-contents-2{
+  > div.eraser-contents-2 {
+    position: absolute;
+    background: url("#{$CDN_URL}/images/overview/eraser/eraser-bg-02@2x.jpg") 50% 0 / cover no-repeat;
+    min-width: 1200px;
+    height: 100vh;
+    min-height: 1140px;
+    transition: 0.3s;
+    top:0;
+    width: 100%;
+    z-index: 10000;
+    overflow: hidden;
+
+    &.scrollLock{
+      overflow: hidden;
+    }
+
+    > img.eraser-contents-2-bg{
+      position:absolute;
+      top:0;
+      width: 100%;
+      height: 100%;
+    }
+
+    > div.eraser-contents-2-title{
+      > h1{
+        font-family: $font-bold;
+        font-size: 48px;
+        line-height: 1.42;
+        color: $color-white;
+        text-align: center;
+        padding-top:100px;
+      }
+
+      > h3{
+        font-family: $font-normal;
+        font-size: 20px;
+        line-height: 1.6;
+        color: $color-white;
+        text-align: center;
+        padding-top: 30px;
+      }
+    }
+    > div.eraser-image-map{
+      position: relative;
+      width: 1368px;
+      height:623px;
+      margin: 0 auto;
+      margin-top:100px;
+
+
+      > div.eraser-image-1,
+      > div.eraser-image-2,
+      > div.eraser-image-3,
+      > div.eraser-image-4{
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        box-shadow: 60px 60px 40px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      > div.eraser-image-1{
+        left:0;
+        bottom:0;
+        z-index: 4000;
+        box-shadow: 60px 60px 40px 0 rgba(0, 0, 0, 0.2);
+        background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-pizza-object@2x.png") center / cover no-repeat;
+      }
+
+      > div.eraser-image-2{
+        left:264px;
+        z-index: 5000;
+        box-shadow: 60px 60px 40px 0 rgba(0, 0, 0, 0.2);
+        background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-cake-object@2x.png") center / cover no-repeat;
+      }
+
+      > div.eraser-image-3{
+        top:80px;
+        left:742px;
+        z-index: 5000;
+        box-shadow: 60px 60px 40px 0 rgba(0, 0, 0, 0.2);
+        background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-board-object@2x.png") center / cover no-repeat;
+      }
+
+      > div.eraser-image-4{
+        left:1000px;
+        top:260px;
+        z-index: 4000;
+        box-shadow: 60px 60px 40px 0 rgba(0, 0, 0, 0.2);
+        background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-juice-object@2x.png") center / cover no-repeat;
+      }
+    }
+
+    /*> div.eraser-image-1,
+    > div.eraser-image-2,
+    > div.eraser-image-3,
+    > div.eraser-image-4{
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      box-shadow: 60px 60px 40px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    > div.eraser-image-1{
+      top: 53%;
+      left: 9.2%;
+      z-index: 1000;
+      background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-pizza-object@2x.png") center / cover no-repeat;
+    }
+
+    > div.eraser-image-2{
+      top: 34.2%;
+      left: 24.7%;
+      z-index: 2000;
+      background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-cake-object@2x.png") center / cover no-repeat;
+    }
+
+    > div.eraser-image-3{
+      top: 41%;
+      left: 53.5%;
+      z-index: 3000;
+      background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-board-object@2x.png") center / cover no-repeat;
+    }
+
+    > div.eraser-image-4{
+      top: 56.2%;
+      left: 69.3%;
+      z-index: 2000;
+      background: url("#{$CDN_URL}/images/overview/eraser/eraser-img-juice-object@2x.png") center / cover no-repeat;
+    }*/
+
+  }
+
+
+}

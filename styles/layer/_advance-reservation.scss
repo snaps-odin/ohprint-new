@@ -1,0 +1,298 @@
+div.policy-advance-reservation-layer-wrap {
+  position: relative;
+  width: 100%;
+
+  > div.container {
+
+    > div.top {
+      height: 50px;
+      background: #191919;
+      color: #fff;
+      font-size: 16px;
+      font-family: $font-bold;
+      line-height: 50px;
+      text-align: center;
+
+      > h1 {
+        padding: 0 0 40px 0;
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+      }
+    }
+
+    > div.middle {
+      padding: 40px 30px 20px 30px;
+
+      > h2{
+        font-size: 18px;
+        font-family: $font-bold;
+        margin-bottom: 30px;
+      }
+
+      > section {
+        padding: 15px;
+        border: 1px solid #eee;
+        background: #f9fafc;
+        text-align: left;
+
+        > h3 {
+          font-weight: normal;
+          font-family: $font-bold;
+          padding-bottom: 30px;
+          font-size: $font-large;
+        }
+
+        > div.tit {
+          padding-bottom: 20px;
+          font-family: $font-bold;
+        }
+
+        > div.txt {
+          line-height: 22px;
+
+          &.ppt {
+            padding-bottom: 20px;
+          }
+        }
+
+        > div.container {
+
+          div.middle {
+
+            > section {
+              height: auto;
+              font-family: $font-normal;
+              font-size: $font-large;
+              color: $color-default;
+              margin-bottom: 16px;
+
+              > div {
+                line-height: 1.67;
+              }
+
+              > h1 {
+                font-size: $font-large;
+                font-family: $font-bold;
+                padding: 10px 0 0 0;
+              }
+
+              > ul {
+
+                > li {
+                  padding: 8px 0 0 0;
+
+                  &:before {
+                    content: '• ';
+                    color: #d8d8d8;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+div.advance-reservation-layer-wrap {
+  position: relative;
+  width: 523px;
+
+/*  > div.policy-advance-reservation-layer-wrap {
+    position: relative;
+    width: 100%;
+
+    > div.container {
+      padding: 40px 25px;
+
+      > div.top {
+        line-height: 1.65;s
+
+        > h1 {
+          padding: 0 0 40px 0;
+          text-align: center;
+          font-size: 18px;
+          font-weight: normal;
+        }
+      }
+
+      > div.bottom {
+
+        > section {
+          height: 366px;
+          padding: 25px;
+          background: $color-box-background;
+          font-size: $font-large;
+          overflow: auto;
+
+          > h3 {
+            font-weight: normal;
+            font-family: $font-bold;
+            padding-bottom: 30px;
+            font-size: $font-large;
+          }
+
+          > div.tit {
+            padding-bottom: 20px;
+            font-family: $font-bold;
+          }
+
+          > div.txt {
+            line-height: 22px;
+
+            &.ppt {
+              padding-bottom: 20px;
+            }
+          }
+
+          > div.container {
+
+            div.middle {
+
+              > section {
+                height: auto;
+                font-family: $font-normal;
+                font-size: $font-large;
+                color: $color-default;
+                margin-bottom: 16px;
+
+                > div {
+                  line-height: 1.67;
+                }
+
+                > h1 {
+                  font-size: $font-large;
+                  font-family: $font-bold;
+                  padding: 10px 0 0 0;
+                }
+
+                > ul {
+
+                  > li {
+                    padding: 8px 0 0 0;
+
+                    &:before {
+                      content: '• ';
+                      color: #d8d8d8;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }*/
+
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+        padding: 20px 30px 0 30px !important;
+
+        > div.inner {
+          width: 440px;
+          padding-bottom:10px;
+
+
+
+          > table {
+            background: $color-box-background;
+            border: 1px solid $color-grid-line;
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  font-family: $font-bold;
+                  line-height: 60px;
+                  vertical-align: top;
+                  text-align: center;
+
+                  > em {
+                    color: $color-red;
+                  }
+                }
+
+                > td {
+                  padding: 13px 0;
+
+                  > div {
+
+                    &.input {
+                      float: left;
+
+                      > div {
+
+                        input {
+                          width: 70px;
+                        }
+
+                        span.error {
+                          word-wrap: unset;
+                          width: 90px;
+                          line-height: 1.6;
+                          margin-top: 10px;
+                        }
+                      }
+                    }
+
+                    &:after {
+                      display: block;
+                      content: '';
+                      clear: both;
+                    }
+                  }
+
+                  > span {
+                    float: left;
+                    padding: 0 6px;
+                    color: $color-button-white-border;
+                    line-height: 34px;
+                  }
+                }
+              }
+            }
+          }
+
+          > p {
+            font-style: 12px;
+            color: $color-light-gray;
+            text-align: center;
+            padding-top: 20px;
+            line-height: 20px;
+          }
+        }
+        > div.checkbox {
+          padding-bottom:10px;
+          display: block;
+
+          > input {
+            width: 16px;
+          }
+
+          > label {
+
+            > span.desc {
+              display: table-cell;
+              line-height: 17px;
+
+              > button {
+                line-height: 17px;
+                text-decoration: underline !important;
+                pointer-events: all
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

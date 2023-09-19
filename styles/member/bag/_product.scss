@@ -1,0 +1,311 @@
+@mixin bag-product-wrap {
+
+  > div {
+
+    &.top {
+      padding: 18px 0 15px 0;
+      border-bottom: 1px solid $color-default;
+      position: relative;
+
+      > span {
+
+        &.left {
+          font-size: 16px;
+          line-height: 20px;
+          font-family: $font-bold;
+
+          > em {
+            font-family: $font-normal;
+            padding-left: 4px;
+          }
+        }
+
+        &.right {
+          position: absolute;
+          top: 8px;
+          right: 0;
+
+          > div {
+            float: left;
+            margin: 0 0 0 6px;
+          }
+        }
+      }
+    }
+
+    &.middle {
+      margin-top: 21px;
+
+      > div {
+
+        &.top {
+          position: relative;
+
+          > span {
+
+            &.left {
+              padding-top: 18px;
+              display: inline-block;
+
+              > button {
+
+                &:last-child {
+                  margin-left: 6px;
+                }
+              }
+            }
+
+            &.right {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+
+        &.bottom {
+          border-top: 1px solid $color-box-line;
+          padding-top: 20px;
+
+          > div.top {
+            position: relative;
+            height: 44px;
+            margin-bottom: 60px;
+
+            > span {
+
+              &.left {
+                font-size: 16px;
+                font-family: $font-bold;
+                display: inline-block;
+
+                > button {
+
+                  &:last-child {
+                    margin-left: 6px;
+                  }
+                }
+
+                > em {
+                  font-family: $font-normal;
+                  padding-left: 4px;
+                }
+              }
+
+              &.right {
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > ul.middle {
+      margin-top: 20px;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      > li {
+        float: left;
+        width: 360px;
+        height: 588px;
+        margin: 0 30px 30px 0;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        > div {
+
+          &.top {
+            width: 360px;
+            height: 360px;
+            position: relative;
+
+            > div {
+              width: 360px;
+              height: 360px;
+              background: $color-thumbnail-background;
+            }
+
+            > span {
+              position: absolute;
+
+              &.checkbox {
+                top: 10px;
+                left: 10px;
+              }
+
+              &.cart {
+                bottom: 20px;
+                left: 20px;
+                font-family: $font-bold;
+                font-size: $font-small;
+                background: $color-white;
+                padding: 6px 12px;
+                border: 1px solid $color-grid-line;
+                @include border-radius(3px);
+              }
+            }
+
+            > div.disabled {
+              width: 360px;
+              height: 360px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: none;
+
+              > span {
+
+                &.bg {
+                  background-color: #000;
+                  opacity: 0.3;
+                  width: 360px;
+                  height: 360px;
+                  display: block;
+                }
+
+                &.warning {
+                  position: absolute;
+                  top: 60%;
+                  left: 50%;
+                  margin-top: -72px;
+                  margin-left: -15px;
+
+                  > span {
+                    @include tip-box;
+                    @include box-shadow (0 2px 2px rgba(25, 25, 25, 0.2));
+
+                    display: block;
+                    width: 200px;
+                    height: 38px;
+                    left: -90px;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+
+          &.middle {
+            height: 125px;
+            padding: 30px 20px 20px 20px;
+
+            > h2 {
+              @include text-ellipsis;
+              width: 320px;
+              font-size: 18px;
+              font-family: $font-normal;
+              padding-bottom: 16px;
+            }
+
+            > span {
+              display: block;
+              font-size: $font-medium;
+              line-height: 16px;
+
+              &:nth-child(3) {
+                color: $color-red;
+                padding: 7px 0 17px 0;
+              }
+
+              &:nth-child(5) {
+                color: $color-blue;
+                padding: 5px 0 0 0;
+              }
+
+              &:last-child {
+                font-size: $font-medium;
+              }
+            }
+          }
+
+          &.bottom {
+            display: none;
+            border-top: 1px solid $color-box-line;
+            padding: 0 20px;
+            line-height: 50px;
+            position: relative;
+
+            > span {
+
+              &:last-child {
+                float: right;
+              }
+
+              > span.line {
+                padding: 0 10px;
+                width: 1px;
+                height: 10px;
+                color: $color-grid-line;
+                line-height: 10px;
+              }
+
+              > button[disabled] {
+                color: $color-gray;
+                cursor: default;
+              }
+            }
+          }
+        }
+
+        &.nothing {
+          width: 1140px;
+          height: 313px;
+          text-align: center;
+          display: block;
+          padding-top: 102px;
+          margin: 0;
+
+          > h2 {
+            font-size: 18px;
+          }
+
+          > div {
+
+            &:nth-child(2) {
+              line-height: 20px;
+              padding: 18px 0 60px 0;
+              color: $color-light-gray;
+            }
+
+            &:last-child {
+
+              > span {
+
+                &.line {
+                  padding: 0 20px;
+                  width: 1px;
+                  height: 9px;
+                  color: $color-grid-line;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            box-shadow: none;
+            margin: 0;
+          }
+        }
+
+        &:hover {
+          @include box-shadow (0 2px 4px 0 rgba(0, 0, 0, .2));
+          @include transition (box-shadow $animation-sec $animation-easing);
+
+          > div.bottom {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

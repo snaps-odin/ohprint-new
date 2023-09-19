@@ -1,0 +1,29 @@
+div.preview-layer-wrap {
+  overflow: hidden;
+  width: 1140px;
+  height: 760px;
+
+  > div.container {
+    width: 1540px;
+    height: 100%;
+
+    > div {
+      position: relative;
+      height: 100%;
+      float: left;
+
+      &.left {
+        width: 760px;
+        background: #fafafa;
+        overflow: hidden;
+
+        @include transition(width 0.5s);
+      }
+
+      &.right {
+        width: 380px;
+        background: #fff;
+      }
+    }
+  }
+}

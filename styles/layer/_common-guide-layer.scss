@@ -1,0 +1,401 @@
+@import "styles/store/intro/service/_base";
+
+div.common-guide-layer {
+
+  > section {
+    height:100vh;
+    overflow-y: scroll;
+    padding: 50px 0;
+    border-bottom: 1px solid $color-box-line;
+
+    &.store-intro-service-wrap {
+      @include store-intro-service;
+    }
+
+    &.store-intro-service-wrap {
+      background: white !important;
+      border-bottom: 1px solid $color-box-line;;
+      > div.store-intro-services-showcase-wrap > div.inner{
+        padding:0;
+      }
+      &.borderTop{
+        border-top: 0;
+      }
+
+      &.fixed {
+        margin: 0;
+
+        &.has-child {
+          margin: 0;
+        }
+      }
+    }
+
+
+    &:first-child {
+      padding: 60px 0 120px 0;
+    }
+
+    > div {
+      @include row-contents;
+      font-family: $font-normal;
+      color: $color-default;
+
+
+      > h3 {
+        font-size: 32px;
+        font-family: $font-bold;
+        padding-bottom: 50px;
+        line-height: 1.3;
+      }
+
+      > div {
+
+        &.sub-title {
+          font-family: $font-bold;
+          font-size: 20px;
+          padding-bottom: 30px;
+          line-height: 1.56;
+
+          > em {
+            color: $color-blue;
+          }
+        }
+
+        &.sub-description {
+          font-family: $font-bold;
+          font-size: $font-large;
+          padding-bottom: 20px;
+          line-height: 1.56;
+        }
+
+        &.contents-title {
+          font-size: 15px;
+          font-family: $font-bold;
+          padding-bottom: 20px;
+        }
+
+        &.image-panel {
+          position: relative;
+          background-color: #f9fafc;
+          margin-bottom: 20px;
+          height: 348px;
+
+          > div {
+
+            &.left {
+              width: 340px;
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              > img {
+                width: 100%;
+              }
+            }
+
+            &.right {
+              padding: 0 0 0 380px;
+
+              &.first {
+                padding-top: 45px;
+              }
+
+              &.secound {
+                padding-top: 105px;
+              }
+
+              > span {
+                font-size: 18px;
+                font-family: $font-bold;
+              }
+
+              > dl {
+                font-size: 13px;
+                padding: 20px 0;
+
+                > dt {
+                  font-family: $font-bold;
+                  padding-bottom: 10px;
+                }
+
+                > dd {
+                  position: relative;
+                  margin-left: 10px;
+                  color: #444;
+                  line-height: 1.77;
+
+                  &:before {
+                    position: absolute;
+                    float: left;
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    top: 0;
+                    left: -10px;
+                    margin: 9px 0 0 0;
+                    content: '';
+                    background: $color-default;
+                    vertical-align: middle;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    -ms-border-radius: 2px;
+                    border-radius: 2px;
+                  }
+
+                  > em {
+                    color: $color-blue;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.explanation {
+          padding: 20px 0 60px;
+
+          > ul {
+
+            > li {
+              position: relative;
+              font-size: $font-large;
+              padding: 0 0 9px 10px;
+
+              > em {
+                color: $color-blue;
+              }
+
+              &:before {
+                position: absolute;
+                float: left;
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                top: 0;
+                left: 0;
+                margin: 4px 6px 0 0;
+                content: '';
+                background: $color-default;
+                vertical-align: middle;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                border-radius: 2px;
+              }
+            }
+          }
+        }
+
+        &.guideNav{
+          display: table;
+          margin-bottom: 60px;
+          > div{
+            display: table-cell;
+            vertical-align: middle;
+            height:50px;
+          }
+          > div:first-child{
+            width: 327px;
+
+          }
+
+          > div:last-child{
+            width: 814px;
+          }
+
+        }
+
+        &.tab-wrap {
+          margin-bottom: 60px;
+
+          > div.store-intro-service-wrap{
+            background: red;
+          }
+
+          &.small {
+            margin-bottom: 30px;
+          }
+
+          &.sub-menu-tab {
+
+            &.signs-posters {
+
+              > button {
+                width: 14.285% !important;
+                line-height: 18px;
+              }
+            }
+
+            > button {
+              border: 1px solid $color-disabled;
+              border-left: 1px solid transparent;
+
+              &:first-child, &:nth-child(7n-6) {
+                border-left: 1px solid $color-disabled;
+              }
+
+              &:nth-child(n+8) {
+                border-top: 1px solid transparent;
+              }
+
+              &.active {
+                border: 1px solid $color-default;
+              }
+            }
+          }
+
+          > button {
+
+            &.active {
+              border-bottom: none;
+            }
+          }
+        }
+
+        &.sticker-option-guide-wrap {
+          margin-top: 80px;
+
+          > div {
+
+            &.top {
+              width: 100%;
+            }
+
+            &.bottom {
+              padding-bottom: 0;
+
+              > ul {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        &.sub-menu-dropdown {
+          text-align: center;
+          margin: 0 0 30px 0;
+        }
+      }
+
+      > ul.images {
+        display: inline-block;
+        width: 100%;
+        padding: 0 0 60px 0;
+
+        &.full {
+
+          > li {
+            width: 100%;
+          }
+        }
+
+        > li {
+          width: 560px;
+          float: left;
+          @include box-size(border-box);
+
+          &:first-child {
+            margin-right: 20px;
+          }
+
+          > img {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
+          > span {
+            display: block;
+            height: 25px;
+            line-height: 2.3em;
+            font-family: $font-bold;
+            text-align: center;
+
+            > span.icon {
+              display: inline-block;
+              padding: 0 6px 0 0;
+              vertical-align: middle;
+              line-height: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    &.guides {
+
+      > div {
+
+        > div.guideMaker{
+          >section.store-intro-service-wrap {
+            @include store-intro-service;
+          }
+        }
+
+        > div {
+
+          &.explanation {
+            padding: 0 0 60px;
+          }
+
+          &.guide-sticker-diy-wrap {
+
+            > section {
+              background: $color-white;
+
+              &.clipart {
+
+                border-top: 1px solid $color-grid-line;
+
+                > div.inner {
+                  padding: 70px 0 0 0;
+                }
+              }
+            }
+          }
+
+          &.guide-sticker-free-size-wrap {
+
+            > section {
+              background: $color-white;
+
+              &.clipart {
+
+                border-top: 1px solid $color-grid-line;
+              }
+            }
+          }
+
+          &.guide-sticker-background-option-wrap {
+
+            > section {
+              border-top: none;
+
+              > div.inner {
+                border-top: 1px solid $color-grid-line;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.common {
+
+      > div {
+
+        > div.explanation {
+          padding: 0 0 20px;
+        }
+
+        > div.sub-title {
+
+          &:not(:first-of-type) {
+            padding: 40px 0 30px;
+          }
+        }
+      }
+    }
+  }
+
+}

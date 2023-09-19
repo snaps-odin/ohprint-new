@@ -1,0 +1,22 @@
+div.perf-profiler {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  padding: 10px;
+  background: #bada55;
+  border: 2px solid black;
+  text-align: center;
+  z-index: 200;
+
+  > h1 {
+    font-size: 1.5em;
+  }
+
+  > button {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+  }
+}

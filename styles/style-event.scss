@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// common
+@import "common/config";
+@import "common/mixin";
+@import "common/reset";
+
+img {
+  vertical-align: top;
+}
+
+button {
+  border: none;
+  background: none;
+}

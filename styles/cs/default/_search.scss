@@ -1,0 +1,94 @@
+@mixin cs-default-search-wrap {
+  height: 140px;
+  background-color: #f9fafc;
+  border: solid 1px #eeeeee;
+  @include box-sizing(border-box);
+  padding-top: 40px;
+
+  > div {
+    display: table;
+
+    &.left {
+      float: left;
+      padding: 0 40px;
+      border-right: 1px solid $color-grid-line;
+
+      > span {
+        width: 760px;
+        position: relative;
+        vertical-align: top;
+
+        > div {
+
+          &.input {
+
+            > div {
+
+              > input {
+                width: 740px;
+                height: 60px;
+                line-height: 40px;
+                font-size: 15px;
+                padding: 0 20px;
+              }
+            }
+          }
+        }
+
+        > span {
+          position: absolute;
+          top: 19px;
+          right: 24px;
+
+          > em {
+            padding: 0 15px;
+            color: $color-grid-line;
+          }
+        }
+      }
+    }
+
+    &.right {
+      float: right;
+      width: 270px;
+      padding-left: 30px;
+      @include box-size(border-box);
+
+      > span {
+        vertical-align: middle;
+
+        &.icon {
+          width: 72px;
+
+          &:before {
+            width: 60px;
+            height: 60px;
+            display: block;
+          }
+        }
+
+        > span {
+          display: block;
+          font-family: $font-bold;
+          font-size: 15px;
+          color: $color-default;
+
+          > em {
+            color: $color-blue;
+          }
+
+          &:last-of-type {
+            padding-top: 7px;
+            font-family: $font-normal;
+            font-size: $font-medium;
+            color: $color-light-gray;
+          }
+        }
+      }
+    }
+
+    > span {
+      display: table-cell;
+    }
+  }
+}

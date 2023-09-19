@@ -1,0 +1,25 @@
+[
+  {
+    "key": "iXpHBgl6H",
+    "width": "48.9769820971867%",
+    "height": "1.3167520117044622%",
+    "left": "25.31969309462916%",
+    "top": "24.667097201901974%",
+    "type": "getCoupons",
+    "desc": {
+      "getCoupons_code": "12A4C2A3-A52F-2C4D"
+    }
+  },
+  {
+    "key": "3Bb9Kj7ZH",
+    "width": "47.9539641943734%",
+    "height": "1.5727871250914411%",
+    "left": "26.726342710997443%",
+    "top": "97.16161073518654%",
+    "type": "getCouponsMove",
+    "desc": {
+      "getCouponsMove_code": "12A4C2A3-A52F-2C4D",
+      "getCouponsMove_url": "/store/apparel/overview?productGroupCode=701"
+    }
+  }
+]

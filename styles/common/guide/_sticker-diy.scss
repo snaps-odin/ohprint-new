@@ -1,0 +1,219 @@
+div.guide-sticker-diy-wrap {
+  padding: 70px 0 0 0;
+
+  > section {
+    background: $color-white;
+    border-top: 1px solid #eee;
+
+    > div.inner {
+      @include row-contents;
+      padding: 70px 0;
+
+      &.small {
+        width: 100% !important;
+      }
+
+      > h3 {
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+      }
+
+      > p {
+        padding: 20px 0 0 0;
+        text-align: center;
+        font-size: 14px;
+
+        > em {
+          color: $color-blue;
+        }
+      }
+
+      > ul {
+        padding: 70px 0 0 0;
+
+        &.clipart, &.upload {
+
+          > li {
+            padding: 70px 0;
+            border-top: 1px solid $color-box-line;
+
+            &:last-of-type {
+              padding: 70px 0 0 0;
+            }
+
+            > ul {
+
+              > li {
+
+                &:nth-child(3) {
+                  margin: 0 20px 0 0;
+                }
+
+                &:nth-child(3), &:nth-child(4) {
+                  margin-top: 45px;
+                }
+              }
+            }
+          }
+        }
+
+        > li {
+
+          > h4 {
+            font-size: 28px;
+            line-height: 1.2em;
+            text-align: center;
+            padding: 0 0 70px 0;
+
+            > em {
+              color: $color-blue;
+
+              &.yellow {
+                color: #ffa800;
+              }
+            }
+          }
+
+          > ul {
+
+            &.box {
+
+              > li {
+
+                > span {
+
+                  &.bottom {
+                    height: 110px;
+                    padding: 30px 0;
+                    background: $color-white;
+                  }
+                }
+              }
+            }
+
+            > li {
+              float: left;
+              width: 560px;
+
+              > span {
+                display: block;
+                width: 100%;
+
+                &.top {
+
+                  > img {
+                    width: 100%;
+                  }
+                }
+
+                &.bottom {
+
+                  > h4 {
+                    font-family: $font-bold;
+                    font-size: 18px;
+                    line-height: 1.1em;
+                    text-align: center;
+                  }
+
+                  > p {
+                    font-size: 13px;
+                    line-height: 1.54em;
+                    padding: 20px 0;
+                    text-align: center;
+
+                    > span {
+                      display: block;
+                      padding: 0 0 8px 0;
+
+                      &:last-of-type {
+                        padding: 0;
+                      }
+
+                      > em {
+                        color: $color-blue;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &:first-of-type {
+                margin: 0 20px 0 0;
+              }
+            }
+
+            &.small {
+
+              > li {
+                width: 100% !important;
+                margin: 0 !important;
+              }
+            }
+
+            &:after {
+              clear: both;
+              display: block;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+
+    &.clipart {
+      background: $color-box-background;
+      border-top: none;
+    }
+
+    &.upload {
+      background: $color-white;
+      border-top: none;
+
+      > div.inner {
+
+        > h3 {
+
+          > em {
+            color: $color-blue;
+          }
+        }
+
+        > p {
+          line-height: 1.71em;
+        }
+
+        > ul {
+
+          > li {
+
+            > ul {
+
+              > li {
+
+                > span.bottom {
+
+                  > p {
+
+                    > span {
+                      position: relative;
+
+                      > span {
+
+                        &.icon {
+                          position: absolute;
+                          top: 0;
+                          margin-left: -25px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

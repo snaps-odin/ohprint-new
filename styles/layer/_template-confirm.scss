@@ -1,0 +1,40 @@
+div.template-confirm-layer-wrap {
+  width: 360px !important;
+  min-width: 360px !important;
+
+  > div.container {
+
+    > form {
+
+      > div {
+
+        &.middle {
+          padding: 50px 60px 0 60px !important;
+          text-align: center;
+
+          > h3 {
+            display: block;
+            font-family: $font-bold;
+            font-size: 15px;
+            line-height: 20px;
+          }
+
+          > p {
+            display: block;
+            padding: 6px 0 0 0;
+            font-size: 13px;
+            line-height: 1.69em;
+          }
+
+          > div {
+            margin: 15px 0 0 0;
+
+            label {
+              color: $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

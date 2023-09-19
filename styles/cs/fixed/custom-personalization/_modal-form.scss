@@ -1,0 +1,193 @@
+.custom-personalization-modal__wrapper {
+  .modal-header {
+    .modal-hero {
+      min-height: 200px;
+      padding-top: 50px;
+      padding-left: 30px;
+      padding-bottom: 200px;
+      padding-right: 30px;
+      text-align: center;
+      background-color: #2c83e9;
+      background-image: url("#{$CDN_URL}/images/cs/custom-personalization/fabrication-service-img.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+
+      .modal-title {
+        font-family: $font-bold;
+        font-size: 30px;
+        line-height: 1.4;
+        color: #ffffff;
+        padding-bottom: 20px;
+      }
+
+      .modal-description {
+        font-size: 14px;
+        line-height: 1.57;
+        color: #ffffff;
+        margin-bottom: 20px;
+
+        & .yellow {
+          color: #ffce53;
+        }
+
+        & .lightblue {
+          color: #00e0ff;
+        }
+      }
+
+      .modal-warning {
+        color: #bbdaff;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .modal-main {
+    & .custom-personalization__form-table {
+      width: 100%;
+
+      span {
+        &.error {
+          line-height: normal;
+          margin-top: 8px;
+        }
+      }
+
+      & .x-small {
+        width: 80px;
+        padding: 0;
+
+        input {
+          width: 60px;
+          height: 34px;
+        }
+      }
+
+      & .small {
+        width: 178px;
+        padding: 0;
+
+        input:not(.input-dummy) {
+          width: 158px;
+          height: 34px;
+        }
+      }
+
+      & .medium {
+        width: 276px;
+        padding: 0;
+
+        input {
+          width: 256px;
+          height: 34px;
+        }
+      }
+
+      & .required {
+        color: #f02222;
+      }
+
+      & thead {
+        & th,
+        td {
+          height: 50px;
+          vertical-align: middle;
+          border-bottom: 1px solid $color-default;
+        }
+
+        & th {
+          font-size: 16px;
+        }
+
+        & td {
+          color: $color-light-gray;
+          text-align: right;
+        }
+      }
+
+      & tbody {
+        & th,
+        td {
+          min-height: 34px;
+          vertical-align: top;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid $color-box-line;
+        }
+
+        & th {
+          width: 120px;
+          line-height: 34px;
+          font-family: $font-bold;
+        }
+      }
+
+      & tfoot {
+        & td {
+          padding-top: 16px;
+          padding-bottom: 16px;
+
+          & .checkbox {
+            width: 100%;
+
+            & input[type="checkbox"] {
+              width: 16px;
+            }
+
+            & .desc {
+              display: table-cell;
+              line-height: 17px;
+
+              & button {
+                line-height: 17px;
+                text-decoration: underline !important;
+                pointer-events: all;
+              }
+            }
+          }
+        }
+      }
+
+      & .product {
+        & .dropdown-scope {
+          width: 100%;
+        }
+      }
+
+      & .phone-number {
+        & .input {
+          float: left;
+        }
+
+        & .line {
+          float: left;
+          background-color: #cccccc;
+          height: 1px;
+          width: 6px;
+          margin: 18px 6px 0 6px;
+        }
+      }
+
+      & .content {
+        label + div {
+          height: 137px;
+        }
+
+        & textarea {
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-top: 12px;
+          height: 91px !important;
+          min-height: 91px !important;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    & .custom-personalization-form__submit {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+  }
+}

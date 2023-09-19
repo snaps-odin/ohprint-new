@@ -1,0 +1,304 @@
+@mixin store-intro-price {
+  background: $color-box-background;
+  padding: 70px 0;
+
+  > div.inner {
+    @include row-contents;
+    min-height: 500px;
+
+    > h3 {
+      font-size: 30px;
+      line-height: 36px;
+      text-align: center;
+      padding: 0 0 70px 0;
+
+      > p {
+        display: block;
+        padding: 20px 0 0 0;
+        font-size: 14px;
+        line-height: 1.71em;
+        text-align: center;
+
+        > em {
+          color: $color-blue;
+        }
+      }
+    }
+
+    > div {
+      width: 100%;
+
+      > form {
+
+        > div {
+
+          &.top {
+            height: 30px;
+            padding: 18px 0 15px 0;
+            border-bottom: 1px solid #191919;
+            position: relative;
+
+            > span {
+
+              &.left {
+                position: absolute;
+                top: 0;
+                font-family: $font-normal;
+                font-size: $font-medium;
+                color: $color-default;
+              }
+
+              &.right {
+                position: absolute;
+                bottom: 8px;
+
+              > div.store-intro-diy-option-engrave-wrap {
+                  margin: 20px 0 0 0;
+
+                  > div {
+                    display: block;
+
+                    &.top {
+
+                      > h4 {
+                        font-family: $font-bold;
+                        font-size: 11px;
+                      }
+                    }
+
+                    &.bottom {
+                      line-height: 36px;
+                      margin: 10px 0 0 0;
+
+                      > div.input {
+
+                        > div {
+
+                          > input {
+                            width: 240px;
+                            font-size: $font-small;
+                          }
+
+                          > div.count {
+                            font-size: $font-small;
+                            line-height: 17px;
+                            padding: 10px 0;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                > div.acrylicKeyring{
+                  margin: 0 0 0 10px;
+                }
+
+                > div {
+                  float: left;
+                  margin: 0 0 0 30px;
+
+                  &:first-child {
+                    margin: 0;
+                  }
+
+                  > label {
+                    padding: 0 10px 0 0;
+                  }
+
+                  > div.dropdown-scope {
+                    min-width: 100px;
+
+                    > button {
+                      padding: 0 35px 0 15px;
+                    }
+                  }
+
+                  &.multi {
+                    display: table;
+
+                    > label {
+                      display: table-cell;
+                      vertical-align: middle;
+                      padding: 0 10px 0 0;
+                    }
+
+                    > div {
+                      display: table-cell;
+
+                      > ul {
+
+                        display: table;
+                        float: left;
+                        border-top: 1px solid $color-button-white-border;
+                        border-left: 1px solid $color-button-white-border;
+
+                        > li {
+                          display: table-cell;
+                          position: relative;
+                          min-width: 87px;
+                          border-right: 1px solid $color-button-white-border;
+                          border-bottom: 1px solid $color-button-white-border;
+
+                          div.checkbox-multi > label {
+                            background: $color-white;
+
+                            &:before {
+                              top: 7px;
+                              left: 10px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                > div.store-intro-price-size-wrap {
+
+                  > div {
+                    display: block;
+
+                    &.left {
+                      display: inline-block;
+                      float: left;
+                      padding: 0 10px;
+                      line-height: 34px;
+
+                      > h4 {
+                        font-family: $font-bold;
+                        font-size: $font-small;
+                      }
+                    }
+                  }
+
+                  > ul.right {
+                    display: table;
+                    margin: 0;
+
+                    > li {
+                      display: table-cell;
+                      width: 120px;
+                      height: 34px;
+                      vertical-align: top;
+
+                      &.x {
+                        width: 20px;
+                        line-height: 34px;
+                        text-align: center;
+                      }
+
+                      > div {
+
+                        input {
+                          text-align: center;
+                          @include box-sizing(border-box);
+                        }
+
+                        span.error {
+                          display: none;
+                        }
+                      }
+                    }
+                  }
+
+                  &.locked {
+                    width: 0;
+                    height: 0;
+                    margin: 0;
+                    overflow: hidden;
+                  }
+                }
+              }
+            }
+          }
+
+          &.middle {
+
+            > table {
+              width: 100%;
+
+              > thead {
+
+                > tr {
+                  border-bottom: 1px solid $color-disabled;
+
+                  > th {
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: $color-white;
+                    font-family: $font-bold;
+
+                    &:not(:last-child) {
+                      border-right: 1px solid $color-disabled;
+                    }
+                  }
+                }
+              }
+
+              > tbody {
+
+                > tr {
+                  border-bottom: 1px solid $color-disabled;
+
+                  > td {
+                    padding: 15px 0 14px 0;
+                    text-align: center;
+                    line-height: 20px;
+
+                    &:not(:last-child) {
+                      border-right: 1px solid $color-disabled;
+                    }
+
+                    &:last-child {
+                      color: $color-blue;
+
+                      > span {
+                        padding: 0 5px 0 5px;
+
+                        &.sale {
+                          color: #999;
+                          text-decoration: line-through;
+                        }
+                      }
+                    }
+
+                    .offset-tag {
+                      width: 68px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.bottom {
+
+            > span {
+              float: left;
+              padding: 10px 0;
+              color: $color-gray;
+              font-size: $font-medium;
+            }
+          }
+
+          &.offset-print-desc {
+            clear: both;
+            margin-top: 20px;
+            color: #191919;
+            font-size: 12px;
+            line-height: 1.5;
+
+            .open {
+              display: inline-block;
+              margin-top: 6px;
+              text-decoration: underline;
+              cursor: pointer;
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

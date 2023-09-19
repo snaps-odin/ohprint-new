@@ -1,0 +1,210 @@
+@import "product";
+@import "buyer";
+@import "discount";
+@import "payment";
+@import "confirm";
+
+div.order-wrap {
+  padding: 0 0 160px 0;
+
+  > div.container {
+
+    > div.top {
+
+      > h1 {
+        font-size: 28px;
+        text-align: center;
+        line-height: 160px;
+      }
+
+      > div.step-wrap {
+        @include step-wrap;
+      }
+    }
+
+    > div.middle {
+      @include row-contents;
+      margin: 0 auto 83px auto;
+
+      > div.order-product-wrap {
+        @include order-product-wrap;
+      }
+    }
+
+    > div.bottom {
+      @include row-contents;
+
+      > form {
+
+        > div.left {
+          width: 748px;
+          float: left;
+
+          > ul {
+            position: relative;
+            width: 748px;
+
+            > li {
+              position: relative;
+              width: 100%;
+              height: 51px;
+              margin: 0 0 40px 0;
+              overflow: hidden;
+              @include transition(height .4s ease-out);
+
+              &:last-child {
+                border: 0;
+              }
+
+              > div {
+                display: inline-block;
+                width: 100%;
+
+                &.top {
+                  height: 50px;
+                  line-height: 50px;
+                  border-bottom: 1px solid $color-disabled;
+                  cursor: pointer;
+
+                  &.active {
+                    border-bottom: 1px solid $color-default;
+                  }
+
+                  > span {
+
+                    &.title {
+                      color: $color-gray;
+                      font-size: 16px;
+                      font-family: $font-bold;
+
+                      &.active {
+                        color: $color-default;
+                      }
+                    }
+
+                    &.desc {
+                      @include text-ellipsis;
+                      float: right;
+                      width: 500px;
+                      text-align: right;
+
+                      > em {
+                        display: inline-block;
+                        height: 20px;
+                        line-height: 20px;
+                        color: $color-error;
+                      }
+                    }
+
+                    &.icon {
+                      @extend .icon-open-1212;
+                      float: right;
+                      padding: 0 0 0 16px;
+                      margin: 2px 0 0 0;
+                    }
+                  }
+                }
+
+                &.bottom {
+
+                  > table {
+
+                    > thead {
+
+                      > tr {
+                        border-bottom: 1px solid $color-disabled;
+
+                        > th {
+                          font-family: $font-bold;
+                          font-size: 16px;
+                          line-height: 50px;
+                          text-align: left;
+                        }
+                      }
+                    }
+
+                    > tbody {
+
+                      > tr {
+                        border-bottom: 1px solid $color-disabled;
+
+                        > th {
+                          font-family: $font-bold;
+                          line-height: 50px;
+                          vertical-align: top;
+
+                          > span {
+                            color: $color-red;
+                          }
+                        }
+
+                        > td {
+                          padding: 7px 0;
+                          vertical-align: top;
+
+                          > div {
+                            float: left;
+
+                            &.input.box {
+
+                              input {
+                                width: 566px;
+                              }
+
+                              &.medium input {
+                                width: 156px;
+                              }
+
+                              &.large input {
+                                width: 251px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  > span.btn {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 40px 0;
+
+                    > button {
+                      float: right;
+
+                      &.active {
+                        background-color: $color-blue;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.order-buyer-wrap {
+                @include order-buyer-wrap;
+              }
+
+              &.order-discount-wrap {
+                @include order-discount-wrap;
+              }
+
+              &.order-payment-wrap {
+                @include order-payment-wrap;
+              }
+            }
+          }
+        }
+
+        > div.right {
+          float: right;
+          width: 354px;
+
+          > div {
+            @include order-confirm-wrap;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,365 @@
+@mixin header-gnb {
+  position: relative;
+  width: 100%;
+  background: $color-white;
+  border-bottom: 1px solid $color-disabled;
+
+  > div.container {
+    @include row-contents;
+
+    > span {
+      position: relative;
+
+      &.left {
+        float: left;
+        display: table;
+        height: 100px;
+
+        > span, > ul {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        > span {
+          cursor: pointer;
+        }
+
+        > ul {
+          position: relative;
+          padding: 0 25px 0 45px;
+
+          > li {
+            float: left;
+            position: relative;
+            margin: 0 31px 0 0;
+
+            &.active, &:hover {
+
+              > a {
+                color: $color-blue;
+              }
+            }
+
+            > a {
+              position: relative;
+              font-family: $font-bold;
+              font-size: 15px;
+
+              > span.ice {
+                display: block;
+                width: 30px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: -9px;
+                  width: 44px;
+                  height: 18px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/ice-4418.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.upgrade {
+                display: block;
+                width : 47px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: -1px;
+                  width: 100%;
+                  height: 20px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/upgrade-4720.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.new {
+                display: block;
+                width: 30px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: 0;
+                  width: 30px;
+                  height: 20px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/new-3020.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.hot {
+                display: block;
+                width: 30px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: 0;
+                  width: 30px;
+                  height: 20px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/hot-3020.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.blackFriday {
+                display: block;
+                width: 30px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -39px;
+                  left: -8px;
+                  width: 42px;
+                  height: 34px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/blackFriday.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.oh {
+                display: block;
+                width: 26px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: 0;
+                  width: 26px;
+                  height: 20px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/oh-2620.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.sale {
+                display: block;
+                width: 30px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: 0;
+                  width: 30px;
+                  height: 20px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/sale-3020.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.event {
+                display: block;
+                width: 30px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: -2px;
+                  width: 30px;
+                  height: 20px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/event-3020.svg") 0 0 no-repeat;
+                }
+              }
+
+              > span.season {
+                display: block;
+                width: 41px;
+                margin: 0 auto;
+
+                &:after {
+                  position: absolute;
+                  top: -25px;
+                  left: 0;
+                  width: 41px;
+                  height: 20px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/season-3020.svg") 0 0 no-repeat;
+                }
+              }
+            }
+
+            > span.inner {
+              position: absolute;
+              z-index: 5;
+              left: 50%;
+              top: 30px;
+
+              > span.icon {
+                position: absolute;
+                z-index: 5;
+                left: -8px;
+                top: 0;
+              }
+
+              > dl {
+                position: relative;
+                left: -60px;
+                top: 9px;
+                width: 90px;
+                padding: 6px 15px;
+                background: $color-white;
+                border: 1px solid $color-button-white-border;
+                border-bottom: 3px solid $color-blue;
+                @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.2));
+
+                &.accessory {
+                  left: -70px;
+                  width: 130px;
+                }
+
+                &.businessCard{
+                  left: -70px;
+                  width: 110px;
+                }
+
+                &.card{
+                  left: -70px;
+                  width: 110px;
+                }
+
+                &.apparel{
+                  left: -70px;
+                  width: 120px;
+                }
+
+                &.md{
+                  left: -82px;
+                  width: 135px;
+                }
+
+                > dt, dd {
+                  display: block;
+                  line-height: 32px;
+                }
+
+                > dt {
+                  font-family: $font-bold;
+                  font-size: 11px;
+                }
+
+                > dd {
+
+                  &.active, &:hover {
+
+                    > a {
+                      color: $color-blue;
+                    }
+
+                    &.bullet:before {
+                      background: $color-blue;
+                    }
+                  }
+
+                  &.bullet:before {
+                    display: inline-block;
+                    width: 3px;
+                    height: 3px;
+                    margin: -2px 6px 0 0;
+                    content: '';
+                    border-radius: 3px;
+                    background: $color-button-white-border;
+                    vertical-align: middle;
+                  }
+
+
+                  > span.icon {
+                    display: inline-block;
+                    padding: 3px 0 0 4px;
+                    line-height: 16px;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+          }
+
+          > li:last-child{
+            margin-right:0;
+          }
+
+          &:after {
+            clear: both;
+            content: '';
+            display: block;
+          }
+        }
+      }
+
+      &.right {
+        float: right;
+        display: table;
+        height: 100px;
+
+        > span {
+          display: table-cell;
+          vertical-align: middle;
+
+          > button {
+            float: left;
+            position: relative;
+            display: block;
+            /*margin: 0 0 0 20px;*/
+
+            > span {
+              display: table;
+
+              > span {
+                position: relative;
+                display: table-cell;
+                height: 55px;
+                vertical-align: middle;
+
+                &:last-of-type {
+                  padding: 10px 0 10px 8px;
+                }
+
+                > span {
+                  @include count-badge;
+
+                  &:after {
+                    top: 12px;
+                    left: 24px;
+                  }
+                }
+              }
+            }
+
+            &.bag {
+
+              > span > span.icon {
+                @extend .icon-folder-3636;
+
+                &:hover {
+                  @extend .icon-folder-3636-over;
+                }
+              }
+            }
+
+            &.cart {
+
+              > span > span.icon {
+                @extend .icon-cart-3636;
+
+                &:hover {
+                  @extend .icon-cart-over-3636;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

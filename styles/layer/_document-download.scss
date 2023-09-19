@@ -1,0 +1,65 @@
+div.document-download-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > div.middle {
+
+      > div.inner {
+
+        > table {
+          border-top: 1px solid $color-default;
+          margin-bottom: 30px;
+
+          > tbody {
+
+            > tr {
+
+              > th {
+                background-color: $color-box-background;
+                font-family: $font-bold;
+                text-align: left;
+                padding: 8px 0 8px 16px;
+                border-bottom: 1px solid $color-disabled;
+              }
+
+              > td {
+                text-align: right;
+                padding: 8px 0;
+                border-bottom: 1px solid $color-disabled;
+
+                &.banks {
+                  padding: 0;
+
+                  > ul {
+
+                    > li {
+                      border-bottom: 1px solid $color-disabled;
+                      padding: 8px 0;
+
+                      &:last-child {
+                        border-bottom: 0;
+                      }
+
+                      > span {
+                        float: left;
+                        padding: 11px 0 0 16px;
+                      }
+                    }
+                  }
+                }
+
+                > button {
+                  margin: 0 0 0 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

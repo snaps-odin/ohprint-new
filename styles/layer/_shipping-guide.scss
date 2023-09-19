@@ -1,0 +1,358 @@
+div.shipping-guide-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > div {
+
+      &.middle {
+        padding: 0 !important;
+
+        > div.inner {
+          padding:0 30px 0 30px;
+
+          > div {
+
+            &.top {
+              padding: 30px 0 20px 0;
+
+              > h3 {
+                font-family: $font-bold;
+                font-size: 16px !important;
+                line-height: 1.57;
+                padding-bottom: 6px;
+              }
+
+              > span {
+                display: block;
+                font-size: $font-big;
+                line-height: 1.67;
+                font-family: $font-bold;
+
+                > em{
+                  color:$color-blue;
+                }
+              }
+
+              .attention {
+                position: relative;
+                display: block;
+                margin-top: 5px;
+                line-height: 1.5;
+                font-size: 12px;
+              }
+            }
+
+            &.calendarNoticeWrap{
+              padding: 30px 0 0 0;
+            }
+
+            &.calendarNoticeTwoWrap{
+              padding: 35px 0 0 0;
+            }
+
+
+            &.middle {
+              padding: 0 0 15px 10px;
+
+              > h2 {
+                font-family: $font-bold;
+                font-size: 18px;
+                line-height: 1.57;
+                padding-bottom: 10px;
+              }
+
+              > h3 {
+                font-family: $font-bold;
+                font-size: 16px;
+                line-height: 1.57;
+                padding-bottom: 6px;
+              }
+
+              > div.title{
+                font-size : $font-large;
+                font-family: $font-bold;
+                margin-left:-10px;
+              }
+
+
+
+              > span {
+                position:relative;
+                display: block;
+                font-size: $font-medium;
+                line-height: 1.67;
+                margin-top:6px;
+
+                > em{
+                  color:$color-blue;
+                }
+
+                &:before{
+                  position: absolute;
+                  top: 8px;
+                  left: -10px;
+                  width: 3px;
+                  height: 3px;
+                  content: '';
+                  background: url("#{$CDN_URL}/images/icon/svg/bullet-33.svg") 0 0 no-repeat;
+                }
+
+                > span{
+                  color:#999999;
+
+                  &.bold {
+                    color: #191919;
+                    font-family: $font-bold;
+                  }
+                }
+
+              }
+
+              > span.calendarM{
+                line-height: 1.5;
+              }
+
+
+
+            }
+
+            &.calendarMiddle{
+              padding: 0 0 0 10px;
+              > span{
+                margin-top:5px;
+                line-height: 1.5;
+              }
+
+            }
+
+
+
+            &.bottom {
+
+
+              > table{
+                width: 100%;
+                text-align: center;
+
+                > thead{
+                  > tr {
+                    > th{
+                      width: 120px;
+                      font-size:$font-medium;
+                      background: $color-box-background;
+                      border-top: 1px solid $color-default;
+                      font-family: $font-bold;
+                      padding: 13px 0 12px 0;
+
+                      > em{
+                        color:$color-blue;
+                      }
+                    }
+                  }
+                }
+
+                > tbody{
+                  > tr{
+                    border-bottom: 1px solid $color-disabled;
+
+                    > td{
+                      font-family: $font-normal;
+                      font-size: $font-medium;
+                      padding:11px;
+
+                      > span{
+                        line-height: 20px;
+                      }
+
+
+
+                      > em{
+                        color:$color-blue;
+                      }
+
+                      &.banks {
+                        padding: 0;
+
+                        > ul {
+
+                          > li {
+                            border-bottom: 1px solid $color-disabled;
+                            padding: 8px 0;
+
+                            &:last-child {
+                              border-bottom: 0;
+                            }
+
+                            > span {
+                              float: left;
+                              padding: 11px 0 0 16px;
+                            }
+                          }
+                        }
+                      }
+
+                    }
+                  }
+
+
+                }
+              }
+              > div{
+                text-align: left;
+
+                > span{
+                  position: relative;
+                  display: inline-block;
+                  padding: 0 30px 0 11px;
+                  line-height: 1.54;
+                  font-size:$font-medium;
+
+                  &:before{
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    width: 3px;
+                    height: 3px;
+                    content: '';
+                    background: url("#{$CDN_URL}/images/icon/svg/bullet-33.svg") 0 0 no-repeat;
+                  }
+
+                  > em{
+                    color:$color-blue;
+                  }
+
+                  > span{
+                    color:#999999;
+                  }
+
+
+                }
+
+                > dl{
+                  margin-top:30px;
+                  line-height: 2;
+
+                  > dt{
+                    font-size:16px;
+                    font-family: $font-bold;
+                  }
+
+                  > dd{
+                    position: relative;
+                    font-size:$font-medium;
+                    font-family: $font-normal;
+                    padding-left:11px;
+
+                    &:before{
+                      position: absolute;
+                      top: 10px;
+                      left: 0;
+                      width: 3px;
+                      height: 3px;
+                      content: '';
+                      background: url("#{$CDN_URL}/images/icon/svg/bullet-33.svg") 0 0 no-repeat;
+                    }
+
+                    > em{
+                      color:$color-blue;
+                    }
+
+                  }
+
+                }
+
+                > div.btnMap{
+                  width: 100%;
+                  height:124px;
+                  line-height: 124px;
+                  text-align: center;
+
+
+                }
+              }
+
+
+
+              > ul {
+                border-top: 1px solid $color-default;
+                text-align: center;
+
+                > li {
+                  display: table;
+                  height: 50px;
+                  line-height: 50px;
+                  border-bottom: 1px solid $color-disabled;
+
+                  > span {
+                    display: table-cell;
+                    color:$color-default;
+                    width: 320px;
+                    padding-left: 15px;
+                    @include box-size(border-box);
+
+                    > em{
+                      color:$color-blue;
+                    }
+
+                    &.title {
+                      width: 120px;
+                      background: $color-box-background;
+                    }
+
+
+                  }
+
+                  &.title{
+                    background: $color-box-background;
+                  }
+
+                  > span.paperCustom{
+                    line-height: 23px;
+                    padding-bottom: 15px;
+                  }
+                }
+              }
+
+              > div {
+                height: 20px;
+                display: block;
+                padding: 15px 0 0 0;
+                font-family: $font-normal;
+                font-size: $font-medium;
+                color: $color-default;
+                line-height: 1.82em;
+
+                > em{
+                  color:$color-blue;
+                }
+              }
+            }
+
+            &.calendarBottom{
+              > div{
+                padding:0;
+                > div.btnMap{
+                  line-height: 131px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+
+      &.bottom {
+        padding: 15px 0 7px !important;
+
+
+
+        > button {
+          display: block;
+          margin: 33px auto !important;
+        }
+      }
+    }
+  }
+}

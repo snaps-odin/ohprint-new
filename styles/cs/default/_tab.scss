@@ -1,0 +1,41 @@
+@mixin cs-default-tab-wrap {
+  margin-bottom: 30px;
+  border: none;
+  
+  > button {
+    float: left;
+    border: 1px solid $color-disabled;
+    border-left: none;
+    border-bottom: 1px solid $color-default;
+    text-align: center;
+    @include box-size(border-box);
+
+    &:first-of-type {
+      border-left: 1px solid $color-disabled;
+    }
+
+    &.active {
+      border: 1px solid $color-default;
+      border-bottom: 1px solid $color-white;
+      font-family: $font-bold;
+    }
+
+    &.prev {
+      border-right: none;
+    }
+
+    > span {
+      display: table;
+      margin: 0 auto;
+
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+
+        &.txt {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

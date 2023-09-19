@@ -1,0 +1,44 @@
+div.save-as-layer-wrap {
+  position: relative;
+  width: 360px;
+  min-width: 360px !important;
+
+  > div.container {
+    padding: 40px 30px;
+
+    > form {
+
+      > div.top {
+
+        > h1 {
+          padding: 10px 0 15px 0;
+          text-align: center;
+          font-size: 13px;
+          font-weight: normal;
+          line-height: 1.69;
+        }
+
+        > div.input {
+
+          > div {
+
+            > input {
+              width: 280px;
+              padding: 0 10px;
+              font-size: $font-medium;
+            }
+          }
+        }
+      }
+
+      > div.bottom {
+        padding: 15px 0 0 0;
+        text-align: center;
+
+        > button {
+          width: 140px;
+        }
+      }
+    }
+  }
+}

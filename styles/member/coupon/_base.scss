@@ -1,0 +1,77 @@
+@import "condition";
+@import "tab";
+@import "board";
+@import "giftcard";
+
+div.coupon-wrap {
+  @include row-contents;
+
+  > div.container {
+
+    > form {
+
+      > div.top {
+
+        > h1 {
+          font-size: 28px;
+          text-align: center;
+          line-height: 160px;
+        }
+
+        > div {
+          //margin-top: 45px;
+          border: 1px solid $color-disabled;
+
+          &.coupon-condition-wrap {
+            @include coupon-condition-wrap;
+          }
+        }
+
+        > div.tab-wrap {
+          @include coupon-tab-wrap;
+        }
+      }
+
+      > div.middle {
+        > div.coupon-title-wrap {
+          position: relative;
+          height: 34px;
+
+          margin-top: 80px;
+          padding: 10px 0 10px 0;
+
+          > span {
+
+            &.left {
+              font-family: YoonGothicPro760;
+              font-size: 16px;
+              color: #191919;
+            }
+
+            &.right {
+              position: absolute;
+              right: 0;
+            }
+          }
+        }
+
+        > div.coupon-board-wrap {
+          @include coupon-board-wrap;
+        }
+
+        > div.giftcard-register-wrap {
+          @include giftcard-register-wrap;
+        }
+      }
+
+      > div.bottom {
+        margin: 80px 0 160px 0;
+
+        > a {
+          display: block;
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+div.alert-layer-wrap {
+  width: 360px;
+  max-width: 360px;
+  min-width: 360px !important;
+  height: auto;
+
+  > div.container {
+
+    > div.middle {
+      padding: 50px 30px 0 30px !important;
+      text-align: center;
+
+      > h3{
+        font-family: $font-bold;
+        font-size: 15px;
+        line-height: 1.53;
+        margin-bottom: 8px;
+      }
+
+      > p {
+        font-size: 13px !important;
+        font-family: $font-normal !important;
+        line-height: 1.69em !important;
+
+        > em {
+          color: $color-blue;
+
+          &.title {
+            font-size: 14px !important;
+            color: $color-default;
+          }
+
+          &.red {
+            color: $color-red;
+          }
+
+          &.blue {
+            color: $color-blue;
+          }
+        }
+      }
+
+      &.single {
+        padding: 50px 30px !important;
+      }
+    }
+  }
+}

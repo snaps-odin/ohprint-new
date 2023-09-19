@@ -1,0 +1,150 @@
+div.payment-info-layer-wrap {
+  width: 840px;
+
+  &.zipcode {
+    width: 500px;
+  }
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+
+        > div.inner {
+
+          > div.zipcode {
+            height: 470px;
+            padding: 0 0 20px 0;
+          }
+
+          > table {
+            margin: 20px 0 0 0;
+
+            &:first-child {
+              margin: 0;
+            }
+
+            > thead {
+              height: 50px;
+              line-height: 50px;
+              border-bottom: 1px solid $color-default;
+
+              > tr {
+
+                > th {
+                  font-family: $font-bold;
+                  font-size: 16px !important;
+                  text-align: left;
+                }
+
+                > td {
+                  text-align: right;
+
+                  > button:nth-child(2) {
+                    margin: 0 0 0 6px;
+                  }
+                }
+              }
+            }
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  background-color: $color-box-background;
+                  font-family: $font-bold;
+                  text-align: left;
+                  padding: 15px 0 15px 16px;
+                  border-bottom: 1px solid $color-disabled;
+                  line-height: 1.67em;
+                }
+
+                > td {
+                  text-align: left;
+                  padding: 15px 0 15px 16px;
+                  border-bottom: 1px solid $color-disabled;
+                  line-height: 20px;
+
+                  > em {
+                    color: $color-red;
+                  }
+
+                  > div {
+                    float: left;
+                    vertical-align: top;
+
+                    &.input.box {
+
+                      &.small input {
+                        width: 34px !important;
+                      }
+
+                      &.medium input {
+                        width: 178px !important;
+                      }
+
+                      &.large input {
+                        width: 568px !important;
+                      }
+                    }
+                  }
+
+                  > span {
+                    float: left;
+
+                    &.line {
+                      background-color: #cccccc;
+                      height: 1px;
+                      width: 6px;
+                      margin: 16px 5px;
+                    }
+                  }
+
+                  &.phone {
+
+                    span.error {
+                      display: none;
+                    }
+                  }
+
+                  &.address {
+
+                    > div {
+                      padding-top: 7px;
+
+                      &:first-child {
+                        padding-top: 0;
+                      }
+                    }
+                  }
+
+                  &.products {
+
+                    > span {
+                      display: inline-block;
+                      width: 100%;
+                      line-height: 1.67em;
+                    }
+                  }
+
+                  > button {
+                    margin-left: 6px;
+                  }
+                }
+              }
+
+              &.edit {
+
+                > tr > td {
+                  padding: 8px 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

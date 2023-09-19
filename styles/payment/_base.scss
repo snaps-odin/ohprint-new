@@ -1,0 +1,76 @@
+div.payment-wrap {
+  padding: 0 0 160px 0;
+
+  > div.container {
+
+    > div {
+
+      &.top {
+
+        > h1 {
+          font-size: 28px;
+          text-align: center;
+          line-height: 160px;
+        }
+
+        > div.step-wrap {
+          @include step-wrap;
+        }
+      }
+
+      &.middle {
+        @include row-contents;
+        text-align: center;
+
+        > span {
+          display: block;
+          padding: 80px 0 60px 0;
+
+          > h2 {
+            padding: 0 0 20px 0;
+            font-size: 18px;
+            line-height: 1.78em;
+
+            > strong {
+              font-family: $font-bold;
+              text-decoration: underline;
+              line-height: 1.69em;
+
+              > span {
+                color: $color-red;
+              }
+            }
+          }
+
+          > span {
+            display: block;
+            font-size: $font-large;
+            line-height: 22px;
+
+            &.order-number {
+              font-family: $font-bold;
+              font-size: 16px;
+              padding: 43px 0 0 0;
+
+              > span {
+                color: $color-red;
+              }
+            }
+          }
+        }
+
+        > button {
+
+          &.home {
+            margin-right: 6px;
+          }
+        }
+      }
+
+      &.bottom {
+        @include row-contents;
+        padding: 160px 0 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@mixin cs-floating-tip {
+  position: absolute;
+  display: block;
+  top: -208px;
+  right: 0;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  pointer-events: all;
+  @include transition(right $animation-sec $animation-easing);
+
+  &.touched {
+    top: -268px;
+
+    &.alarm {
+      top: -180px;
+    }
+  }
+
+  > div {
+
+    > span {
+
+      &.message {
+        padding: 10px;
+        background: $color-white;
+        font-family: $font-bold;
+        line-height: 1.67em;
+        border-radius: 6px;
+        border: 1px solid $color-default;
+        white-space: nowrap;
+        @include box-shadow(2px 4px 3px 0 rgba(0, 0, 0, 0.2));
+
+        @include keyframes(cs-floating-tip-motion) {
+          0%, 100% {
+            color: $color-default;
+          }
+
+          50% {
+            color: $color-white;
+          }
+        }
+
+        @include animation(cs-floating-tip-motion 1s linear infinite);
+      }
+
+      &.icon {
+        position: absolute;
+        width: 8px;
+        height: 10px;
+        top: 5px;
+        right: -6px;
+      }
+    }
+  }
+}
+

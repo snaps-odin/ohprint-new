@@ -1,0 +1,74 @@
+@mixin delivery-condition-wrap {
+  display: table;
+  width: 1100px;
+  padding: 13px 20px;
+  background: $color-box-background;
+
+  > div.left {
+    float: left;
+    display: table;
+
+    > span {
+      float: left;
+      display: table-cell;
+
+      &.tit {
+        padding: 0 16px 0 11px;
+        line-height: 34px;
+      }
+
+      &.btn {
+        height: 34px;
+
+        > button {
+          float: left;
+          position: relative;
+          border: none;
+          padding: 0 20px;
+          display: inline-block;
+          font-size: $font-small;
+          outline: 1px solid #ccc;
+
+          &.active {
+            z-index: 1;
+            outline-color: $color-default;
+          }
+        }
+      }
+    }
+  }
+
+  > div.right {
+    float: right;
+    display: table;
+
+    > span {
+      float: left;
+      display: table-cell;
+
+      &.tit {
+        padding: 0 16px 0 11px;
+        line-height: 34px;
+      }
+
+      &.input {
+
+        > div {
+          float: left;
+        }
+
+        > span {
+          float: left;
+          margin: 0 8px;
+          color: #ccc;
+          line-height: 34px;
+        }
+      }
+
+      &.btn {
+        height: 34px;
+        margin-left: 8px;
+      }
+    }
+  }
+}

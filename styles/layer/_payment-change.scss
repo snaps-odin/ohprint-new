@@ -1,0 +1,130 @@
+div.payment-change-layer-wrap {
+  width: 500px;
+
+  > div.container {
+
+    > form {
+
+      > div.middle {
+
+        > div.inner {
+
+          > table {
+            width: 100%;
+            margin: 20px 0 0 0;
+
+            > thead {
+              height: 50px;
+              line-height: 50px;
+              border-bottom: 1px solid $color-default;
+
+              > tr {
+
+                > td {
+                  font-family: $font-bold;
+                  font-size: 16px !important;
+                }
+              }
+            }
+
+            > tbody {
+
+              > tr {
+
+                > th {
+                  background-color: $color-box-background;
+                  font-family: $font-bold;
+                  text-align: left;
+                  padding: 15px 0 15px 16px;
+                  border-bottom: 1px solid $color-disabled;
+                }
+
+                > td {
+                  text-align: left;
+                  padding: 15px 16px;
+                  border-bottom: 1px solid $color-disabled;
+                  line-height: 20px;
+                  vertical-align: top;
+
+                  > div {
+                    float: left;
+
+                    &.input.box.small {
+
+                      input {
+                        width: 63px !important;
+                      }
+
+                      span.error {
+                        display: none;
+                      }
+                    }
+                  }
+
+                  > span {
+                    float: left;
+                    color: #ccc;
+                    padding: 0 6px;
+                    line-height: 34px;
+                  }
+
+                  > em {
+                    color: $color-red;
+                  }
+
+                  &.form {
+                    padding: 8px 0;
+                    line-height: inherit;
+
+                    &:first-of-type {
+                      padding: 8px 16px;
+                    }
+
+                    &.radio {
+                      padding: 17px 0;
+                    }
+
+                    &.select {
+                      padding: 8px 0;
+
+                      > div {
+                        float: right;
+                      }
+                    }
+                  }
+
+                  &.icon {
+                    padding: 16px 0 12px 0;
+                  }
+
+                  &.check {
+                    border-bottom: 0;
+                  }
+                }
+              }
+            }
+
+            &:first-child {
+              margin: 0;
+            }
+
+            &:nth-child(2) {
+
+              > tbody > tr > td:first-child {
+                padding-left: 0 !important;
+                vertical-align: top;
+              }
+            }
+          }
+
+          > div.checkbox {
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

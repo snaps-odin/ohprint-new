@@ -1,0 +1,54 @@
+@import "keyVisual/base";
+@import "promote-point";
+@import "product";
+@import "best-review";
+@import "instagram";
+@import "sample-pack";
+
+div.home-wrap {
+
+  > div.container {
+    @include row-contents-full;
+
+    min-width: 1200px;
+
+    > section {
+      position: relative;
+      width: 100%;
+
+      > div.inner {
+        @include row-contents;
+        display: table;
+        padding: 0;
+
+        > div {
+          display: table-cell;
+        }
+      }
+
+      &.home-key-visual-wrap {
+        @include home-key-visual;
+      }
+
+      &.home-promote-point-wrap {
+        @include home-promote-point;
+      }
+
+      &.home-product-wrap {
+        @include home-product;
+      }
+
+      &.home-best-review-wrap {
+        @include home-best-review;
+      }
+
+      &.home-sample-pack-wrap {
+        @include home-sample-pack;
+      }
+
+      &.home-instagram-wrap {
+        @include home-instagram;
+      }
+    }
+  }
+}

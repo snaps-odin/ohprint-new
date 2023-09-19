@@ -1,0 +1,17 @@
+div.events-new-year-plan-success-layer-wrap {
+  min-width: 300px !important;
+  width: 300px;
+
+  > div.container {
+    position: relative;
+    height: 400px;
+    background: url("#{$CDN_URL}/images/events/popup-conpon@2x.jpg") 0 0 / cover no-repeat;
+
+    > button {
+      position: absolute;
+      bottom: 2.5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

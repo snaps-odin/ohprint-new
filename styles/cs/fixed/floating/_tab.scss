@@ -1,0 +1,112 @@
+@mixin cs-floating-tab {
+  position: absolute;
+  z-index: 1;
+  pointer-events: all;
+  background: #191919;
+  border: 2px solid #191919;
+  border-right: #fff;
+  color: #fff;
+  overflow: hidden;
+  bottom: 148px;
+  right: -2px;
+  width: 52px;
+  height: 64px;
+  @include border-radius(6px 0 0 6px);
+  @include box-shadow(-2px 4px 3px 0 rgba(0, 0, 0, 0.2));
+  @include transition(height .5s ease-out);
+  @include transition(width .3s ease-out);
+
+  > ul {
+    list-style-type: none;
+    overflow: hidden;
+
+    > li {
+      position: relative;
+      list-style-type: none;
+      float: left;
+      width: 52px;
+      height: 64px;
+      background: #191919;
+      cursor: pointer;
+      @include transition(background .3s ease-out);
+
+      > span {
+        display: inline-block;
+        text-align: center;
+        width: 50px;
+      }
+
+      > span.icon {
+        margin-top: 10px;
+      }
+
+      > span.title {
+        font-size: 9px;
+        margin-top: 4px;
+      }
+
+      &.badge {
+
+        &:after {
+          position: absolute;
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $color-error;
+          top: 4px;
+          left: 4px;
+        }
+      }
+    }
+
+    > li.small {
+      display: table;
+      width: 97px;
+      height: 42px;
+
+      > span.icon-chatbot-w-2020:before{
+        content: "";
+        background: black;
+        width: 20px;
+        height: 20px;
+//        background: url("https://front-cdn.snaps.com/desktop/kor/images/icon/svg/chatbot-w-2020.svg") no-repeat;
+        background: url("#{$CDN_URL}/images/icon/svg/chatbot-w-2020.svg") no-repeat;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      > span.icon {
+        width: 40px;
+      }
+
+      > span.title {
+        font-size: 11px;
+        line-height: 1.45em;
+        text-align: left;
+      }
+    }
+
+    > li.on {
+      background: #fff;
+      color: #191919;
+    }
+  }
+
+  &.touched {
+    width: 42px;
+    //height: 168px;
+    height:auto;
+    overflow: hidden;
+
+    &.tutorial {
+      bottom: 106px;
+      //height: 168px;
+    }
+  }
+}

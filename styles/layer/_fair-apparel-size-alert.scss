@@ -1,0 +1,119 @@
+div.fair-apparel-size-layer-wrap {
+  width: 500px;
+
+  > div.container {
+    > div,
+    > form > div {
+      &.top {
+        > h2 {
+          height: 50px;
+          background: $color-default;
+          color: $color-white;
+          font-size: 16px;
+          font-family: $font-bold;
+          line-height: 50px;
+          text-align: center;
+        }
+      }
+
+      &.middle {
+        padding: 40px 30px 20px 30px;
+/*        overflow-x: hidden;
+        overflow-y: auto;*/
+
+        > div.sizeSelectMap{
+
+          > label{
+            font-size: $font-medium;
+            font-family: $font-bold;
+            color:$color-default;
+          }
+
+          > div.sizeContents{
+            margin-top:15px;
+
+            >div.fieldSelect{
+              width: 410px;
+              padding:15px;
+              background: $color-box-background;
+            }
+
+            > div.sizeButtomMap{
+              text-align: center;
+              padding:15px;
+              > button:last-of-type{
+                margin-left:6px;
+              }
+            }
+          }
+
+        }
+
+
+        h3 {
+          font-size: 14px;
+          font-family: $font-bold;
+        }
+      }
+
+      &.bottom {
+        padding: 20px 30px 40px 30px;
+        text-align: center;
+
+        > div.table-wrap{
+
+          > div.caption{
+            color:$color-default;
+            font-size:$font-medium;
+            font-family: $font-bold;
+            text-align: left;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #191919;
+          }
+
+          > table {
+            width: 100%;
+
+            > thead{
+              > tr {
+                > th{
+                  background: $color-box-background;
+                  padding:17px 15px 17px 15px;
+                  color:$color-default;
+                  font-size:$font-medium;
+                  font-family: $font-bold;
+                  border-left: 1px solid $color-box-background;
+                  border-right: 1px solid $color-box-background;
+                }
+              }
+            }
+
+            > tbody{
+              > tr{
+                > td{
+                  color:$color-default;
+                  padding:17px 15px 17px 15px;
+                  font-size:$font-medium;
+                  border: 1px solid $color-box-background;
+                }
+              }
+            }
+
+
+          }
+        }
+
+        > button {
+          margin-right: 6px;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

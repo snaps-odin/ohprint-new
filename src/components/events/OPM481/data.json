@@ -1,0 +1,38 @@
+[
+  {
+    "key": "QYPVCrwRI",
+    "width": "35.19375731850117%",
+    "height": "6.020935708435708%",
+    "left": "32.54949136416862%",
+    "top": "83.54864097051598%",
+    "type": "openLayerPopup",
+    "desc": {
+      "value": "EVENTS_FORM",
+      "isNeedLogin": true,
+      "checkEventAlready": true,
+      "options": {
+        "title": "우리 모임 자랑대회",
+        "width": 500
+      }
+    }
+  },
+  {
+    "key": "S5JcFEgNs",
+    "width": "28.73289300351288%",
+    "height": "2.1182048525798525%",
+    "left": "36.14470506440281%",
+    "top": "90.77888257575758%",
+    "type": "openLayerPopup",
+    "desc": {
+      "value":"EVENTS_CONFIRM_BEFOREHAND",
+      "isNeedLogin": false,
+      "checkEventAlready": false,
+      "options": {
+        "title": "우리 모임 자랑대회",
+        "width": 460,
+        "height" : 819,
+        "imgUrl" : "https://front-cdn.ohprint.me/map_event/481/pc/e_body/notice-img@2x.png"
+      }
+    }
+  }
+]

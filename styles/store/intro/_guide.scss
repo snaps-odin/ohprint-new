@@ -1,0 +1,48 @@
+@import "./service/showcase";
+
+@mixin store-intro-guide {
+
+  > div.inner {
+    @include row-contents;
+    padding: 70px 0;
+    min-height: 500px;
+    padding-bottom:0;
+
+    > h3 {
+      font-size: 30px;
+      line-height: 36px;
+      padding: 0 0 30px 0;
+      text-align: center;
+    }
+
+    > div.tab-wrap {
+      margin-bottom: 60px;
+      padding-top: 40px;
+    }
+  }
+
+  > div.guide-apparel-option-wrap {
+    padding: 0;
+  }
+
+  > section.store-intro-service-wrap  {
+    > div.store-intro-services-showcase-wrap {
+      @include showcase;
+
+      > div {
+
+        &.inner {
+          > ul {
+            margin-top: 70px;
+
+            > li {
+              float: none !important;
+              display: inline-block !important;
+              vertical-align: top !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

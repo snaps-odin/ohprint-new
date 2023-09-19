@@ -1,0 +1,92 @@
+@mixin eraser-contents-4{
+
+  > div.eraser-contents-4 {
+    position: relative;
+    min-width: 1200px;
+    height: 1412px;
+    transition: 0.3s;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+
+    &.scrollLock {
+      overflow: hidden;
+    }
+
+    > img.eraser-contents-4-bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    > div.eraser-contents-4-title {
+      > h1 {
+        font-family: $font-bold;
+        font-size: 48px;
+        line-height: 68px;
+        color: $color-default;
+        text-align: center;
+        padding-top: 100px;
+      }
+    }
+
+    > div.eraser-contents-4-map{
+      width: 1140px;
+      height:956px;
+      margin: 0 auto;
+      margin-top:100px;
+
+      > div.eraser-contents-4-item{
+        width: 360px;
+        height: 464px;
+        margin-bottom:30px;
+        float: left;
+        margin-left:30px;
+        cursor: pointer;
+
+        > img{
+          width: 360px;
+          height: 280px;
+        }
+
+        > span{
+          display: block;
+          padding-left: 15px;
+          color:$color-default;
+          font-family: $font-normal;
+        }
+
+        > span.title{
+          font-size:18px;
+          margin:30px 0 15px 0;
+        }
+
+        > span.description{
+          line-height: 21px;
+          font-size:$font-medium;
+        }
+
+        > span.link{
+          color:#2c83e9;
+          font-size:$font-large;
+          margin-top:30px;
+          text-decoration: underline;
+        }
+      }
+      > div.eraser-contents-4-item:hover{
+        @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.2));
+      }
+
+
+      > div.eraser-contents-4-item:nth-child(1),
+      > div.eraser-contents-4-item:nth-child(4){
+        margin-left:0;
+      }
+
+
+
+    }
+  }
+}
+

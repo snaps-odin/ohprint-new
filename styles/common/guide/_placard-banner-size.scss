@@ -1,0 +1,122 @@
+div.guide-placard-banner-size-wrap {
+  padding: 70px 0 70px 0;
+
+  em {
+    color: $color-blue;
+
+    &.yellow {
+      color: #ffa800;
+    }
+
+    &.pink {
+      color: #ff00d2;
+    }
+
+    &.green {
+      color: #1aab97;
+    }
+  }
+
+  > div.top {
+    padding: 70px 0 0 0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+    border-top: 1px solid $color-box-line;
+
+    > h3 {
+      padding: 0 0 20px 0;
+      font-size: 32px;
+      line-height: 1.2em;
+    }
+
+    > p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  > ul.bottom {
+    display: table;
+    width: 100%;
+    padding: 40px 0 0 0;
+    text-align: center;
+
+    &.small {
+      display: inline-block;
+
+      > li {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    > li {
+      display: table-cell;
+      width: 540px;
+
+      &.arrow {
+        width: 60px;
+        padding: 35px 0 0 0;
+        vertical-align: middle;
+      }
+
+      > div {
+        width: 100%;
+
+        &.top {
+          padding: 0 0 15px 0;
+          color: $color-blue;
+          font-size: 13px;
+          line-height: 1.54em;
+        }
+
+        &.bottom {
+          padding: 30px;
+          background: $color-box-background;
+          outline: 1px solid $color-box-line;
+          @include box-sizing(border-box);
+
+          > dl {
+            display: table;
+            width: 100%;
+
+            > dd {
+              display: table-cell;
+              width: 45%;
+
+              &.x {
+                width: 10%;
+              }
+
+              > div {
+                width: 100%;
+
+                input {
+                  height: 44px;
+                  font-size: 14px;
+                  line-height: 1.43em;
+                  text-align: center;
+                  @include box-sizing(border-box);
+                }
+
+                span.error {
+                  display: none;
+                }
+
+                &.blue {
+
+                  input {
+                    color: $color-blue;
+                    background: $color-white;
+                    @include user-select(none);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+div.input-calendar {
+  position: relative;
+
+  > div {
+
+    > input {
+      width: 72px;
+      height: 32px;
+      padding: 0 34px 0 10px;
+      line-height: 32px;
+      border: 1px solid $color-box-line;
+      font-size: $font-medium;
+
+      &:focus {
+        border: 1px solid $color-default !important;
+      }
+
+      &.error {
+        border: 1px solid $color-error;
+      }
+    }
+  }
+
+  > span {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    pointer-events: none;
+  }
+}

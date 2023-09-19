@@ -1,0 +1,102 @@
+div.textarea {
+  position: relative;
+
+  &.fanEvent{
+    > div {
+
+      > textarea {
+        max-height: 180px;
+        overflow-y: auto !important;
+      }
+    }
+  }
+
+  &.cheerupEvent{
+    margin-top: -10px;
+    > div {
+
+      > textarea {
+        max-height: 180px !important;
+        overflow-y: auto !important;
+      }
+    }
+  }
+
+  &.gatheringEvent {
+    > div {
+      > textarea {
+        min-height: 120px;
+        height: 120px !important;
+        overflow-y: auto !important;
+      }
+    }
+  }
+
+  > div {
+
+    > textarea {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 12px;
+      min-height: 186px;
+      line-height: 1.83em;
+      border: 0;
+      resize: none;
+      color: $color-default;
+      @include user-select(text);
+
+      &.empty {
+        color: $color-gray;
+      }
+    }
+
+    > span {
+      display: inline-block;
+      width: 100%;
+
+      > span {
+        line-height: 34px;
+
+        &.count {
+          color: $color-gray;
+        }
+
+        &.left {
+          float: left;
+        }
+
+        &.right {
+          float: right;
+        }
+      }
+    }
+
+    &.error > span {
+      border-top: 1px solid $color-error;
+    }
+  }
+
+  &.box {
+
+    > div {
+      padding: 0 12px;
+      outline: 1px solid $color-disabled;
+
+      &.error {
+        outline: 1px solid $color-error;
+
+        > span {
+          border: 0;
+        }
+      }
+
+      &.focused {
+        outline: 1px solid $color-default;
+
+        > span {
+          border: 0;
+        }
+      }
+    }
+  }
+}

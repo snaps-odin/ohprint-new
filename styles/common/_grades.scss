@@ -1,0 +1,33 @@
+span.grades-wrap {
+  display: inline-block !important;
+
+  &.lock {
+    pointer-events: none;
+  }
+
+  > button {
+    width: 20px;
+    height: 20px;
+    background: url("#{$CDN_URL}/images/icon/svg/star-2424.svg") no-repeat;
+    background-size: 20px;
+    float: left;
+
+    &.active {
+      background: url("#{$CDN_URL}/images/icon/svg/star-2424-on.svg") no-repeat;
+      background-size: 20px;
+    }
+
+    &.big {
+      width: 24px;
+      height: 24px;
+      background: url("#{$CDN_URL}/images/icon/svg/star-2424.svg") no-repeat;
+      background-size: 24px;
+      float: initial;
+
+      &.active {
+        background: url("#{$CDN_URL}/images/icon/svg/star-2424-on.svg") no-repeat;
+        background-size: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+
+$CDN_URL:'https://front-cdn.ohprint.me/assets/ko_kr/pc';
+
+
+@import "config";
+@import "mixin";
+@import "extends";
+@import "reset";
+@import "form/base";
+@import "scroll-bar";
+@import "pagination";
+@import "calendar";
+@import "grades";
+@import "comment";
+@import "swipe-text";
+@import "swipe-contents";
+@import "loading-animation";
+@import "product-layout";
+@import "review-board";
+@import "guide/base";
+@import "tab";
+@import "tab-blue";
+@import "image-loader";
+@import "banner";
+@import "attention";
+@import "template-preview";
+@import "animation";
+@import "a11y";
+@import "group";
+@import "preview-3d";
+@import "icons/icons";
+@import "style-outsource";
+
+//font
+//@import "public/fonts/notoSansKR400";
+//@import "public/fonts/notoSansKR500";
+
+@include font-face(YoonGothicPro760, '/fonts/snaps_YoonGothicB', normal, normal, eot woff2 woff ttf svg);
+@include font-face(YoonGothicPro740, '/fonts/snaps_YoonGothicM', normal, normal, eot woff2 woff ttf svg);

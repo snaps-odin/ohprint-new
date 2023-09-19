@@ -1,0 +1,37 @@
+[
+  {
+    "key": "6Q9Y2i9gM",
+    "width": "35.16624040920716%",
+    "height": "1.5488383712215839%",
+    "left": "32.48081841432225%",
+    "top": "29.247985885585813%",
+    "type": "getCoupons",
+    "desc": {
+      "getCoupons_code": "12A481A5-727F-5BB8"
+    }
+  },
+  {
+    "key": "Fqpf-3mBe",
+    "width": "35.0383631713555%",
+    "height": "1.5988008993255058%",
+    "left": "32.48081841432225%",
+    "top": "55.1535567074694%",
+    "type": "goLink",
+    "desc": {
+      "type": "goLink",
+      "value":"https://www.ohprint.me/store/acrylic-keyring/intro/defaults"
+    }
+  },
+  {
+    "key": "RqiuJJt6S",
+    "width": "35.16624040920716%",
+    "height": "1.5488383712215839%",
+    "left": "32.608695652173914%",
+    "top": "96.42260492130902%",
+    "type": "getCouponsMove",
+    "desc": {
+      "getCouponsMove_code": "12A481A5-727F-5BB8",
+      "getCouponsMove_url": "https://www.ohprint.me/store/acrylic-keyring/intro/defaults"
+    }
+  }
+]

@@ -1,0 +1,45 @@
+div.cs-write-layer-wrap {
+  min-width: 360px !important;
+  width: 360px;
+
+  > div.container {
+
+    > div {
+
+      &.middle {
+        padding: 0 !important;
+
+        > div.inner {
+          padding: 0 40px;
+
+          > div {
+
+            &.middle {
+              padding-top: 50px;
+
+              >p {
+                font-size: 13px;
+                line-height: 1.69;
+                color: #191919;
+              }
+
+            }
+
+
+            &.bottom {
+              text-align: center;
+              padding: 20px 0 40px 0;
+            }
+        }
+      }
+
+
+
+        > button {
+          display: block;
+          margin: 33px auto !important;
+        }
+      }
+    }
+  }
+}

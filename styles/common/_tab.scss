@@ -1,0 +1,38 @@
+div.tab-wrap {
+  width: 100%;
+  display: inline-block;
+
+  > button {
+    float: left;
+    width: 150px;
+    height: 40px;
+    border: 1px solid $color-disabled;
+    border-bottom: 1px solid $color-default;
+    border-left: 1px solid transparent;
+    text-align: center;
+
+    @include box-size(border-box);
+
+    &:first-child {
+      border-left: 1px solid $color-disabled;
+    }
+
+    &.active {
+      border: 1px solid $color-default;
+      border-bottom: 1px solid $color-box-background;
+      font-family: $font-bold;
+    }
+  }
+
+
+  &.modern {
+    > button {
+      border-bottom: 1px solid $color-disabled;
+
+      &.active {
+        border: 1px solid $color-default;
+        font-family: $font-bold;
+      }
+    }
+  }
+}

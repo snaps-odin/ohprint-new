@@ -1,0 +1,258 @@
+@mixin thumbnail-wrap {
+  height: 140px;
+  display: table;
+
+  > div {
+    padding: 12px;
+    display: table-cell;
+    vertical-align: middle;
+
+    > span {
+      display: inline-block;
+      padding: 12px;
+
+      > span {
+        display: block;
+        float: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &:first-child {
+          margin-right: 6px;
+        }
+
+        > span {
+
+          &.mask-image {
+            display: inline-block;
+
+            &.sticker-round-square {
+              background: url('#{$CDN_URL}/images/common/mask/list/sticker-round-line-8080@2x.png') center center / cover;
+            }
+
+            &.sticker-square-square {
+              background: url('#{$CDN_URL}/images/common/mask/list/sticker-square-line-8080@2x.png') center center / cover;
+            }
+
+            &.sticker-rectanguler-vertical {
+              background: url('#{$CDN_URL}/images/common/mask/list/sticker-rectangle-01-line-8080@2x.png') center center / cover;
+            }
+
+            &.sticker-rectanguler-horizontal {
+              background: url('#{$CDN_URL}/images/common/mask/list/sticker-rectangle-02-line-8080@2x.png') center center / cover;
+            }
+          }
+        }
+      }
+
+      &.active {
+        outline: 1px solid $color-default;
+      }
+
+      &.round {
+
+        > span {
+          border-radius: 4px;
+        }
+      }
+
+      &.full {
+
+        > span {
+          margin-right: 0 !important;
+        }
+      }
+
+      &.folded {
+
+        > span {
+          position: absolute;
+
+          &.back {
+            @include transform(translate(-2%, -6%) rotateY(-20deg) skewY(-10deg));
+          }
+        }
+
+        &.horizontal {
+
+          > span {
+            top: 30%;
+
+            &.back {
+              @include transform(translate(6%, 2%) rotateX(-20deg) skewX(10deg));
+            }
+          }
+        }
+
+        &.tri-fold {
+
+          > span {
+
+            &.back {
+              @include transform(translate(-3%, -7%) rotateY(-20deg) skewY(-8deg));
+            }
+
+            &.center {
+              @include transform(translate(20%, -9%) rotateY(60deg) skewY(-6deg));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin preview-layout-wrap {
+
+  > div {
+    width: 860px;
+    height: 480px;
+    display: table;
+
+    &.full {
+
+      > div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        > span {
+          display: inline-block;
+          //@include box-shadow (0 2px 4px 0 rgba(0, 0, 0, .2));
+        }
+      }
+
+      > span.thumbnail-icon {
+        position: absolute;
+        top: 155px;
+        left: 15px;
+
+        > span {
+          width: 80px;
+          height: 80px;
+          display: block;
+
+          &.active {
+            outline: 1px solid $color-default;
+          }
+
+          &:last-child {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    &.half {
+
+      > div {
+        display: table-cell;
+        width: 430px;
+        height: 480px;
+        vertical-align: middle;
+        text-align: center;
+
+        &:last-child {
+          border-left: 1px solid $color-grid-line;
+        }
+
+        > span {
+          display: inline-block;
+        }
+      }
+    }
+
+    &.round {
+
+      > div {
+
+        > span {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    > div {
+
+      > span {
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &.background-image {
+          position: relative;
+
+          &:not(.shadow-none) {
+            @include box-shadow (0 2px 4px 0 rgba(0, 0, 0, .2));
+          }
+
+          > span {
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            &.effect-image {
+              display: inline-block;
+            }
+
+            &.mask-image {
+              display: inline-block;
+
+              &.sticker-round-square {
+                background: url('#{$CDN_URL}/images/common/mask/list/sticker-round-line-380380@2x.png') center center / cover;
+              }
+
+              &.sticker-square-square {
+                background: url('#{$CDN_URL}/images/common/mask/list/sticker-square-line-380380@2x.png') center center / cover;
+              }
+
+              &.sticker-rectanguler-vertical {
+                background: url('#{$CDN_URL}/images/common/mask/list/sticker-rectangle-01-line-380380@2x.png') center center / cover;
+              }
+
+              &.sticker-rectanguler-horizontal {
+                background: url('#{$CDN_URL}/images/common/mask/list/sticker-rectangle-02-line-380380@2x.png') center center / cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.error {
+
+    > div {
+      vertical-align: middle;
+      display: table-cell;
+      text-align: center;
+
+      > span {
+        font-size: 14px;
+        margin: 0 auto;
+        display: table;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

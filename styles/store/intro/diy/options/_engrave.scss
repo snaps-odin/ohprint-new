@@ -1,0 +1,37 @@
+@mixin store-intro-diy-option-engrave {
+  margin: 20px 0 0 0;
+
+  > div {
+    display: block;
+
+    &.top {
+
+      > h4 {
+        font-family: $font-bold;
+        font-size: 11px;
+      }
+    }
+
+    &.bottom {
+      line-height: 36px;
+      margin: 10px 0 0 0;
+
+      > div.input {
+
+        > div {
+
+          > input {
+            width: 240px;
+            font-size: $font-small;
+          }
+
+          > div.count {
+            font-size: $font-small;
+            line-height: 17px;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
